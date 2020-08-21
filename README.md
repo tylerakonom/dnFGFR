@@ -1,2 +1,4 @@
 # dnFGFR
-How do housing conditions effect dnFGFR animals?
+How housing conditions effect dnFGFR animals, an exploratory RNA-Seq study.
+
+### Slurm Scripts
