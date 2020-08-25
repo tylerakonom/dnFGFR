@@ -2,7 +2,7 @@
 #SBATCH -J trimReads
 #SBATCH -n 6 # Number of cores
 #SBATCH -N 1 # Ensure that all cores are on one node
-#SBATCH -t 10:00:00 # Runtime 
+#SBATCH -t 10:00:00 # Runtime in HH:MM:SS
 #SBATCH --partition=shas
 
 export PATH=$PATH:/projects/ehringer/software/scripts 
