@@ -27,4 +27,4 @@ RC requires the use of a header for jobs to queue. An example header is as follo
 
 ### Post Trim Quality Control
 
-[FastQC (v0.11.8)](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) was used to visualize the 
+[FastQC (v0.11.8)](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) was used to visualize the data to check for quality before continued processing. An example of good Illumina data can be found [here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html#M2), and an example of our trimmed data (sample A1006-1) can be found [here](https://github.com/tylerakonom/dnFGFR/blob/master/Example_FastQC_Output_A1006-1.html).
