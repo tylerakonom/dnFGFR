@@ -50,7 +50,7 @@ Trimmed samples were aligned to the Ensembl ([GRCm38](ftp://ftp.ensembl.org/pub/
 
 Raw read counts were generated using the [Rsubread (v2.0.1)](https://bioconductor.org/packages/release/bioc/html/Rsubread.html) for [R (v3.6.1)](https://www.r-project.org/) package installed on summit. Processing was performed by switching to a compile node with this command:
 
-	$ssh scompile
+	$ ssh scompile
 
 R was run by calling and running R in the anaconda environment on summit:
 
@@ -69,6 +69,8 @@ From this point on, the processing was performed on a local machine. The command
 *Turning counts into results.*
 
 Raw read counts were normalized and analyzed for differential expression using [DESeq2(v1.26.0)](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) for R. This is currently a work in progress and will be updated as soon as possible.
+
+
 
 
 
