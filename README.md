@@ -42,6 +42,18 @@ A few discrepancies between the two examples given can be explained by the fact 
 
 #### Align to the Genome
 
-Trimmed samples were aligned to the Ensembl ([GRCm38](ftp://ftp.ensembl.org/pub/release-101/gtf/mus_musculus/)) primary mouse genome using [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/manual.shtml) and two scripts due to a cap in run time ([align_1](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/alignReads1ensemblPrimary.sh) and [align_2](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/alignReads2ensemblPrimary.sh)). 
+Trimmed samples were aligned to the Ensembl ([GRCm38](ftp://ftp.ensembl.org/pub/release-101/gtf/mus_musculus/)) primary mouse genome using [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/manual.shtml) and two scripts due to a cap in run time ([align_1](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/alignReads1ensemblPrimary.sh) and [align_2](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/alignReads2ensemblPrimary.sh)). This accomplished two primary objectives, assigning a gene to each read and combining the two paired-end reads into one ".bam" file. [Here](https://github.com/tylerakonom/dnFGFR/blob/master/aligned1006.txt) is an example of the HISAT2 output, giving the results of the alignment for a sample (A1006).
+
+#### Generating Raw Read Counts
+
+Raw read counts were generated using the [Rsubread (v2.0.1)](https://bioconductor.org/packages/release/bioc/html/Rsubread.html) for [R (v3.6.1)](https://www.r-project.org/) package installed on summit. Processing was performed by switching to a compile node with this command:
+
+	$ssh scompile
+
+R was run by calling and running R in the anaconda environment on summit:
+
+	$ source /curc/sw/anaconda/default
+	$ conda activate r361
+	$ R
 
 
