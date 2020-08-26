@@ -50,7 +50,7 @@ Trimmed samples were aligned to the Ensembl ([GRCm38](ftp://ftp.ensembl.org/pub/
 
 Raw read counts were generated using the [Rsubread (v2.0.1)](https://bioconductor.org/packages/release/bioc/html/Rsubread.html) for [R (v3.6.1)](https://www.r-project.org/) package installed on summit. Processing was performed by switching to a compile node with this command:
 
-	$ssh scompile
+	$ ssh scompile
 
 R was run by calling and running R in the anaconda environment on summit:
 
