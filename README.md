@@ -6,7 +6,7 @@
 
 We set out to understand the gene expression changes preceding a rescue effect in dnFGFR animals housed with same-sex partners during an experiment conducted by [Rocherster et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3532464/). We performed an RNA-Seq experiment and deferentially expressed genes were documented for further study. The pipeline used is as follows:
 
-![dnFGFR Pipeline](https://github.com/tylerakonom/dnFGFR/blob/master/graphics/Pipeline.png)
+![dnFGFR Pipeline](https://github.com/tylerakonom/dnFGFR/blob/master/graphics/pipeline8.25.20.png)
 
 ## Data Pre-processing
 
