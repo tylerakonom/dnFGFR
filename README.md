@@ -8,7 +8,9 @@ We set out to understand the gene expression changes preceding a rescue effect i
 
 ![dnFGFR Pipeline](https://github.com/tylerakonom/dnFGFR/blob/master/graphics/pipeline_8.25.20.png)
 
+
 ## Data Pre-processing
+*Getting raw reads ready for analysis.*
 
 All files were uploaded to the summit module as part of the research computing program at CU Boulder. Basic tutorials on how to work with the RC computing environment and FAQs are located [here](https://curc.readthedocs.io/en/latest/faq.html). All files were uploaded to the users project folder, then processed in the scratch directory. Software was called from the container located in the summit module at:
 
@@ -55,5 +57,19 @@ R was run by calling and running R in the anaconda environment on summit:
 	$ source /curc/sw/anaconda/default
 	$ conda activate r361
 	$ R
+
+The script [Rsubread.R](https://github.com/tylerakonom/dnFGFR/blob/master/Rsubread.R) was entered into the command line, and the output was stored as a text file for processing and analysis.
+
+From this point on, the processing was performed on a local machine. The command to copy a file from the summit cluster looks like this:
+
+	$ scp <username>@login.rc.colorado.edu:<path to file you want to transfer> ~<path to folder on the local machine you want to copy to>
+
+
+## Analyzing Counts
+*Turning counts into results.*
+
+Raw read counts were normalized and analyzed for differential expression using [DESeq2(v1.26.0)](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) for R. This is currently a work in progress and will be updated as soon as possible.
+
+
 
 
