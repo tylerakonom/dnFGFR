@@ -36,6 +36,6 @@ A few discrepancies between the two examples given can be explained by the fact 
 
 #### Align to the Genome
 
-Trimmed samples were aligned to the Ensembl (GRCh38) genome using [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/manual.shtml) and [this]()
+Trimmed samples were aligned to the Ensembl (GRCh38) genome using [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/manual.shtml) and two scripts due to a cap in run time ([align_1]())
 
 
