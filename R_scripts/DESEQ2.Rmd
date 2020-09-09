@@ -170,16 +170,13 @@ dev.off()
 
 # OLD SCRIPT: PN140 dnFGFR effect of housing
 ```{r}
-setwd("/Users/gallifrey/Desktop/dnFGFR/PN140 dnFGFR/")
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\test\\")
 #Designate Files
-counts1 = read.table("PN140dnFGFRcounts.txt", header=TRUE, row.names=1, sep="\t")
+counts = read.table("PN140dnFGFRcounts.txt", header=TRUE, row.names=1, sep="\t")
 coldata = read.table("PN140dnFGFRcoldata.txt", header=TRUE, row.names=1, sep="\t")
 
-#remove length column
-counts1['Length'] = NULL
-
 #set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~housing)
+dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design = ~housing)
 
 #remove low count genes (anything less than 20 reads)
 keep <- rowSums(counts(dds)) >= 20
