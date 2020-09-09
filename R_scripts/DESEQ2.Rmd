@@ -4,33 +4,14 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+require("knitr")
 knitr::opts_chunk$set(echo = TRUE)
-
-path="C:/Users/Gallifrey/Documents/GitHub/dnFGFR/deseq_outputs/"
-setwd("C:/Users/Gallifrey/Documents/GitHub/dnFGFR/deseq_outputs/")
-```
-
-#Import Libraries
-```{r}
-knitr::opts_chunk$set(echo = TRUE)
+opts_knit$set(root.dir = "C:\\GitHub\\dnFGFR\\deseq_outputs\\")
 library(dplyr)
-require(data.table)
-require(DESeq2)
-require(RColorBrewer)
-require(EDASeq)
-require(cqn)
-require(AnnotationDbi)
-require(org.Mm.eg.db)
-require(pheatmap)
-require(genefilter)
-require(GO.db)
+library(DESeq2)
 library(knitr)
-require(GenomicFeatures)
-require(BiocParallel)
-require(limma)
-require(ggplot2)
+library(ggplot2)
 ALLOW_WGCNA_THREADS=8
-knitr::opts_knit$set(root.dir ="C:\Users\Gallifrey\Documents\GitHub\dnFGFR\deseq_outputs\")
 ```
 
 #Load counts and sample info
@@ -41,7 +22,7 @@ coldata = read.table("coldataAllSamplesFixed.txt", header=TRUE, sep="\t")
 
 #remove length from counts table
 ```{r}
-counts['Length'] = NULL
+#counts['Length'] = NULL
 ```
 
 #sort coldata so it matches counts table columns
@@ -51,7 +32,7 @@ counts['Length'] = NULL
 
 #make deseq2 object
 ```{r}
-dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design= ~housing + genotype:time)
+dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design= ~time + genotype + housing)
 ```
 
 #transform counts for PCA plots
@@ -64,32 +45,32 @@ ntd <- normTransform(dds)
 #plot SD of transformed data
 ```{r}
 library("vsn")
-pdf("/Users/gallifrey/Desktop/dnFGFR/sdplot_shiftedLogtransformed.pdf")
+pdf("C:\\GitHub\\dnFGFR\\deseq_outputs\\sdplot_shiftedLogtransformed.pdf")
 meanSdPlot(assay(ntd))
 dev.off()
 
-pdf("/Users/gallifrey/Desktop/dnFGFR/sdplot_regLogtransformed.pdf")
+pdf("C:\\GitHub\\dnFGFR\\deseq_outputs\\sdplot_regLogtransformed.pdf")
 meanSdPlot(assay(rld))
 dev.off()
 
-pdf("/Users/gallifrey/Desktop/dnFGFR/sdplot_varstabilizedtransformed.pdf")
+pdf("C:\\GitHub\\dnFGFR\\deseq_outputs\\sdplot_varstabilizedtransformed.pdf")
 meanSdPlot(assay(vst))
 dev.off()
 ```
 
 #check to see what is the dominant driver of gene expression differences
 ```{r}
-pdf("allsamples_genotype_PCA.pdf")
+pdf("C:\\GitHub\\dnFGFR\\deseq_outputs\\allsamples_genotype_PCA.pdf")
 sampleDists <- dist(t(assay(vst)))
 plotPCA(rld, intgroup=c("genotype"))
 dev.off()
 
-pdf("allsamples_treatment_PCA.pdf")
+pdf("C:\\GitHub\\dnFGFR\\deseq_outputs\\allsamples_treatment_PCA.pdf")
 sampleDists <- dist(t(assay(vst)))
 plotPCA(rld, intgroup=c("housing"))
 dev.off()
 
-pdf("allsamples_day_PCA.pdf")
+pdf("C:\\GitHub\\dnFGFR\\deseq_outputs\\allsamples_day_PCA.pdf")
 sampleDists <- dist(t(assay(vst)))
 plotPCA(rld, intgroup=c("time"))
 dev.off()
