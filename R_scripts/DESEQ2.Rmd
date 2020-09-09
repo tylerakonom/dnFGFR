@@ -16,8 +16,8 @@ ALLOW_WGCNA_THREADS=8
 
 #Load counts and sample info
 ```{r}
-counts = read.table("allSamplesFixed.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("coldataAllSamplesFixed.txt", header=TRUE, sep="\t")
+counts = read.table("all_counts.txt", header=TRUE, row.names=1, sep="\t")
+coldata = read.table("all_coldata.txt", header=TRUE, sep="\t")
 ```
 
 #remove length from counts table
@@ -33,6 +33,7 @@ PN140counts <- select(counts, contains("B"))
 PN140coldata <- filter(coldata, time=="PN140")
 PN140DNcounts <- select(PN140counts, contains("B2"))
 PN140DNcoldata <- filter(PN140coldata, genotype =="dnFGFR")
+PN140DNcoldata['time'] = NULL
 ```
 
 #sort coldata so it matches counts table columns
@@ -140,7 +141,6 @@ dds <- dds[keep,]
 
 #set comparison level, 
 dds$housing <- relevel(dds$housing, ref = "same")
-dds$genotype <- relevel(dds$genotype, ref = "ctrl")
 
 #perform normalization, dispersion estimate, and statistical tests
 dds = DESeq(dds)
