@@ -89,7 +89,7 @@ plotPCA(rld, intgroup=c("time"))
 dev.off()
 ```
 
-# PN140 effect of housing on dnFGFR animals
+# PN140 effect of housing on dnFGFR animals only
 ```{r}
 #Designate Files
 setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\dn_housing\\")
@@ -127,7 +127,7 @@ dev.off()
 
 ```
 
-# PN140 effect of housing at PN140
+# PN140 effect of housing
 ```{r}
 #Designate Files
 setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\housing\\")
@@ -167,104 +167,8 @@ dev.off()
 ```
 
 
-# PCA FIXED All samples, effect of housing controlling for genotype and time
-```{r}
-#Designate Files
-setwd("/Users/gallifrey/Desktop/dnFGFR/allsamplesfixed/deseq2/genotype/")
 
-counts1 = read.table("allSamplesFixed.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("coldataAllSamplesFixed.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts1['Length'] = NULL
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~ housing + time + genotype)
-
-#remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
-
-#set comparison level, 
-dds$housing <- relevel(dds$housing, ref = "same")
-dds$genotype <- relevel(dds$genotype, ref = "ctrl")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("all_fixed_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="all_fixed_genotype_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="all_fixed_genotype_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("all_fixed_genotype_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-```
-
-
-
-# PCA FIXED All samples, effect of interaction term housing*time
-```{r}
-#Designate Files
-setwd("/Users/gallifrey/Desktop/dnFGFR/allsamplesfixed/deseq2/interaction/")
-
-counts1 = read.table("allSamplesFixed.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("coldataAllSamplesFixed.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts1['Length'] = NULL
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~ housing + time + genotype + housing:genotype)
-
-#remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
-
-#set comparison level, 
-dds$housing <- relevel(dds$housing, ref = "same")
-dds$genotype <- relevel(dds$genotype, ref = "ctrl")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("all_fixed_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="all_fixed_interaction_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="all_fixed_interaction_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("all_fixed_interaction_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-```
-
-
-
-
-# PN140 dnFGFR effect of housing
+# OLD SCRIPT: PN140 dnFGFR effect of housing
 ```{r}
 setwd("/Users/gallifrey/Desktop/dnFGFR/PN140 dnFGFR/")
 #Designate Files
