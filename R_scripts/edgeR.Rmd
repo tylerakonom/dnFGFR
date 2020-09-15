@@ -28,3 +28,11 @@ coldata_sort <-coldata[order(coldata$sample),]
 y <- DGEList(counts = counts_sort, group = coldata_sort$group)
 ```
 
+
+# Filter by low expression
+```{r}
+keep <- filterByExpr(y)
+y <- y[keep, , keep.lib.sizes=FALSE]
+```
+
+

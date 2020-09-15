@@ -1,0 +1,2 @@
+"0","counts = read.table(""all_counts.txt"", header=TRUE, row.names=1, sep=""\t"")"
+"0","coldata = read.table(""all_coldata.txt"", header=TRUE, sep=""\t"")"

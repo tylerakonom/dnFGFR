@@ -1,0 +1,38 @@
+---
+title: "edgeR"
+author: "Tyler Akonom"
+date: "9/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+require("knitr")
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+opts_knit$set(root.dir = "C:\\GitHub\\dnFGFR\\edgeR_outputs\\")
+library(dplyr)
+library(DESeq2)
+library(ggplot2)
+library(magrittr)
+library(edgeR)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Bring in counts and group data
+```{r}
+counts = read.table("all_counts.txt", header=TRUE, row.names=1, sep="\t")
+coldata = read.table("all_coldata.txt", header=TRUE, sep="\t")
+counts_sort <- counts[,order(colnames(counts))]
+coldata_sort <-coldata[order(coldata$sample),]
+y <- DGEList(counts = counts_sort, group = coldata_sort$group)
+```
+
+
+# Filter by low expression
+```{r}
+keep <- filterByExpr(y)
+y <- y[keep, , keep.lib.sizes=FALSE]
+```
+
+
