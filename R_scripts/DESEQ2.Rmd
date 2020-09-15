@@ -11,6 +11,7 @@ library(dplyr)
 library(DESeq2)
 library(knitr)
 library(ggplot2)
+library(magrittr)
 ALLOW_WGCNA_THREADS=8
 ```
 
@@ -86,7 +87,7 @@ dev.off()
 
 pdf("allsamples_day_PCA.pdf")
 sampleDists <- dist(t(assay(vst)))
-plotPCA(rld, intgroup=c("time"))
+#plotPCA(rld, intgroup=c("time"))
 dev.off()
 ```
 
@@ -166,6 +167,81 @@ dev.off()
 
 ```
 
+# PN140 effect of housing, controlling for genotype
+```{r}
+#Designate Files
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\housing-gen\\")
+
+dds = DESeqDataSetFromMatrix(countData = PN140counts, colData = PN140coldata, design = ~genotype + housing)
+
+#remove low count genes (anything less than 20 reads)
+keep <- rowSums(counts(dds)) >= 20
+dds <- dds[keep,]
+
+#set comparison level, 
+dds$housing <- relevel(dds$housing, ref = "same")
+
+#perform normalization, dispersion estimate, and statistical tests
+dds = DESeq(dds)
+
+#plot dispersions
+pdf("housing-gen_dispersionPlot.pdf")
+plotDispEsts(dds )
+dev.off()
+
+#write out normalized counts
+normed = counts(dds, normalized=TRUE)
+write.csv(normed, file="PN140_normCounts.csv")
+
+#write out statistical results
+res <- results(dds)
+write.csv(as.data.frame(res), file="PN140_housing-gen_results.csv")
+
+#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
+pdf("PN140_housing-gen_MAPlot.pdf")
+DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
+abline(h=c(-1,1), col="dodgerblue", lwd=2)
+dev.off()
+
+```
+
+# PN140 effect of genotype, controlling for housing
+```{r}
+#Designate Files
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\genotype-housing\\")
+
+dds = DESeqDataSetFromMatrix(countData = PN140counts, colData = PN140coldata, design = ~ housing + genotype)
+
+#remove low count genes (anything less than 20 reads)
+keep <- rowSums(counts(dds)) >= 20
+dds <- dds[keep,]
+
+#set comparison level, 
+dds$housing <- relevel(dds$housing, ref = "same")
+
+#perform normalization, dispersion estimate, and statistical tests
+dds = DESeq(dds)
+
+#plot dispersions
+pdf("genotype-housing_dispersionPlot.pdf")
+plotDispEsts(dds )
+dev.off()
+
+#write out normalized counts
+normed = counts(dds, normalized=TRUE)
+write.csv(normed, file="PN140_normCounts.csv") 
+
+#write out statistical results
+res <- results(dds)
+write.csv(as.data.frame(res), file="PN140_genotype-housing_results.csv")
+
+#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
+pdf("PN140_genotype-housing_MAPlot.pdf")
+DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
+abline(h=c(-1,1), col="dodgerblue", lwd=2)
+dev.off()
+
+```
 
 
 # OLD SCRIPT: PN140 dnFGFR effect of housing
@@ -184,6 +260,7 @@ dds <- dds[keep,]
 
 #set comparison level, 
 dds$housing <- relevel(dds$housing, ref = "same")
+# dds$genotype <- relevel(dds$genotype, ref = "ctrl")
 
 #perform normalization, dispersion estimate, and statistical tests
 dds = DESeq(dds)
@@ -209,362 +286,21 @@ dev.off()
 
 ```
 
-# PN140 Control effect of housing
+
+#Checking Results PN140
 ```{r}
-setwd("/Users/gallifrey/Desktop/dnFGFR/PN140 control/")
-#Designate Files
-counts1 = read.table("PN140control_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("PN140control_coldata.txt", header=TRUE, row.names=1, sep="\t")
+goi <- "ENSMUSG00000037461"
+goi.count <- as.data.frame(normed[goi,])
+names(goi.count) <- goi
+t.goi.count <- as.data.frame(t(goi.count))
 
-#remove length column
-counts1['Length'] = NULL
 
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~housing)
-
-#remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
-
-#set comparison level, 
-dds$housing <- relevel(dds$housing, ref = "same")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("PN140control_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="PN140controlNormCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="PN140control_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("PN140control_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
+COS140 <- dplyr::filter(goi.count, contains("B110"))
+CSS140 <- dplyr::select(goi.count, contains("B111"))
+DOS140 <- dplyr::select(goi.count, contains("B210"))
+DSS140 <- dplyr::select(goi.count, contains("B211"))
+goi.sorted <- data.frame(COS140, CSS140, DOS140, DSS140)
+names(goi.sorted) <- data.frame("C-SS", "C-OS", "D-SS", "D-OS")
 
 ```
-
-#Comparing effect of housing in 40D animals controlling for genotype
-```{r}
-#Designate Files
-counts1 = read.table("40D_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("40D_coldata.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts1['Length'] = NULL
-
-#remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~genotype + housing)
-
-#set comparison level, 
-dds$housing <- relevel(dds$housing, ref = "same")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("40D_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="40D_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="40D_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("40D_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-```
-
-#Comparing effect of housing in 120D animals controlling for genotype
-```{r}
-#Designate Files
-counts2 = read.table("120D_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("120D_coldata.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts2['Length'] = NULL
-
-#remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts2, colData = coldata, design = ~genotype + housing)
-
-#set comparison level, 
-dds$housing <- relevel(dds$housing, ref = "same")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("120D_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="120D_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="120D_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("120D_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-```
-
-
-#Comparing effect of genotype on 40D animals while controlling for housing
-```{r}
-#Designate Files
-counts1 = read.table("40D_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("40D_coldata.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts1['Length'] = NULL
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~housing + genotype)
-
-#set comparison level, 
-#dds$housing <- relevel(dds$housing, ref = "same")
-
-dds$genotype <- relevel(dds$genotype, ref = "ctrl")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("40D_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="40D_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="40D_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("40D_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-```
-
-
-#Comparing effect of genotype on 120D animals while controlling for housing
-```{r}
-#Designate Files
-counts2 = read.table("120D_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("120D_coldata.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts2['Length'] = NULL
-
-#remove low count genes (anything less than 20 reads)
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts2, colData = coldata, design = ~ housing + genotype)
-
-#set comparison level, 
-dds$genotype <- relevel(dds$genotype, ref = "ctrl")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("120D_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="120D_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="120D_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("120D_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-```
-
-
-# All samples, effect of genotype controlling for housing and time
-```{r}
-#Designate Files
-setwd("/Users/gallifrey/Desktop/dnFGFR/allsamples/deseq2/genotype/")
-
-counts1 = read.table("all_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("all_coldata.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts1['Length'] = NULL
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~ housing + time + genotype)
-
-#remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
-
-#set comparison level, 
-dds$housing <- relevel(dds$housing, ref = "same")
-dds$genotype <- relevel(dds$genotype, ref = "ctrl")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("all_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="all_genotype_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="all_genotype_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("all_genotype_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-```
-
-
-# All samples, effect of housing controlling for genotype and time
-```{r}
-#Designate Files
-setwd("/Users/gallifrey/Desktop/dnFGFR/allsamples/deseq2/housing/")
-
-counts1 = read.table("all_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("all_coldata.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts1['Length'] = NULL
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~ genotype + time + housing)
-
-#remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
-
-#set comparison level, 
-dds$housing <- relevel(dds$housing, ref = "same")
-dds$genotype <- relevel(dds$genotype, ref = "ctrl")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("all_housing_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="all_housing_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="all_housing_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("all_housing_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-```
-
-
-# ----------------------------------------------------------------------
-
-#Example of basic comparison of OppSex vs SameSex in 40D control mice. - From Patrick
-```{r}
-#read in files
-counts1 = read.table("control_40D_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("control_40D_coldata.txt", header=TRUE, sep="\t")
-
-#remove length column
-counts1['Length'] = NULL
-
-#remove low count genes
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
-
-
-#set dds object, define design
-dds = DESeqDataSetFromMatrix(countData = counts1, colData = coldata, design = ~housing)
-
-
-#set comparison level, 
-dds$housing <- relevel(dds$housing, ref = "sameSex")
-
-#perform normalization, dispersion estimate, and statistical tests
-dds = DESeq(dds)
-
-#plot dispersions
-pdf("control_40D_dispersionPlot.pdf")
-plotDispEsts(dds )
-dev.off()
-
-#write out normalized counts
-normed = counts(dds, normalized=TRUE)
-write.csv(normed, file="control_40D_normCounts.csv")
-
-#write out statistical results
-res <- results(dds)
-write.csv(as.data.frame(res), file="control_40D_results.csv")
-
-#plot fold changes with 2 fold blue line added, alpha is FDR cutoff, change to whatever cutoff you want
-pdf("control_40D_MAPlot.pdf")
-DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-
-```
-
-
 
