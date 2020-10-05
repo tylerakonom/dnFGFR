@@ -25,7 +25,7 @@ counts = read.table("all_counts.txt", header=TRUE, row.names=1, sep="\t")
 coldata = read.table("all_coldata.txt", header=TRUE, sep="\t")
 counts_sort <- counts[,order(colnames(counts))]
 coldata_sort <-coldata[order(coldata$sample),]
-y <- DGEList(counts = counts_sort, group = coldata_sort$group)
+y <- DGEList(counts = counts_sort, group = coldata_sort)
 ```
 
 
@@ -34,5 +34,42 @@ y <- DGEList(counts = counts_sort, group = coldata_sort$group)
 keep <- filterByExpr(y)
 y <- y[keep, , keep.lib.sizes=FALSE]
 ```
+
+
+# Normalizing The Data
+```{r}
+y <- calcNormFactors(y)
+```
+
+
+# Using a single factor test to determine DEGs
+_____________________________________________________________________________
+
+
+# Sorting data for PN140 animals
+```{r}
+require(dplyr)
+PN140counts <- select(counts, contains("B"))
+PN140coldata <- filter(coldata, time=="PN140")
+PN140DNcounts <- select(PN140counts, contains("B2"))
+PN140DNcoldata <- filter(PN140coldata, genotype =="dnFGFR")
+PN140DNcoldata['time'] = NULL
+
+DN140 <- DGEList(counts = PN140DNcounts, group = PN140DNcoldata$group)
+keep <- filterByExpr(DN140)
+DN140 <- DN140[keep, , keep.lib.sizes=FALSE]
+DN140 <- calcNormFactors(DN140)
+```
+
+
+# Estimating dispersion factors with two groups
+```{r}
+
+DN140 <- estimateDisp(DN140)
+DN140 <- estimateCommonDisp(DN140)
+DN140 <- estimateTagwiseDisp(DN140)
+```
+
+
 
 
