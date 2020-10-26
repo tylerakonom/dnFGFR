@@ -1,39 +1,39 @@
-sampleName	time	housing	genotype
-A1016	PN60	same	ctrl
-A1017	PN60	same	ctrl
-A1018	PN60	same	ctrl
-A1019	PN60	same	ctrl
-A1020	PN60	same	ctrl
-A1006	PN60	opposite	ctrl
-A1007	PN60	opposite	ctrl
-A1008	PN60	opposite	ctrl
-A1009	PN60	opposite	ctrl
-A1010	PN60	opposite	ctrl
-A2011	PN60	same	dnFGFR
-A2012	PN60	same	dnFGFR
-A2013	PN60	same	dnFGFR
-A2014	PN60	same	dnFGFR
-A2015	PN60	same	dnFGFR
-A2001	PN60	opposite	dnFGFR
-A2003	PN60	opposite	dnFGFR
-A2004	PN60	opposite	dnFGFR
-A2005	PN60	opposite	dnFGFR
-B1116	PN140	same	ctrl
-B1117	PN140	same	ctrl
-B1118	PN140	same	ctrl
-B1119	PN140	same	ctrl
-B1120	PN140	same	ctrl
-B1106	PN140	opposite	ctrl
-B1107	PN140	opposite	ctrl
-B1108	PN140	opposite	ctrl
-B1109	PN140	opposite	ctrl
-B1110	PN140	opposite	ctrl
-B2111	PN140	same	dnFGFR
-B2112	PN140	same	dnFGFR
-B2113	PN140	same	dnFGFR
-B2115	PN140	same	dnFGFR
-B2101	PN140	opposite	dnFGFR
-B2102	PN140	opposite	dnFGFR
-B2103	PN140	opposite	dnFGFR
-B2104	PN140	opposite	dnFGFR
-B2105	PN140	opposite	dnFGFR
+sampleName	time	housing	genotype	cage
+A1016	PN60	same	ctrl	A1016
+A1017	PN60	same	ctrl	A1017
+A1018	PN60	same	ctrl	A1018
+A1019	PN60	same	ctrl	A1019
+A1020	PN60	same	ctrl	A1020
+A1006	PN60	opposite	ctrl	A1006
+A1007	PN60	opposite	ctrl	A1007
+A1008	PN60	opposite	ctrl	A1008
+A1009	PN60	opposite	ctrl	A1009
+A1010	PN60	opposite	ctrl	A1010
+A2011	PN60	same	dnFGFR	A2011
+A2012	PN60	same	dnFGFR	A2012
+A2013	PN60	same	dnFGFR	A2013
+A2014	PN60	same	dnFGFR	A2014
+A2015	PN60	same	dnFGFR	A2015
+A2001	PN60	opposite	dnFGFR	A2001
+A2003	PN60	opposite	dnFGFR	A2003
+A2004	PN60	opposite	dnFGFR	A2004
+A2005	PN60	opposite	dnFGFR	A2005
+B1116	PN140	same	ctrl	B1116
+B1117	PN140	same	ctrl	B1117
+B1118	PN140	same	ctrl	B1118
+B1119	PN140	same	ctrl	B1119
+B1120	PN140	same	ctrl	B1120
+B1106	PN140	opposite	ctrl	B1106
+B1107	PN140	opposite	ctrl	B1107
+B1108	PN140	opposite	ctrl	B1108
+B1109	PN140	opposite	ctrl	B1109
+B1110	PN140	opposite	ctrl	B1110
+B2111	PN140	same	dnFGFR	B2111
+B2112	PN140	same	dnFGFR	B2112
+B2113	PN140	same	dnFGFR	B2113
+B2115	PN140	same	dnFGFR	B2115
+B2101	PN140	opposite	dnFGFR	B2101
+B2102	PN140	opposite	dnFGFR	B2102
+B2103	PN140	opposite	dnFGFR	B2103
+B2104	PN140	opposite	dnFGFR	B2104
+B2105	PN140	opposite	dnFGFR	B2105
