@@ -8,8 +8,8 @@
 export PATH=$PATH:/projects/ehringer/software/scripts 
 ml singularity
 
-mkdir /scratch/summit/tyak9569/dnFGFR
-mkdir /scratch/summit/tyak9569/dnFGFR/trimmedReads
+mkdir -p /scratch/summit/tyak9569/dnFGFR
+mkdir -p /scratch/summit/tyak9569/dnFGFR/trimmedReads
 
 FILES1=/projects/tyak9569/dnFGFR/data/*_1*.fq.gz
 for f in $FILES1
