@@ -3,54 +3,73 @@
 library(Rsubread)
 
 files=c(
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1006.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1007.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1008.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1009.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1010.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1016.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1017.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1018.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1019.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1020.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1106.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1107.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1108.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1109.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1110.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1116.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1117.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1118.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1119.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_1120.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2001.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2002.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2003.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2004.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2005.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2011.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2012.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2013.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2014.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2015.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2101.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2102.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2103.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2104.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2105.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2111.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2112.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2113.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2114.bam',
-'/scratch/summit/tyak9569/dnFGFR/PrimaryAligned/aligned_primary_2115.bam')
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1006.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1007.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1008.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1009.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1010.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1016.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1017.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1018.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1019.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1020.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1106.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1107.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1108.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1109.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1110.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1116.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1117.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1118.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1119.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B1120.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2001.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2002.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2003.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2004.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2005.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2011.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2012.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2013.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2014.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A2015.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2101.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2102.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2103.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2104.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2105.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2111.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2112.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2113.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2114.sort.bam',
+'/scratch/summit/tyak9569/dnFGFR/aligned/sorted/B2115.sort.bam')
 
 ## Point to GTF file:
 
-gtf=("/scratch/summit/tyak9569/dnFGFR/ensembl/genome/Mus_musculus.GRCm38.98.gtf")
+gtf=("/projects/tyak9569/dnFGFR/genome/Mus_musculus.GRCm38.101.gtf")
 
-##Output the file:
+## Output the file:
 
-OUT="/scratch/summit/tyak9569/dnFGFR/rsubOut/primary/"
+OUT="/scratch/summit/tyak9569/dnFGFR/rsub/"
+
+# Unstranded
+
+senseunique=featureCounts(files,
+isGTFAnnotationFile = TRUE,
+annot.ext = gtf,
+GTF.attrType = "gene_id",
+allowMultiOverlap = FALSE,
+nthreads = 18,
+isPairedEnd=TRUE,
+strandSpecific = 0)
+
+write.table(x=data.frame(
+senseunique$annotation[,c("GeneID","Length")],
+senseunique$counts,stringsAsFactors=FALSE),
+file=paste(OUT,"rsubread_senseunique_0.txt"),
+quote=FALSE,sep="\t",row.names=FALSE) 
+
+# Forward Stranded
 
 senseunique=featureCounts(files,
 isGTFAnnotationFile = TRUE,
@@ -64,8 +83,27 @@ strandSpecific = 1)
 write.table(x=data.frame(
 senseunique$annotation[,c("GeneID","Length")],
 senseunique$counts,stringsAsFactors=FALSE),
-file=paste(OUT,"Rsubread_senseunique.txt"),
+file=paste(OUT,"rsubread_senseunique_1.txt"),
 quote=FALSE,sep="\t",row.names=FALSE) 
+
+# Reverse Stranded
+
+senseunique=featureCounts(files,
+isGTFAnnotationFile = TRUE,
+annot.ext = gtf,
+GTF.attrType = "gene_id",
+allowMultiOverlap = FALSE,
+nthreads = 18,
+isPairedEnd=TRUE,
+strandSpecific = 2)
+
+write.table(x=data.frame(
+senseunique$annotation[,c("GeneID","Length")],
+senseunique$counts,stringsAsFactors=FALSE),
+file=paste(OUT,"rsubread_senseunique_2.txt"),
+quote=FALSE,sep="\t",row.names=FALSE) 
+
+# Antisense
 
 antisenseunique=featureCounts(files,
 isGTFAnnotationFile = TRUE,
