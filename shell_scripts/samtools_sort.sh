@@ -26,4 +26,4 @@ mkdir -p $outdirectory
 
 # Merge files
 singularity run /projects/lowryc/software/containers/rnaseq.sif samtools sort -m 25G -o ${outdirectory}${filename}.sort.bam -T ${SLURM_JOBID} -@ 4 /scratch/summit/$USER/dnFGFR/aligned/${filename}.bam
-singularity run /projects/lowryc/software/containers/rnaseq.sif samtools index /scratch/summit/$USER/hex_acid/aligned/sorted/${filename}.sort.bam
+singularity run /projects/lowryc/software/containers/rnaseq.sif samtools index /scratch/summit/$USER/dnFGFR/aligned/sorted/${filename}.sort.bam
