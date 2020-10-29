@@ -1,6 +1,7 @@
 ##Running Rsubread for counts:
 
 library(Rsubread)
+TMP = "/scratch/summit/tyak9569/dnFGFR/rsub/"
 
 files=c(
 '/scratch/summit/tyak9569/dnFGFR/aligned/sorted/A1006.sort.bam',
