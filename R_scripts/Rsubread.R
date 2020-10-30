@@ -1,5 +1,9 @@
 ##Running Rsubread for counts:
 
+# $ source /curc/sw/anaconda/default
+# $ conda activate r361
+# $ R
+
 library(Rsubread)
 TMP = "/scratch/summit/tyak9569/dnFGFR/rsub/"
 
@@ -47,7 +51,7 @@ files=c(
 
 ## Point to GTF file:
 
-gtf=("/projects/tyak9569/dnFGFR/genome/Mus_musculus.GRCm38.101.gtf")
+gtf=("/projects/tyak9569/dnFGFR/genome/fixedgenes.gtf")
 
 ## Output the file:
 
@@ -60,7 +64,7 @@ isGTFAnnotationFile = TRUE,
 annot.ext = gtf,
 GTF.attrType = "gene_id",
 allowMultiOverlap = FALSE,
-nthreads = 18,
+nthreads = 36,
 isPairedEnd=TRUE,
 strandSpecific = 0)
 

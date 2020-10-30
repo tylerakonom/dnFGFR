@@ -12,18 +12,25 @@ library(DESeq2)
 library(knitr)
 library(ggplot2)
 library(magrittr)
-ALLOW_WGCNA_THREADS=8
 ```
 
 #Load counts and sample info
 ```{r}
-counts = read.table("all_counts.txt", header=TRUE, row.names=1, sep="\t")
-coldata = read.table("all_coldata.txt", header=TRUE, sep="\t")
+counts = read.table("counts_0.txt", header=TRUE, row.names=1, sep="\t")
+coldata = read.table("coldata.txt", header=TRUE, sep="\t")
 ```
 
 #remove length from counts table
 ```{r}
-#counts['Length'] = NULL
+counts['Length'] = NULL
+```
+
+#sort coldata so it matches counts table columns
+```{r}
+coldata_s <-coldata[order(coldata$sample),]
+rownames(coldata_s) = coldata_s$sampleName
+coldata_s['sampleName'] = NULL
+coldata <- coldata_s
 ```
 
 # Filter data to show different cohorts
@@ -37,15 +44,11 @@ PN140DNcoldata <- filter(PN140coldata, genotype =="dnFGFR")
 PN140DNcoldata['time'] = NULL
 ```
 
-#sort coldata so it matches counts table columns
-```{r}
-coldata_sort <-coldata[order(coldata$sample),]
-```
 
 
 #make deseq2 object
 ```{r}
-dds = DESeqDataSetFromMatrix(countData = PN140DNcounts, colData = PN140DNcoldata, design= ~housing)
+dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design= ~ cage + time + housing)
 ```
 
 #transform counts for PCA plots
@@ -76,8 +79,8 @@ dev.off()
 ```{r}
 setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\pdfs\\")
 pdf("allsamples_genotype_PCA.pdf")
-sampleDists <- dist(t(assay(vst)))
-plotPCA(rld, intgroup=c("genotype"))
+sampleDists <- dist(t(assay(ntd)))
+plotPCA(rld, intgroup=c("cage"))
 dev.off()
 
 pdf("allsamples_treatment_PCA.pdf")
