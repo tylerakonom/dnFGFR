@@ -84,17 +84,17 @@ setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\pdfs\\")
 
 pdf("genotype_PCA.pdf")
 sampleDists <- dist(t(assay(ntd)))
-plotPCA(rld, intgroup=c("genotype"))
+plotPCA(ntd, intgroup=c("genotype"))
 dev.off()
 
 pdf("treatment_PCA.pdf")
 sampleDists <- dist(t(assay(ntd)))
-plotPCA(rld, intgroup=c("housing"))
+plotPCA(ntd, intgroup=c("housing"))
 dev.off()
 
 pdf("day_PCA.pdf")
-sampleDists <- dist(t(assay(vst)))
-plotPCA(rld, intgroup=c("time"))
+sampleDists <- dist(t(assay(ntd)))
+plotPCA(ntd, intgroup=c("time"))
 dev.off()
 ```
 
