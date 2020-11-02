@@ -1,0 +1,473 @@
+---
+title: "WGCNA_run1"
+output: html_document
+---
+
+
+## R Markdown
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(data.table)
+require(DESeq2)
+require(RColorBrewer)
+require(EDASeq)
+require(cqn)
+require(AnnotationDbi)
+require(org.Mm.eg.db)
+require(pheatmap)
+require(genefilter)
+require(WGCNA)
+require(GO.db)
+require(knitr)
+require(GenomicFeatures)
+require(BiocParallel)
+require(limma)
+require(ggplot2)
+ALLOW_WGCNA_THREADS=8
+knitr::opts_knit$set(root.dir ="/Users/patrickgonzales/Desktop/Yongjie_WGCNA")
+```
+
+#read in counts and coldata for DESeq2
+
+```{r}
+counts = read.table("PRHC_norm.txt", header=TRUE, row.names=1, sep="\t")
+coldata = read.table("PRHC_colData_forWGNA.txt", header=TRUE, sep="\t")
+dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design= ~batch + sex + genotype)
+```
+
+#remove low expressed genes and set levels
+
+```{r}
+keep <- rowSums(counts(dds)) >= 10
+dds <- dds[keep,]
+dds$genotype <- factor(dds$genotype, levels = c("GFP","PR50"))
+```
+
+#use sizeFactors from file
+
+```{r}
+sizeFactors(dds) =coldata$sizeFactors
+```
+
+#run DESeq
+
+```{r}
+dds = DESeq(dds, test="Wald")
+```
+
+#check out results
+
+```{r}
+res <- results(dds, alpha=0.01)
+resSig = subset(res, padj < 0.01)
+summary(res)
+```
+
+#plot MA and make sigdiff only table
+
+```{r}
+resSig <- resSig[order(resSig$padj),]
+
+resSig$symbol <- mapIds(org.Mm.eg.db,
+                     keys=row.names(resSig),
+                     column="SYMBOL",
+                     keytype="SYMBOL",
+                     multiVals="first")
+resSig$entrez <- mapIds(org.Mm.eg.db,
+                     keys=row.names(resSig),
+                     column="ENTREZID",
+                     keytype="SYMBOL",
+                     multiVals="first")
+
+write.table(resSig, file="GFP_vs_PR50_DESeq2results.txt", quote=FALSE, sep="\t", col.names = NA)
+```
+
+#transform dds
+
+```{r}
+rld <- rlog(dds, blind=FALSE)
+vst <- vst(dds, blind=FALSE)
+ntd <- normTransform(dds)
+```
+
+#make heatmap of signficant genes
+
+```{r}
+mat.sig.15m  <- assay(rld)[ rownames(resSig), ]
+mat.sig.15m  <- mat.sig.15m - rowMeans(mat.sig.15m)
+anno.sig.15m <- as.data.frame(colData(rld)[, c("genotype")])
+rownames(anno.sig.15m) <- rownames(colData(rld))
+colnames(anno.sig.15m) <- "genotype"
+
+pheatmap(mat.sig.15m, annotation_col = anno.sig.15m, show_colnames = FALSE, show_rownames=FALSE)
+
+pdf("PR50_GFP_mice-cluster_significant_genes.pdf")
+grid::grid.draw(pheatmap(mat.sig.15m, annotation_col = anno.sig.15m, show_colnames=FALSE, show_rownames=FALSE)$gtable)
+dev.off()
+```
+
+#remove batch effects
+
+```{r}
+batch=c("1", "2", "2", "1", "1", "2", "2", "1", "1", "2", "2")
+rmvBatch_ntd = limma::removeBatchEffect(assay(ntd), ntd$batch)
+write.table(rmvBatch_ntd, "PR_ntd_batchRemoved.txt", sep="\t")
+
+# for plotting pca after batch removal
+assay(rld) = limma::removeBatchEffect(assay(rld), rld$batch)
+
+assay(ntd)= limma::removeBatchEffect(assay(ntd), ntd$batch)
+pcaData <- plotPCA(rld, intgroup=c("genotype", "sex"), returnData=TRUE)
+percentVar <- round(100 * attr(pcaData, "percentVar"))
+ggplot(pcaData, aes(PC1, PC2, color=genotype, shape=sex)) +
+  geom_point(size=3) +
+  xlab(paste0("PC1: ",percentVar[1],"% variance")) +
+  ylab(paste0("PC2: ",percentVar[2],"% variance")) + 
+  coord_fixed()
+```
+```{r}
+mat.sig.15m  <- assay(rld)[ rownames(resSig), ]
+mat.sig.15m  <- mat.sig.15m - rowMeans(mat.sig.15m)
+anno.sig.15m <- as.data.frame(colData(rld)[, c("genotype")])
+rownames(anno.sig.15m) <- rownames(colData(rld))
+colnames(anno.sig.15m) <- "genotype"
+
+pheatmap(mat.sig.15m, annotation_col = anno.sig.15m, show_colnames = FALSE, show_rownames=FALSE)
+
+pdf("PR50_GFP_mice-cluster_significant_genes_nobatch.pdf", width=2.25, height=3.5)
+grid::grid.draw(pheatmap(mat.sig.15m, annotation_col = anno.sig.15m, annotation_legend = FALSE, fontsize = 7, show_colnames=FALSE, show_rownames=FALSE)$gtable)
+dev.off()
+```
+
+
+#######read in data, set WGCNA options######
+
+
+```{r}
+options(stringsAsFactors = FALSE);
+#Read in the data set
+df = read.csv("PR_batchCorr_logReversed.txt", sep='\t', header=TRUE);
+# Take a quick look at what is in the data set:
+dim(df);
+names(df);
+```
+
+#transpose dataframe for WGCNA
+
+```{r}
+datExpr1 = as.data.frame(t(df[,-c(1:1) ]));
+names(datExpr1) = df$Gene;
+rownames(datExpr1) = names(df)[-c(1:1)];
+```
+
+#data cleaning: genes and sample.
+
+```{r}
+gsg = goodSamplesGenes(datExpr1, verbose = 3);
+if (!gsg$allOK) {
+  # Optionally, print the gene and sample names that were removed:
+  if (sum(!gsg$goodGenes)>0)
+    printFlush(paste("Removing genes:", paste(names(datExpr1)[!gsg$goodGenes], collapse = ", ")));
+  if (sum(!gsg$goodSamples)>0)
+    printFlush(paste("Removing samples:", paste(rownames(datExpr1)[!gsg$goodSamples], collapse = ", ")));
+  # Remove the offending genes and samples from the data:
+  datExpr1 <- datExpr1[gsg$goodSamples, gsg$goodGenes]
+}
+```
+```{r}
+sampleTree = hclust(dist(datExpr1), method = "average");
+# Plot the sample tree: Open a graphic output window of size 12 by 9 inches
+# The user should change the dimensions if the window is too large or too small.
+sizeGrWindow(12,9)
+#pdf(file = "Plots/sampleClustering.pdf", width = 12, height = 9);
+par(cex = 0.6);
+par(mar = c(0,4,2,0))
+plot(sampleTree, main = "Sample clustering to detect outliers", sub="", xlab="", cex.lab = 1.5,
+     cex.axis = 1.5, cex.main = 2)
+```
+
+#read in meta info and assign sex as factor
+
+```{r}
+allTraits =read.table("PRHC_colData_forWGNA.txt", sep="\t", header=TRUE)
+allTraits = allTraits[, -c(4,5)];
+
+factorlist = as.factor(c(allTraits$sex))
+allTraits$Gender_Factors = as.numeric(factorlist)
+
+factorlist = as.factor(c(allTraits$genotype))
+allTraits$genotype_Factors = as.numeric(factorlist)
+
+ls.str(allTraits)
+```
+
+#can use the colData here
+
+```{r}
+# Form a data frame analogous to expression data that will hold the clinical traits.
+
+cleanedSamples = rownames(datExpr1);
+traitRows = match(cleanedSamples, allTraits$sample);
+dataTraits = allTraits[traitRows, -1];
+rownames(dataTraits) = allTraits[traitRows, 1];
+
+collectGarbage();
+
+
+dataTraits <- subset( dataTraits, select = -sex ) 
+dataTraits <- subset( dataTraits, select = -genotype ) #Get rid of length column
+#Get rid of length column
+```
+
+#make trait and dendrogram heatmap
+
+```{r}
+# Re-cluster samples
+sampleTree2 = hclust(dist(datExpr2), method = "average")
+# Convert traits to a color representation: white means low, red means high, grey means missing entry
+traitColors = numbers2colors(d_datTraits, signed = FALSE);
+# Plot the sample dendrogram and the colors underneath.
+plotDendroAndColors(sampleTree2, traitColors,
+                    groupLabels = names(d_datTraits),
+                    main = "Sample dendrogram and trait heatmap")
+
+png(filename="Sample dendrogram and trait heatmap.png",width=800,height=500,res=72) #Open png to write out
+
+dev.off()
+```
+
+# pick soft thresholding, make sure to pick power above 0.7 R2. If many options pick where plateua starts.
+
+```{r}
+# Choose a set of soft-thresholding powers
+powers = c(c(1:10), seq(from = 12, to=20, by=2))
+# Call the network topology analysis function
+sft = pickSoftThreshold(datExpr2, powerVector = powers, verbose = 5)
+# Plot the results:
+sizeGrWindow(9, 5)
+par(mfrow = c(1,2));
+cex1 = 0.9;
+# Scale-free topology fit index as a function of the soft-thresholding power
+plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+     xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
+     main = paste("Scale independence"));
+text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+     labels=powers,cex=cex1,col="red");
+# this line corresponds to using an R^2 cut-off of h
+abline(h=0.8,col="red")
+# Mean connectivity as a function of the soft-thresholding power
+plot(sft$fitIndices[,1], sft$fitIndices[,5],
+     xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
+     main = paste("Mean connectivity"))
+text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
+```
+
+#initialize network, set power based on soft power result above
+
+```{r}
+net = blockwiseModules(datExpr1, power =9,
+                       TOMType = "signed", minModuleSize = 10,
+                       reassignThreshold = 0, mergeCutHeight = 0.01,
+                       numericLabels = TRUE, pamRespectsDendro = FALSE,
+                       saveTOMs = TRUE, nThreads=8,
+                       saveTOMFileBase = "GFPvsPR50_pow9_signed",
+                       verbose = 3)
+```
+
+#plot module dendrogram
+
+```{r}
+table(labels2colors(net$colors))
+# open a graphics window
+sizeGrWindow(12, 9)
+# Convert labels to colors for plotting
+mergedColors = labels2colors(net$colors)
+# Plot the dendrogram and the module colors underneath
+plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
+                    "Module colors",
+                    dendroLabels = FALSE, hang = 0.03,
+                    addGuide = TRUE, guideHang = 0.05)
+```
+
+#save intermediary file
+
+```{r}
+moduleLabels = net$colors
+moduleColors = labels2colors(moduleLabels)
+MEs = net$MEs;
+geneTree = net$dendrograms[[1]];
+save(MEs, moduleLabels, moduleColors, geneTree,
+     file = "GFPvsPR50_pow9_signed_batchcorr_revlog-networkConstruction-auto.RData")
+```
+
+#write out significance of each module and the correlation, plot module correlation with traits
+
+```{r}
+# Define numbers of genes and samples
+nGenes = ncol(datExpr1);
+nSamples = nrow(datExpr1);
+# Recalculate MEs with color labels
+MEs0 = moduleEigengenes(datExpr1, moduleColors)$eigengenes
+MEs = orderMEs(MEs0)
+moduleTraitCor = cor(MEs, allTraits, use = "p")
+moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples)
+
+tmp<-as.data.frame(moduleTraitPvalue)
+#tmp$PR.genotype.HolmCorrected <- p.adjust(tmp$PR.genotype) # default is Holm
+tmp$Gender_Factors.HolmCorrected <- p.adjust(tmp$Gender_Factors) # default is Holm
+tmp$genotype_Factors.HolmCorrected <- p.adjust(tmp$genotype_Factors)
+head(tmp,7)
+
+write.table(tmp, file = "power9_signed_batchcorr_revlog_tmp_module_cor_pvals.txt", quote=FALSE, sep="\t")
+write.table(moduleTraitCor, file = "power9_signed_batchcorr_revlog_tmp_module_cor_betas.txt", quote=FALSE, sep="\t")
+```
+```{r}
+#sizeGrWindow(10,6)
+# Will display correlations and their p-values
+textMatrix = paste(signif(moduleTraitCor, 2), "\n(",
+                   signif(moduleTraitPvalue, 1), ")", sep = "");
+head(textMatrix)
+dim(textMatrix) = dim(moduleTraitCor)
+par(mar = c(6, 8.5, 3, 3));
+# Display the correlation values within a heatmap plot
+labeledHeatmap(Matrix = moduleTraitCor,
+               xLabels = colnames(allTraits),
+               yLabels = names(MEs),
+               ySymbols = names(MEs),
+               colorLabels = FALSE,
+               colors = blueWhiteRed(50),
+               textMatrix = textMatrix,
+               setStdMargins = FALSE,
+               cex.text = 0.3,
+               cex.lab.x = 0.2,
+               zlim = c(-1,1),
+               main = paste("Module-trait relationships"))
+```
+
+#load annotation databases
+
+```{r}
+library(GO.db)
+library(AnnotationDbi)
+library(org.Mm.eg.db)
+```
+
+# run genes in each module through gene ontology. 
+
+```{r}
+# Define variable weight containing the weight column of datTrait
+genotype = as.data.frame(allTraits[,4]);
+names(genotype) = "PR.genotype"
+# names (colors) of the modules
+modNames = substring(names(MEs), 3)
+geneModuleMembership = as.data.frame(cor(datExpr1, MEs, use = "p"));
+MMPvalue = as.data.frame(corPvalueStudent(as.matrix(geneModuleMembership), nSamples));
+names(geneModuleMembership) = paste("MM", modNames, sep="");
+names(MMPvalue) = paste("p.MM", modNames, sep="");
+geneTraitSignificance = as.data.frame(cor(datExpr1, genotype, use = "p"));
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples));
+names(geneTraitSignificance) = paste("GS.", names(genotype), sep="");
+names(GSPvalue) = paste("p.GS.", names(genotype), sep="");
+
+module = "black"
+column = match(module, modNames);
+moduleGenes = moduleColors==module;
+sizeGrWindow(7, 7);
+par(mfrow = c(1,1));
+#verboseScatterplot(abs(geneModuleMembership[moduleGenes, column]),
+                   #abs(geneTraitSignificance[moduleGenes, 1]),
+                   #xlab = paste("Module Membership in", module, "module"),
+                  # ylab = "Gene sig. for hippo. and cortex weight",
+                  # main = paste("Module membership vs. gene significance\n"),
+                  # cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+
+probes2annot <- mapIds(org.Mm.eg.db,
+                     keys=colnames(datExpr1),
+                     column="SYMBOL",
+                     keytype="SYMBOL",
+                     multiVals="first")
+
+probes2ontology <- mapIds(org.Mm.eg.db,
+                     keys=colnames(datExpr1),
+                     column="ONTOLOGY",
+                     keytype="SYMBOL",
+                     multiVals="first")
+
+probes2entrez <- mapIds(org.Mm.eg.db,
+                     keys=colnames(datExpr1),
+                     column="ENTREZID",
+                     keytype="SYMBOL",
+                     multiVals="first")
+
+probes2GO <- mapIds(org.Mm.eg.db,
+                     keys=colnames(datExpr1),
+                     column="GO",
+                     keytype="SYMBOL",
+                     multiVals="first")
+
+go.term <- select(GO.db, keys=probes2GO, columns="TERM", keytype="GOID")
+
+geneInfo0 <- data.frame(ensemblID = colnames(datExpr1),
+                        geneSymbol = probes2annot,
+                        ontology = probes2ontology,
+                        go = probes2GO,
+                        go.term = go.term,
+                        entrezID = probes2entrez,
+                        moduleColor = moduleColors,
+                        geneTraitSignificance,
+                        GSPvalue
+                        )
+
+# Order modules by their significance for weight
+modOrder = order(-abs(cor(MEs,genotype, use = "p")));
+# Add module membership information in the chosen order
+for (mod in 1:ncol(geneModuleMembership))
+{
+  oldNames = names(geneInfo0)
+  geneInfo0 = data.frame(geneInfo0, geneModuleMembership[, modOrder[mod]],
+                         MMPvalue[, modOrder[mod]]);
+  names(geneInfo0) = c(oldNames, paste("MM.", modNames[modOrder[mod]], sep=""),
+                       paste("p.MM.", modNames[modOrder[mod]], sep=""))
+}
+# Order the genes in the geneInfo variable first by module color, then by geneTraitSignificance
+geneOrder = order(geneInfo0$moduleColor, -abs(geneInfo0$GS.PR.genotype));
+geneInfo = geneInfo0[geneOrder, ]
+# fix(geneInfo)
+
+colorsAndEntrez <- data.frame(moduleColors = moduleColors, entrez = probes2entrez)
+```
+```{r}
+GOenr.mf = GOenrichmentAnalysis(moduleColors, probes2entrez, ontologies="MF", organism = "mouse", pCut = 0.06);
+GOenr.bp = GOenrichmentAnalysis(moduleColors, probes2entrez, ontologies="BP", organism = "mouse", pCut = 0.06);
+GOenr.cc = GOenrichmentAnalysis(moduleColors, probes2entrez, ontologies="CC", organism = "mouse", pCut = 0.06);
+tab.mf = GOenr.mf$bestPTerms[[1]]$enrichment
+tab.bp = GOenr.bp$bestPTerms[[1]]$enrichment
+tab.cc = GOenr.cc$bestPTerms[[1]]$enrichment
+
+genes.modules <- data.frame(Module = moduleColors, Gene = probes2annot)
+
+write.table(genes.modules, file="gene_modules-merge_0.01_pow9_signed_batchcorr_revlog.xls", sep="\t", quote=FALSE, row.names = FALSE)
+write.table(rbind(tab.mf, tab.bp, tab.cc), file="enrichment_analysis-merge_0.01_power9_signed_batchcorr_revlog.xls", sep="\t", quote=FALSE, col.names = NA)
+```
+
+#plot heatmap of genes associated with module color with genotype as factor
+
+```{r}
+black.ensemble <- rownames(genes.modules[genes.modules$Module=="black",])
+black  <- assay(rld)[ black.ensemble, ]
+black  <- black - rowMeans(black)
+anno.black <- as.data.frame(colData(rld)[, c("genotype")])
+rownames(anno.black) <- rownames(colData(rld))
+colnames(anno.black) <- "genotype"
+
+pheatmap(black, annotation_col = anno.black, show_rownames=FALSE)
+
+black.resSig <- resSig[black.ensemble,]
+
+write.table(black.resSig, file="diff_exp-black.xls", quote=FALSE, sep="\t", col.names=NA)
+
+pdf("PR50_GFP_mice-black_module_genes_mice.pdf")
+grid::grid.draw(pheatmap(black, annotation_col = anno.black, show_colnames = FALSE, show_rownames=FALSE)$gtable)
+dev.off()
+```
+

@@ -16,7 +16,7 @@ library(magrittr)
 
 #Load counts and sample info
 ```{r}
-counts = read.table("counts_0.txt", header=TRUE, row.names=1, sep="\t")
+counts = read.table("refcounts.txt", header=TRUE, row.names=1, sep="\t")
 coldata = read.table("coldata.txt", header=TRUE, sep="\t")
 ```
 
@@ -27,10 +27,12 @@ counts['Length'] = NULL
 
 #sort coldata so it matches counts table columns
 ```{r}
-coldata_s <-coldata[order(coldata$sample),]
-rownames(coldata_s) = coldata_s$sampleName
-coldata_s['sampleName'] = NULL
-coldata <- coldata_s
+#coldata_s <-coldata[order(colnames(counts)),]
+#rownames(coldata) = coldata$sampleName
+#coldata['sampleName'] = NULL
+#rownames(coldata_s) = coldata_s$sampleName
+#coldata_s['sampleName'] = NULL
+#coldata <- coldata_s
 ```
 
 # Filter data to show different cohorts
@@ -48,7 +50,7 @@ PN140DNcoldata['time'] = NULL
 
 #make deseq2 object
 ```{r}
-dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design= ~ cage + time + housing)
+dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design= ~time + housing)
 ```
 
 #transform counts for PCA plots
@@ -77,20 +79,22 @@ dev.off()
 
 #check to see what is the dominant driver of gene expression differences
 ```{r}
+
 setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\pdfs\\")
-pdf("allsamples_genotype_PCA.pdf")
+
+pdf("genotype_PCA.pdf")
 sampleDists <- dist(t(assay(ntd)))
-plotPCA(rld, intgroup=c("cage"))
+plotPCA(rld, intgroup=c("genotype"))
 dev.off()
 
-pdf("allsamples_treatment_PCA.pdf")
-sampleDists <- dist(t(assay(vst)))
+pdf("treatment_PCA.pdf")
+sampleDists <- dist(t(assay(ntd)))
 plotPCA(rld, intgroup=c("housing"))
 dev.off()
 
-pdf("allsamples_day_PCA.pdf")
+pdf("day_PCA.pdf")
 sampleDists <- dist(t(assay(vst)))
-#plotPCA(rld, intgroup=c("time"))
+plotPCA(rld, intgroup=c("time"))
 dev.off()
 ```
 
@@ -105,8 +109,8 @@ setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\dn_housing\\")
 dds = DESeqDataSetFromMatrix(countData = PN140DNcounts, colData = PN140DNcoldata, design = ~ housing)
 
 #remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
+#keep <- rowSums(counts(dds)) >= 20
+#dds <- dds[keep,]
 
 #set comparison level, 
 dds$housing <- relevel(dds$housing, ref = "same")
@@ -144,8 +148,8 @@ setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\housing\\")
 dds = DESeqDataSetFromMatrix(countData = PN140counts, colData = PN140coldata, design = ~ housing)
 
 #remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
+#keep <- rowSums(counts(dds)) >= 20
+#dds <- dds[keep,]
 
 #set comparison level, 
 dds$housing <- relevel(dds$housing, ref = "same")
@@ -183,8 +187,8 @@ setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\housing-gen\\")
 dds = DESeqDataSetFromMatrix(countData = PN140counts, colData = PN140coldata, design = ~genotype + housing)
 
 #remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
+#keep <- rowSums(counts(dds)) >= 20
+#dds <- dds[keep,]
 
 #set comparison level, 
 dds$housing <- relevel(dds$housing, ref = "same")
@@ -222,8 +226,8 @@ setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\genotype-housing\\")
 dds = DESeqDataSetFromMatrix(countData = PN140counts, colData = PN140coldata, design = ~ housing + genotype)
 
 #remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
+#keep <- rowSums(counts(dds)) >= 20
+#dds <- dds[keep,]
 
 #set comparison level, 
 dds$housing <- relevel(dds$housing, ref = "same")
@@ -265,8 +269,8 @@ setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\all_samples\\housing-genotype-time\\")
 dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design = ~ genotype + time + housing)
 
 #remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
+#keep <- rowSums(counts(dds)) >= 20
+#dds <- dds[keep,]
 
 #set comparison level, 
 dds$housing <- relevel(dds$housing, ref = "same")
@@ -305,8 +309,8 @@ setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\all_samples\\genotype-time-housing\\")
 dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design = ~ time + housing + genotype)
 
 #remove low count genes (anything less than 20 reads)
-keep <- rowSums(counts(dds)) >= 20
-dds <- dds[keep,]
+#keep <- rowSums(counts(dds)) >= 20
+#dds <- dds[keep,]
 
 #set comparison level, 
 dds$housing <- relevel(dds$housing, ref = "same")
@@ -315,7 +319,7 @@ dds$genotype <- relevel(dds$genotype, ref = "ctrl")
 #perform normalization, dispersion estimate, and statistical tests
 dds = DESeq(dds)
 
-#plot dispersions
+#plot dispersions 
 pdf("genotype-time-housing_dispersionPlot.pdf")
 plotDispEsts(dds )
 dev.off()
