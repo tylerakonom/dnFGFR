@@ -42,7 +42,7 @@ A few discrepancies between the two examples given can be explained by the fact 
 
 #### Align to the Genome
 
-Trimmed samples were aligned to the NCBI ([GRCm38, mm10](https://www.ncbi.nlm.nih.gov/assembly/GCF_000001635.20/)) mouse genome using [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/manual.shtml) and [**alignReads.sh**](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/alignReads.sh). This script was queued in Summit by calling the script and inputting filenames with [**run_alignReads.sh**](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/run_alignReads.sh). This was done in the bash terminal in a "compile" node. To ssh into a compile node, this command was used:
+Trimmed samples were aligned to the NCBI ([GRCm38 mm10](https://www.ncbi.nlm.nih.gov/assembly/GCF_000001635.20/)) mouse genome using [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/manual.shtml) and [**alignReads.sh**](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/alignReads.sh). This script was queued in Summit by calling the script and inputting filenames with [**run_alignReads.sh**](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/run_alignReads.sh). This was done in the bash terminal in a "compile" node. To ssh into a compile node, this command was used:
 
 	$ ssh scompile
 
