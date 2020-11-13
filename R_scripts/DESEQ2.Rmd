@@ -12,6 +12,9 @@ library(DESeq2)
 library(knitr)
 library(ggplot2)
 library(magrittr)
+library(tidyr)
+library(tibble)
+library(DEGreport)
 ```
 
 #Load counts and sample info
@@ -50,12 +53,12 @@ PN140DNcoldata['time'] = NULL
 
 #make deseq2 object
 ```{r}
-dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design= ~time + housing)
+dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design= ~ time + genotype + housing)
 ```
 
 #transform counts for PCA plots
 ```{r}
-rld <- rlog(dds, blind=FALSE)
+rld <- rlog(dds, blind=TRUE)
 vst <- vst(dds, blind=FALSE)
 ntd <- normTransform(dds)
 ```
@@ -97,6 +100,76 @@ sampleDists <- dist(t(assay(ntd)))
 plotPCA(ntd, intgroup=c("time"))
 dev.off()
 ```
+
+# Visualizing Neat Groups -----------------------------------------------------------------------------------------------------------------------------------
+
+
+```{r}
+dds_lrt <- DESeq(dds, test="LRT", reduced = ~ 1)
+normcounts <- as.data.frame(counts(dds_lrt, normalize=TRUE))
+normcountslong <- normcounts %>% gather(key = "sample", value = "signal")
+ggplot(normcountslong, aes(x = sample, y = signal))+ geom_violin(trim = FALSE) + theme(axis.text.x = element_text(angle = 90))+scale_y_continuous(trans='log2')
+genename="Il33"
+normcounts[genename,]
+plotCounts(dds_lrt, intgroup="genotype",genename)
+res_LRT <- results(dds_lrt)
+# Subset the LRT results to return genes with padj < 0.05
+padj.cutoff <-0.01
+sig_res_LRT <- res_LRT %>%
+  data.frame() %>%
+  rownames_to_column(var="gene") %>% 
+  as_tibble() %>% 
+  filter(padj < padj.cutoff)
+
+# Get sig gene lists
+sigLRT_genes <- sig_res_LRT %>% 
+  pull(gene)
+
+length(sigLRT_genes)
+# Subset results for faster cluster finding (for classroom demo purposes)
+
+clustering_sig_genes <- sig_res_LRT %>%
+  arrange(padj) %>%
+  head(n=1000)
+
+#when you do alll genes you should do this instead
+#clustering_sig_genes <- sig_res_LRT
+
+# Obtain rlog values for those significant 
+rld <- rlog(dds_lrt, blind=TRUE)
+rld_mat <- assay(rld)
+cluster_rlog <- rld_mat[clustering_sig_genes$gene, ]
+
+#make meta
+meta <-as.data.frame(cbind(paste(dds_lrt$time),paste(dds_lrt$housing),paste(dds_lrt$genotype),paste(dds_lrt$sampleName)))
+colnames(meta)<-c("time","housing","genotype","sampleName")
+row.names(meta)<-meta$sampleName
+meta$time <- factor(meta$time, levels = c("PN60", "PN140"))
+meta$housingtime <- factor(paste0(meta$time,"_", meta$housing,sep = ""), levels = c("PN60_same", "PN140_same", "PN60_opposite", "PN140_opposite"))
+
+
+# jpeg(paste0(outdir,outfilename,"/",'clusters.jpg', sep=""))
+clusters <- degPatterns(cluster_rlog, metadata = meta, time = "housingtime", col=NULL)
+# dev.off()
+
+#get more info on clusters
+cluster_groups <- clusters$df
+for (i in unique(cluster_groups$cluster)){
+  group <- clusters$df %>% filter(cluster == i)
+  normcounts_group <- unnorm_counts[rownames(unnorm_counts) %in% noquote(group$genes),]
+  normcounts_group <- as.matrix(normcounts_group)
+  title = paste0("cluster", i, sep=" ")
+  jpeg(paste0(outdir,outfilename,"/",'cluster',i,'.jpg', sep=""))
+  heatmap(normcounts_group,Colv = NA, main=title)
+  dev.off()
+  write.table(normcounts_group,paste0(outdir,outfilename,"/",'cluster',i,'.txt', sep=""), sep="\t",append = FALSE, quote = FALSE)}
+```
+
+
+
+
+
+
 
 
 # PN140 -----------------------------------------------------------------------------------------------------------------------------------
