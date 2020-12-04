@@ -64,9 +64,10 @@ dds1$housing <- relevel(dds1$housing, ref = "same")
 # Run DESeq on the DESeq object
 dds1 = DESeq(dds1)
 res140DN <- results(dds1)
+normed1 = counts(dds1, normalized=TRUE)
 
-# # Check individual genes
-# plotCounts(dds1,gene="Tnf",intgroup="housing")
+# Check individual genes
+plotCounts(dds1,gene="Gpnmb",intgroup="housing")
 # 
 # # Write out results
 # write.csv(as.data.frame(res140DN), file="PN140DN_housing_results.csv")
@@ -78,7 +79,6 @@ res140DN <- results(dds1)
 # dev.off()
 
 # # Write out normalized counts
-# normed1 = counts(dds1, normalized=TRUE)
 # write.csv(normed1, file="PN140DN_normCounts.csv")
 
 # # Plot dispersions
@@ -102,9 +102,10 @@ dds2$genotype <- relevel(dds2$genotype, ref = "ctrl")
 # Run DESeq on the DESeq object
 dds2 = DESeq(dds2)
 res140h <- results(dds2)
+normed2 = counts(dds2, normalized=TRUE)
 
 # # Check individual genes
-# plotCounts(dds2,gene="Tnf",intgroup="housing")
+# plotCounts(dds2,gene="Gpnmb",intgroup="housing")
 
 # # Write out results
 # write.csv(as.data.frame(res140h), file="PN140_housing-gen_results.csv")
@@ -116,8 +117,7 @@ res140h <- results(dds2)
 # dev.off()
 # 
 # # Write out normalized counts
-# normed1 = counts(dds2, normalized=TRUE)
-# write.csv(normed1, file="PN140_normCounts.csv")
+# write.csv(normed2, file="PN140_normCounts.csv")
 # 
 # # Plot dispersions
 # pdf("PN140_housing-gen_dispersionPlot.pdf")
@@ -140,6 +140,7 @@ dds3$genotype <- relevel(dds3$genotype, ref = "ctrl")
 # Run DESeq on the DESeq object
 dds3 = DESeq(dds3)
 res140g <- results(dds3)
+normed3 = counts(dds3, normalized=TRUE)
 
 # # Check individual genes
 # plotCounts(dds3,gene="Rnf122",intgroup="genotype")
@@ -154,7 +155,6 @@ res140g <- results(dds3)
 # dev.off()
 # 
 # # Write out normalized counts
-# normed3 = counts(dds3, normalized=TRUE)
 # write.csv(normed3, file="PN140_normCounts.csv")
 # 
 # # Plot dispersions
@@ -180,6 +180,7 @@ dds4$time <- relevel(dds4$time, ref = "PN60")
 # Run DESeq on the DESeq object
 dds4 = DESeq(dds4)
 resallg <- results(dds4)
+normed4 = counts(dds4, normalized=TRUE)
 
 # # Check individual genes
 # plotCounts(dds4,gene="Rnf122",intgroup="genotype")
@@ -194,7 +195,6 @@ resallg <- results(dds4)
 # dev.off()
 # 
 # # Write out normalized counts
-# normed4 = counts(dds4, normalized=TRUE)
 # write.csv(normed4, file="all_normCounts.csv")
 # 
 # # Plot dispersions
@@ -219,6 +219,7 @@ dds5$time <- relevel(dds5$time, ref = "PN60")
 # Run DESeq on the DESeq object
 dds5 = DESeq(dds5)
 resallh <- results(dds5)
+normed5 = counts(dds5, normalized=TRUE)
 
 # # Check individual genes
 # plotCounts(dds5,gene="Rnf122",intgroup="genotype")
@@ -233,7 +234,6 @@ resallh <- results(dds5)
 # dev.off()
 # 
 # # Write out normalized counts
-# normed5 = counts(dds5, normalized=TRUE)
 # write.csv(normed5, file="all_normCounts.csv")
 # 
 # # Plot dispersions
@@ -259,6 +259,7 @@ dds6$housing <- relevel(dds6$housing, ref = "same")
 # Run DESeq on the DESeq object
 dds6 = DESeq(dds6)
 res60DN <- results(dds6)
+normed6 = counts(dds6, normalized=TRUE)
 
 # # Check individual genes
 # plotCounts(dds6,gene="Tnf",intgroup="housing")
@@ -273,7 +274,6 @@ res60DN <- results(dds6)
 # dev.off()
 # 
 # # Write out normalized counts
-# normed6 = counts(dds6, normalized=TRUE)
 # write.csv(normed6, file="PN60DN_normCounts.csv")
 # 
 # # Plot dispersions
@@ -297,6 +297,7 @@ dds7$genotype <- relevel(dds7$genotype, ref = "ctrl")
 # Run DESeq on the DESeq object
 dds7 = DESeq(dds7)
 res60h <- results(dds7)
+normed7 = counts(dds7, normalized=TRUE)
 
 # # Check individual genes
 # plotCounts(dds7,gene="Tnf",intgroup="housing")
@@ -311,7 +312,6 @@ res60h <- results(dds7)
 # dev.off()
 # 
 # # Write out normalized counts
-# normed7 = counts(dds7, normalized=TRUE)
 # write.csv(normed7, file="PN60_normCounts.csv")
 # 
 # # Plot dispersions
@@ -335,27 +335,28 @@ dds8$genotype <- relevel(dds8$genotype, ref = "ctrl")
 # Run DESeq on the DESeq object
 dds8 = DESeq(dds8)
 res60g <- results(dds8)
+normed8 = counts(dds8, normalized=TRUE)
 
 # # Check individual genes
 # plotCounts(dds8,gene="Rnf122",intgroup="genotype")
-
-# Write out results
-write.csv(as.data.frame(res60g), file="PN60_genotype-housing_results.csv")
-
-# Create MA Plot, alpha is FDR cutoff, for this experiment it is "0.05"
-pdf("PN60_genotype-housing_MAPlot.pdf")
-DESeq2::plotMA(res60g, alpha = 0.05, ylim=c(-3,3), cex=.4)
-abline(h=c(-1,1), col="dodgerblue", lwd=2)
-dev.off()
-
-# Write out normalized counts
-normed8 = counts(dds8, normalized=TRUE)
-write.csv(normed8, file="PN60_normCounts.csv")
-
-# Plot dispersions
-pdf("PN60_genotype-housing_dispersionPlot.pdf")
-plotDispEsts(dds8)
-dev.off()
+# 
+# # Write out results
+# write.csv(as.data.frame(res60g), file="PN60_genotype-housing_results.csv")
+# 
+# # Create MA Plot, alpha is FDR cutoff, for this experiment it is "0.05"
+# pdf("PN60_genotype-housing_MAPlot.pdf")
+# DESeq2::plotMA(res60g, alpha = 0.05, ylim=c(-3,3), cex=.4)
+# abline(h=c(-1,1), col="dodgerblue", lwd=2)
+# dev.off()
+# 
+# # Write out normalized counts
+# 
+# write.csv(normed8, file="PN60_normCounts.csv")
+# 
+# # Plot dispersions
+# pdf("PN60_genotype-housing_dispersionPlot.pdf")
+# plotDispEsts(dds8)
+# dev.off()
 
 ```
 
