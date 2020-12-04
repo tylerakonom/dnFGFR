@@ -47,6 +47,7 @@ PN140coldata <- filter(coldata, time=="PN140")
 PN140DNcounts <- select(PN140counts, contains("B2"))
 PN140DNcoldata <- filter(PN140coldata, genotype =="dnFGFR")
 PN140DNcoldata['time'] = NULL
+
 ```
 
 
@@ -109,9 +110,9 @@ dds_lrt <- DESeq(dds, test="LRT", reduced = ~ 1)
 normcounts <- as.data.frame(counts(dds_lrt, normalize=TRUE))
 normcountslong <- normcounts %>% gather(key = "sample", value = "signal")
 ggplot(normcountslong, aes(x = sample, y = signal))+ geom_violin(trim = FALSE) + theme(axis.text.x = element_text(angle = 90))+scale_y_continuous(trans='log2')
-genename="Il33"
+genename="Gpnmb"
 normcounts[genename,]
-plotCounts(dds_lrt, intgroup="genotype",genename)
+plotCounts(dds_lrt, intgroup="housing",genename)
 res_LRT <- results(dds_lrt)
 # Subset the LRT results to return genes with padj < 0.05
 padj.cutoff <-0.01
@@ -179,7 +180,9 @@ for (i in unique(cluster_groups$cluster)){
 #Designate Files
 setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\dn_housing\\")
 
-dds = DESeqDataSetFromMatrix(countData = PN140DNcounts, colData = PN140DNcoldata, design = ~ housing)
+countdat <- PN140DNcounts[,PN140DNcoldata$sampleName]
+
+dds = DESeqDataSetFromMatrix(countData = countdat, colData = PN140DNcoldata, design = ~ housing)
 
 #remove low count genes (anything less than 20 reads)
 #keep <- rowSums(counts(dds)) >= 20
@@ -209,6 +212,8 @@ pdf("dn_PN140_housing_MAPlot.pdf")
 DESeq2::plotMA(res, alpha = 0.1, ylim=c(-3,3), cex=.4)
 abline(h=c(-1,1), col="dodgerblue", lwd=2)
 dev.off()
+
+# plotCounts(dds,gene="Tnf",intgroup="housing")
 
 ```
 
