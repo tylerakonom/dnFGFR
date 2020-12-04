@@ -8,3 +8,4 @@ deseq_outputs/all_samples/.DS_Store
 genome/Mus_musculus.GRCm38.dna.primary_assembly.fa.gz
 genome/genes.gtf
 deseq_outputs/.DS_Store
+R_scripts/.Rhistory
