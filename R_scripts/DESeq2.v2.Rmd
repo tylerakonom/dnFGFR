@@ -85,6 +85,9 @@ plotCounts(dds1,gene="Gpnmb",intgroup="housing")
 # pdf("PN140DN_housing_dispersionPlot.pdf")
 # plotDispEsts(dds1)
 # dev.off()
+# 
+# normed1[rownames(normed1)=="Gpnmb",]
+# barplot(normed1[rownames(normed1)=="Gpnmb",])
 
 ```
 
