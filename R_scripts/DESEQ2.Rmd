@@ -313,7 +313,7 @@ dds$housing <- relevel(dds$housing, ref = "same")
 dds = DESeq(dds)
 
 #plot dispersions
-pdf("genotype-housing_dispersionPlot.pdf")
+pdf("genotype-housing_dispersion Plot.pdf")
 plotDispEsts(dds )
 dev.off()
 
