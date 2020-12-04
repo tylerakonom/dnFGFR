@@ -1,0 +1,208 @@
+---
+title: "DESeq2.v2"
+author: "Tyler Akonom"
+date: "12/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+require("knitr")
+knitr::opts_chunk$set(echo = TRUE)
+opts_knit$set(root.dir = "C:\\GitHub\\dnFGFR\\deseq_outputs\\")
+library(dplyr)
+library(DESeq2)
+library(knitr)
+library(ggplot2)
+library(magrittr)
+library(tidyr)
+library(tibble)
+library(DEGreport)
+```
+
+
+# Load counts and metadata
+```{r}
+counts = read.table("refcounts.txt", header=TRUE, row.names=1, sep="\t")
+coldata = read.table("coldata.txt", header=TRUE, sep="\t")
+```
+
+#remove length from counts table and sort properly
+```{r}
+counts['Length'] = NULL
+counts <- counts[,coldata$sampleName]
+```
+
+# Filter data to show different cohorts
+```{r}
+require(dplyr)
+PN140counts <- select(counts, contains("B"))
+PN140coldata <- filter(coldata, time=="PN140")
+PN140DNcounts <- select(PN140counts, contains("B2"))
+PN140DNcoldata <- filter(PN140coldata, genotype =="dnFGFR")
+PN140DNcoldata['time'] = NULL
+```
+
+# Creating a DESeq object and check for differential expression -----------------------------------
+
+# PN140 dnFGFR animals only (effect of housing on dnFGFR animals)
+```{r}
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\dn_housing\\")
+
+# Create DESeq object
+dds1 = DESeqDataSetFromMatrix(countData = PN140DNcounts, colData = PN140DNcoldata, design = ~housing)
+
+# Set "reference" levels
+dds1$housing <- relevel(dds1$housing, ref = "same")
+
+# Run DESeq on the DESeq object
+dds1 = DESeq(dds1)
+res140DN <- results(dds1)
+
+# # Check individual genes
+# plotCounts(dds1,gene="Tnf",intgroup="housing")
+# 
+# # Write out results
+# write.csv(as.data.frame(res140DN), file="PN140DN_housing_results.csv")
+
+# # Create MA Plot, alpha is FDR cutoff, for this experiment it is "0.05"
+# pdf("PN140DN_housing_MAPlot.pdf")
+# DESeq2::plotMA(res140DN, alpha = 0.05, ylim=c(-3,3), cex=.4)
+# abline(h=c(-1,1), col="dodgerblue", lwd=2)
+# dev.off()
+
+# # Write out normalized counts
+# normed1 = counts(dds1, normalized=TRUE)
+# write.csv(normed1, file="PN140DN_normCounts.csv")
+
+# # Plot dispersions
+# pdf("PN140DN_housing_dispersionPlot.pdf")
+# plotDispEsts(dds1)
+# dev.off()
+
+```
+
+# PN140 effect of housing, removing genotype effect
+```{r}
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\housing-gen\\")
+
+# Create DESeq object
+dds2 = DESeqDataSetFromMatrix(countData = PN140counts, colData = PN140coldata, design = ~genotype + housing)
+
+# Set "reference" levels
+dds2$housing <- relevel(dds2$housing, ref = "same")
+dds2$genotype <- relevel(dds2$genotype, ref = "ctrl")
+
+# Run DESeq on the DESeq object
+dds2 = DESeq(dds2)
+res140 <- results(dds2)
+
+# # Check individual genes
+# plotCounts(dds2,gene="Tnf",intgroup="housing")
+
+# # Write out results
+# write.csv(as.data.frame(res140), file="PN140_housing-gen_results.csv")
+# 
+# # Create MA Plot, alpha is FDR cutoff, for this experiment it is "0.05"
+# pdf("PN140_housing-gen_MAPlot.pdf")
+# DESeq2::plotMA(res140, alpha = 0.05, ylim=c(-3,3), cex=.4)
+# abline(h=c(-1,1), col="dodgerblue", lwd=2)
+# dev.off()
+# 
+# # Write out normalized counts
+# normed1 = counts(dds2, normalized=TRUE)
+# write.csv(normed1, file="PN140_normCounts.csv")
+# 
+# # Plot dispersions
+# pdf("PN140_housing-gen_dispersionPlot.pdf")
+# plotDispEsts(dds2)
+# dev.off()
+
+```
+
+# PN140 effect of genotype, removing housing effect
+```{r}
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\genotype-housing\\")
+
+# Create DESeq object
+dds3 = DESeqDataSetFromMatrix(countData = PN140counts, colData = PN140coldata, design = ~housing + genotype)
+
+# Set "reference" levels
+dds3$housing <- relevel(dds3$housing, ref = "same")
+dds3$genotype <- relevel(dds3$genotype, ref = "ctrl")
+
+# Run DESeq on the DESeq object
+dds3 = DESeq(dds3)
+res140h <- results(dds3)
+
+# # Check individual genes
+# plotCounts(dds3,gene="Rnf122",intgroup="genotype")
+# 
+# # Write out results
+# write.csv(as.data.frame(res140h), file="PN140_genotype-housing_results.csv")
+# 
+# # Create MA Plot, alpha is FDR cutoff, for this experiment it is "0.05"
+# pdf("PN140_genotype-housing_MAPlot.pdf")
+# DESeq2::plotMA(res140h, alpha = 0.05, ylim=c(-3,3), cex=.4)
+# abline(h=c(-1,1), col="dodgerblue", lwd=2)
+# dev.off()
+# 
+# # Write out normalized counts
+# normed3 = counts(dds3, normalized=TRUE)
+# write.csv(normed3, file="PN140_normCounts.csv")
+# 
+# # Plot dispersions
+# pdf("PN140_genotype-housing_dispersionPlot.pdf")
+# plotDispEsts(dds3)
+# dev.off()
+
+```
+
+# PN140 effect of genotype, removing housing effect
+```{r}
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\PN140\\genotype-housing\\")
+
+# Create DESeq object
+dds3 = DESeqDataSetFromMatrix(countData = PN140counts, colData = PN140coldata, design = ~housing + genotype)
+
+# Set "reference" levels
+dds3$housing <- relevel(dds3$housing, ref = "same")
+dds3$genotype <- relevel(dds3$genotype, ref = "ctrl")
+
+# Run DESeq on the DESeq object
+dds3 = DESeq(dds3)
+res140h <- results(dds3)
+
+# # Check individual genes
+# plotCounts(dds3,gene="Rnf122",intgroup="genotype")
+# 
+# # Write out results
+# write.csv(as.data.frame(res140h), file="PN140_genotype-housing_results.csv")
+# 
+# # Create MA Plot, alpha is FDR cutoff, for this experiment it is "0.05"
+# pdf("PN140_genotype-housing_MAPlot.pdf")
+# DESeq2::plotMA(res140h, alpha = 0.05, ylim=c(-3,3), cex=.4)
+# abline(h=c(-1,1), col="dodgerblue", lwd=2)
+# dev.off()
+# 
+# # Write out normalized counts
+# normed3 = counts(dds3, normalized=TRUE)
+# write.csv(normed3, file="PN140_normCounts.csv")
+# 
+# # Plot dispersions
+# pdf("PN140_genotype-housing_dispersionPlot.pdf")
+# plotDispEsts(dds3)
+# dev.off()
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
