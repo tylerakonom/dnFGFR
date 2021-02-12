@@ -1,0 +1,440 @@
+MGI Gene/Marker ID	Symbol	Name	Chr	Qualifier	Annotated Term	Context	Proteoform	Evidence	Inferred From	Reference(s)
+MGI:99607	Abca1	ATP-binding cassette, sub-family A (ABC1), member 1	4		cellular response to lipopolysaccharide			IDA		J:154929 	
+MGI:87859	Abl1	c-abl oncogene 1, non-receptor tyrosine kinase	2		cellular response to lipopolysaccharide	happens in B cell,happens in spleen		IMP	MGI:1856663 	J:34903 	
+MGI:103206	Acod1	aconitate decarboxylase 1	14		cellular response to lipopolysaccharide			IDA		J:196954 J:196955 	
+MGI:103206	Acod1	aconitate decarboxylase 1	14		cellular response to lipopolysaccharide			ISO	A6NK06 	J:164563 	
+MGI:103206	Acod1	aconitate decarboxylase 1	14		cellular response to molecule of bacterial origin			IDA		J:196718 	
+MGI:103206	Acod1	aconitate decarboxylase 1	14		tolerance induction to lipopolysaccharide			IDA		J:196955 	
+MGI:103206	Acod1	aconitate decarboxylase 1	14		tolerance induction to lipopolysaccharide			ISO	A6NK06 	J:164563 	
+MGI:105376	Adam9	a disintegrin and metallopeptidase domain 9 (meltrin gamma)	8		cellular response to lipopolysaccharide			ISO	Q13443 	J:164563 	
+MGI:1342279	Aicda	activation-induced cytidine deaminase	6		cellular response to lipopolysaccharide			IMP		J:141184 	
+MGI:1928488	Akap8	A kinase (PRKA) anchor protein 8	17		cellular response to lipopolysaccharide			IMP		J:230622 	
+MGI:87986	Akt1	thymoma viral proto-oncogene 1	12		lipopolysaccharide-mediated signaling pathway			IDA		J:215205 	
+MGI:2656551	Ang4	angiogenin, ribonuclease A family, member 4	14		cellular response to lipopolysaccharide	happens in paneth cell of epithelium of small intestine	UniProtKB:Q3TMQ6:PRO_0000415440	IDA		J:82368 	
+MGI:1097717	Ankrd1	ankyrin repeat domain 1 (cardiac muscle)	19		cellular response to lipopolysaccharide	happens in metanephric glomerular visceral epithelial cell		IDA		J:177255 	
+MGI:1097717	Ankrd1	ankyrin repeat domain 1 (cardiac muscle)	19		cellular response to lipopolysaccharide			ISO	Q15327 	J:164563 	
+MGI:2443039	Arid5a	AT rich interactive domain 5A (MRF1-like)	1		cellular response to lipopolysaccharide			IMP		J:240577 	
+MGI:1914045	Atg10	autophagy related 10	13		ER overload response			ISO	Q9H0Y0 	J:164563 	
+MGI:1347244	Axl	AXL receptor tyrosine kinase	7		cellular response to lipopolysaccharide			ISO	P30530 	J:164563 	
+MGI:3630303	AY761185	cDNA sequence AY761185	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:88127	B2m	beta-2 microglobulin	2		cellular response to lipopolysaccharide			ISO	P61769 	J:164563 	
+MGI:1197519	Bcl2l11	BCL2-like 11 (apoptosis facilitator)	2		positive regulation of autophagy in response to ER overload			ISO	RGD:628774 	J:155856 	
+MGI:1337994	Bcl10	B cell leukemia/lymphoma 10	3		lipopolysaccharide-mediated signaling pathway			ISO	O95999 	J:164563 	
+MGI:88141	Bcr	BCR activator of RhoGEF and GTPase	10		cellular response to lipopolysaccharide			IMP	MGI:2154396 	J:23804 	
+MGI:108093	Bid	BH3 interacting domain death agonist	6		positive regulation of autophagy in response to ER overload			ISO	RGD:620160 	J:155856 	
+MGI:88182	Bmp6	bone morphogenetic protein 6	13		positive regulation of lipopolysaccharide-mediated signaling pathway			IMP		J:151027 	
+MGI:3045315	Bpi	bactericidal permeablility increasing protein	2		cellular response to lipopolysaccharide			ISO	P17213 	J:164563 	
+MGI:3045315	Bpi	bactericidal permeablility increasing protein	2		lipopolysaccharide-mediated signaling pathway			IBA	PTN002471180 	J:265628 	
+MGI:88216	Btk	Bruton agammaglobulinemia tyrosine kinase	X		cellular response to molecule of fungal origin			ISO	RGD:1359683 	J:155856 	
+MGI:1917562	Cactin	cactin, spliceosome C complex subunit	10		cellular response to lipopolysaccharide			ISO	Q8WUQ7 	J:164563 	
+MGI:1917562	Cactin	cactin, spliceosome C complex subunit	10		negative regulation of lipopolysaccharide-mediated signaling pathway			ISO	Q8WUQ7 	J:164563 	
+MGI:96544	Casp1	caspase 1	9		cellular response to lipopolysaccharide			ISO	P29466 	J:164563 	
+MGI:1914413	Ccdc47	coiled-coil domain containing 47	11		ER overload response			IMP		J:124441 	
+MGI:98259	Ccl2	chemokine (C-C motif) ligand 2	11		cellular response to lipopolysaccharide			IDA		J:118487 	
+MGI:98262	Ccl5	chemokine (C-C motif) ligand 5	11		lipopolysaccharide-mediated signaling pathway			ISO	P13501 	J:164563 	
+MGI:108224	Ccl12	chemokine (C-C motif) ligand 12	11		lipopolysaccharide-mediated signaling pathway			ISO	P13500 	J:164563 	
+MGI:103566	Cd6	CD6 antigen	19		lipopolysaccharide-mediated signaling pathway			ISO	P30203 	J:164563 	
+MGI:88318	Cd14	CD14 antigen	18		cellular response to diacyl bacterial lipopeptide			ISO	P08571 	J:164563 	
+MGI:88318	Cd14	CD14 antigen	18		cellular response to lipopolysaccharide			IMP		J:32729 J:222669 	
+MGI:88318	Cd14	CD14 antigen	18		cellular response to lipopolysaccharide			ISO	P08571 	J:73065 	
+MGI:88318	Cd14	CD14 antigen	18		cellular response to lipoteichoic acid			ISO	P08571 	J:73065 	
+MGI:88318	Cd14	CD14 antigen	18		cellular response to molecule of bacterial origin			ISO	P08571 	J:164563 	
+MGI:88318	Cd14	CD14 antigen	18		cellular response to triacyl bacterial lipopeptide			ISO	P08571 	J:164563 	
+MGI:88318	Cd14	CD14 antigen	18		lipopolysaccharide-mediated signaling pathway			IBA	PTN001636475 	J:265628 	
+MGI:88318	Cd14	CD14 antigen	18		lipopolysaccharide-mediated signaling pathway			IMP		J:222669 	
+MGI:107899	Cd36	CD36 molecule	5		cellular response to bacterial lipopeptide	happens in macrophage		IMP	MGI:1931790 MGI:3573941 	J:96018 	
+MGI:107899	Cd36	CD36 molecule	5		cellular response to diacyl bacterial lipopeptide			ISO	P16671 	J:164563 	
+MGI:107899	Cd36	CD36 molecule	5		cellular response to lipopolysaccharide	happens in peritoneal macrophage		IMP	MGI:2447190 	J:100140 	
+MGI:107899	Cd36	CD36 molecule	5		cellular response to lipoteichoic acid	happens in macrophage		IDA		J:96018 	
+MGI:107899	Cd36	CD36 molecule	5		cellular response to lipoteichoic acid			IMP	MGI:2447190 	J:100140 	
+MGI:107899	Cd36	CD36 molecule	5		cellular response to lipoteichoic acid	happens in macrophage		IMP	MGI:1931790 MGI:3573941 	J:96018 	
+MGI:88342	Cd68	CD68 antigen	11		cellular response to lipopolysaccharide	happens in microglial cell,is a part of inflammatory response to antigenic stimulus		IDA		J:269541 	
+MGI:101775	Cd80	CD80 antigen	16		cellular response to lipopolysaccharide			IBA	PTN002402215 	J:265628 	
+MGI:101775	Cd80	CD80 antigen	16		cellular response to lipopolysaccharide			IDA		J:143745 	
+MGI:1336885	Cd84	CD84 antigen	1		regulation of lipopolysaccharide-mediated signaling pathway			IDA		J:227381 	
+MGI:101773	Cd86	CD86 antigen	16		cellular response to lipopolysaccharide			IBA	PTN002402215 	J:265628 	
+MGI:101773	Cd86	CD86 antigen	16		cellular response to lipopolysaccharide			IDA		J:143745 	
+MGI:1194924	Cd180	CD180 antigen	13		cellular response to lipopolysaccharide			IBA	PTN001223121 	J:265628 	
+MGI:1194924	Cd180	CD180 antigen	13		cellular response to lipopolysaccharide	happens in B cell		IMP	MGI:3581654 	J:63145 	
+MGI:1194924	Cd180	CD180 antigen	13		positive regulation of lipopolysaccharide-mediated signaling pathway			IBA	PTN001223121 	J:265628 	
+MGI:1194924	Cd180	CD180 antigen	13		positive regulation of lipopolysaccharide-mediated signaling pathway	regulates a function/process that happens in B cell		IGI	MGI:1321404 MGI:96824 	J:63145 	
+MGI:1194924	Cd180	CD180 antigen	13		positive regulation of lipopolysaccharide-mediated signaling pathway			ISO	Q99467 	J:63145 	
+MGI:1926446	Cd274	CD274 antigen	19		cellular response to lipopolysaccharide			IBA	PTN002402215 	J:265628 	
+MGI:2685099	Cd300lb	CD300 molecule like family member B	11		cellular response to lipopolysaccharide			IMP	MGI:4829592 	J:189766 	
+MGI:2384876	Cdc73	cell division cycle 73, Paf1/RNA polymerase II complex component	1		cellular response to lipopolysaccharide			IDA		J:183965 	
+MGI:88357	Cdk4	cyclin-dependent kinase 4	10		cellular response to lipopolysaccharide			IDA		J:30542 	
+MGI:88373	Cebpb	CCAAT/enhancer binding protein (C/EBP), beta	2		cellular response to lipopolysaccharide			ISO	RGD:2327 	J:155856 	
+MGI:88385	Cfh	complement component factor h	1		cellular response to lipopolysaccharide			IGI		J:156611 	
+MGI:1924209	Chmp5	charged multivesicular body protein 5	4		cellular response to lipopolysaccharide			ISO	Q9NZZ3 	J:164563 	
+MGI:99830	Cmpk2	cytidine monophosphate (UMP-CMP) kinase 2, mitochondrial	12		cellular response to lipopolysaccharide			IDA		J:25529 	
+MGI:88489	Cr2	complement receptor 2	1		cellular response to lipopolysaccharide	uses Cfh		IGI		J:156611 	
+MGI:109345	Ctr9	CTR9 homolog, Paf1/RNA polymerase II complex component	7		cellular response to lipopolysaccharide			IDA		J:183965 	
+MGI:88563	Ctsg	cathepsin G	14		cellular response to lipopolysaccharide			ISO	P08311 	J:164563 	
+MGI:1097153	Cx3cl1	chemokine (C-X3-C motif) ligand 1	8		regulation of lipopolysaccharide-mediated signaling pathway			ISO	P78423 	J:164563 	
+MGI:1333815	Cx3cr1	chemokine (C-X3-C motif) receptor 1	9		cellular response to lipopolysaccharide	happens in microglial cell		IGI	P05067 	J:262355 	
+MGI:108068	Cxcl1	chemokine (C-X-C motif) ligand 1	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:1340094	Cxcl2	chemokine (C-X-C motif) ligand 2	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:3037818	Cxcl3	chemokine (C-X-C motif) ligand 3	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:1096868	Cxcl5	chemokine (C-X-C motif) ligand 5	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:1096868	Cxcl5	chemokine (C-X-C motif) ligand 5	5		cellular response to lipopolysaccharide			ISO	P80162 	J:164563 	
+MGI:1352449	Cxcl9	chemokine (C-X-C motif) ligand 9	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:1352450	Cxcl10	chemokine (C-X-C motif) ligand 10	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:1352450	Cxcl10	chemokine (C-X-C motif) ligand 10	5		cellular response to lipopolysaccharide			ISO	P02778 	J:205449 	
+MGI:1888499	Cxcl13	chemokine (C-X-C motif) ligand 13	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:1339941	Cxcl15	chemokine (C-X-C motif) ligand 15	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:1932682	Cxcl16	chemokine (C-X-C motif) ligand 16	11		cellular response to lipopolysaccharide			IDA		J:65117 	
+MGI:1923520	Cyrib	CYFIP related Rac1 interactor B	15		cellular response to molecule of bacterial origin			IMP		J:282597 	
+MGI:1923520	Cyrib	CYFIP related Rac1 interactor B	15		cellular response to molecule of bacterial origin			ISO	Q9NUQ9 	J:164563 	
+MGI:1916851	Dab2ip	disabled 2 interacting protein	2		cellular response to lipopolysaccharide			IDA		J:159941 	
+MGI:1916851	Dab2ip	disabled 2 interacting protein	2		cellular response to lipopolysaccharide			ISO	Q5VWQ8 	J:164563 	
+MGI:109247	Ddit3	DNA-damage inducible transcript 3	10		ER overload response			IBA	PTN002703959 	J:265628 	
+MGI:109247	Ddit3	DNA-damage inducible transcript 3	10		ER overload response			IMP	MGI:2179046 	J:74700 	
+MGI:109247	Ddit3	DNA-damage inducible transcript 3	10		ER overload response			ISO	RGD:62391 	J:155856 	
+MGI:109247	Ddit3	DNA-damage inducible transcript 3	10		positive regulation of autophagy in response to ER overload			ISO	RGD:62391 	J:155856 	
+MGI:94880	Defa1	defensin, alpha 1	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:94880	Defa1	defensin, alpha 1	8		cellular response to lipopolysaccharide			IGI	MGI:94882 MGI:94883 MGI:99582 	J:118036 	
+MGI:94882	Defa2	defensin, alpha, 2	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:94882	Defa2	defensin, alpha, 2	8		cellular response to lipopolysaccharide			IGI	MGI:94880 MGI:94883 MGI:99582 	J:118036 	
+MGI:94883	Defa3	defensin, alpha, 3	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:94883	Defa3	defensin, alpha, 3	8		cellular response to lipopolysaccharide			IGI	MGI:94880 MGI:94882 MGI:99582 	J:118036 	
+MGI:99584	Defa4	defensin, alpha, 4	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99583	Defa5	defensin, alpha, 5	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99582	Defa6	defensin, alpha, 6	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99582	Defa6	defensin, alpha, 6	8		cellular response to lipopolysaccharide			IGI	MGI:94880 MGI:94882 MGI:94883 	J:118036 	
+MGI:99581	Defa7	defensin, alpha, 7	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99580	Defa8	defensin, alpha, 8	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99579	Defa9	defensin, alpha, 9	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99591	Defa10	defensin, alpha, 10	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99590	Defa11	defensin, alpha, 11	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99588	Defa13	defensin, alpha, 13	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99587	Defa14	defensin, alpha, 14	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99586	Defa15	defensin, alpha, 15	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99585	Defa16	defensin, alpha, 16	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:1345152	Defa17	defensin, alpha, 17	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:1915259	Defa20	defensin, alpha, 20	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:1913548	Defa21	defensin, alpha, 21	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3639039	Defa22	defensin, alpha, 22	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3630381	Defa23	defensin, alpha, 23	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3630383	Defa24	defensin, alpha, 24	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3630385	Defa25	defensin, alpha, 25	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3630390	Defa26	defensin, alpha, 26	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3642780	Defa27	defensin, alpha, 27	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3646688	Defa28	defensin, alpha, 28	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:94881	Defa29	defensin, alpha, 29	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3808881	Defa30	defensin, alpha, 30	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:102509	Defa31	defensin, alpha, 31	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3709048	Defa34	defensin, alpha, 34	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3711900	Defa35	defensin, alpha, 35	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3705236	Defa37	defensin, alpha, 37	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3709605	Defa38	defensin, alpha, 38	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3611585	Defa39	defensin, alpha, 39	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3708769	Defa40	defensin, alpha, 40	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3705230	Defa41	defensin, alpha, 41	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3645033	Defa42	defensin, alpha, 42	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:99592	Defa-rs2	defensin, alpha, related sequence 2	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:102516	Defa-rs10	defensin, alpha, related sequence 10	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:102514	Defa-rs12	defensin, alpha, related sequence 12	8		cellular response to lipopolysaccharide			IBA	PTN002275316 	J:265628 	
+MGI:3651158	Defb25	defensin beta 25	2		cellular response to peptidoglycan			IBA	PTN001030034 	J:265628 	
+MGI:1341830	Eif2ak3	eukaryotic translation initiation factor 2 alpha kinase 3	6		ER overload response			ISO	Q9NZJ5 	J:164563 	
+MGI:3576783	Eme1	essential meiotic structure-specific endonuclease 1	11		response to intra-S DNA damage checkpoint signaling			ISO	Q96AY2 	J:73065 	
+MGI:1354699	Fbh1	F-box DNA helicase 1	2		response to intra-S DNA damage checkpoint signaling			IMP		J:210130 	
+MGI:1354699	Fbh1	F-box DNA helicase 1	2		response to intra-S DNA damage checkpoint signaling			ISO	Q8NFZ0 	J:73065 	
+MGI:95499	Fcgr2b	Fc receptor, IgG, low affinity IIb	1		cellular response to molecule of bacterial origin	happens in B cell		IMP	MGI:1857166 	J:102982 	
+MGI:2179523	Fcgr4	Fc receptor, IgG, low affinity IV	1		cellular response to lipopolysaccharide			ISO	RGD:1303067 	J:155856 	
+MGI:108571	Fzd5	frizzled class receptor 5	1		cellular response to molecule of bacterial origin			ISO	Q13467 	J:164563 	
+MGI:102772	Gbp2	guanylate binding protein 2	3		cellular response to lipopolysaccharide			IDA		J:155210 	
+MGI:2140937	Gbp6	guanylate binding protein 6	5		cellular response to lipopolysaccharide			IDA		J:155210 	
+MGI:4359647	Gbp10	guanylate-binding protein 10	5		cellular response to lipopolysaccharide			IDA		J:155210 	
+MGI:95675	Gch1	GTP cyclohydrolase 1	14		cellular response to lipopolysaccharide	happens in macrophage		TAS		J:237677 	
+MGI:1927140	Git1	GIT ArfGAP 1	11		cellular response to lipopolysaccharide			IMP		J:297330 	
+MGI:1861437	Gsk3b	glycogen synthase kinase 3 beta	16		ER overload response	happens in fibroblast		IDA		J:88275 	
+MGI:1861437	Gsk3b	glycogen synthase kinase 3 beta	16		ER overload response			ISO	P49841 	J:73065 	
+MGI:95865	Gstp1	glutathione S-transferase, pi 1	19		cellular response to lipopolysaccharide			IDA		J:172998 	
+MGI:2159682	Havcr2	hepatitis A virus cellular receptor 2	11		cellular response to lipopolysaccharide			IDA		J:228102 	
+MGI:96113	Hmgb1	high mobility group box 1	5		cellular response to lipopolysaccharide	happens in microglial cell		IDA		J:266466 	
+MGI:95835	Hspa5	heat shock protein 5	2		ER overload response			IDA		J:74700 	
+MGI:107656	Ifng	interferon gamma	10		cellular response to lipopolysaccharide			IDA		J:142604 	
+MGI:96542	Il1a	interleukin 1 alpha	2		cellular response to lipopolysaccharide			IBA	PTN002560644 	J:265628 	
+MGI:96543	Il1b	interleukin 1 beta	2		cellular response to lipopolysaccharide			IBA	PTN002560644 	J:265628 	
+MGI:96543	Il1b	interleukin 1 beta	2		lipopolysaccharide-mediated signaling pathway			ISO	P01584 	J:164563 	
+MGI:2652548	Il1f10	interleukin 1 family, member 10	2		cellular response to lipopolysaccharide			IBA	PTN002560644 	J:265628 	
+MGI:96548	Il2	interleukin 2	3		cellular response to biotic stimulus			IDA		J:199058 	
+MGI:96559	Il6	interleukin 6	5		cellular response to lipopolysaccharide			IDA		J:143745 J:173334 J:204786 	
+MGI:96559	Il6	interleukin 6	5		cellular response to lipopolysaccharide			ISO	P05231 	J:205449 	
+MGI:96537	Il10	interleukin 10	1		cellular response to lipopolysaccharide	happens in monocyte		IDA		J:265599 	
+MGI:96537	Il10	interleukin 10	1		cellular response to lipopolysaccharide			IDA		J:143745 J:173330 	
+MGI:96539	Il12a	interleukin 12a	3		cellular response to lipopolysaccharide			IDA		J:143745 	
+MGI:96540	Il12b	interleukin 12b	11		cellular response to lipopolysaccharide			IDA		J:155210 J:173334 	
+MGI:107936	Il18	interleukin 18	9		lipopolysaccharide-mediated signaling pathway			ISO	Q14116 	J:164563 	
+MGI:1859324	Il36a	interleukin 36A	2		cellular response to lipopolysaccharide			IBA	PTN002560644 	J:265628 	
+MGI:1916927	Il36b	interleukin 36B	2		cellular response to lipopolysaccharide			IBA	PTN002560644 	J:265628 	
+MGI:2449929	Il36g	interleukin 36G	2		cellular response to lipopolysaccharide			IBA	PTN002560644 	J:265628 	
+MGI:1859325	Il36rn	interleukin 36 receptor antagonist	2		cellular response to lipopolysaccharide			IBA	PTN002560644 	J:265628 	
+MGI:96573	Ins2	insulin II	7		ER overload response			IMP	MGI:1857572 	J:74700 	
+MGI:107420	Irak1	interleukin-1 receptor-associated kinase 1	X		cellular response to lipopolysaccharide			IBA	PTN000701420 	J:265628 	
+MGI:107420	Irak1	interleukin-1 receptor-associated kinase 1	X		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IDA		J:84679 	
+MGI:107420	Irak1	interleukin-1 receptor-associated kinase 1	X		lipopolysaccharide-mediated signaling pathway	happens in peritoneal macrophage		IDA		J:76115 	
+MGI:107420	Irak1	interleukin-1 receptor-associated kinase 1	X		lipopolysaccharide-mediated signaling pathway			ISO	P51617 	J:164563 	
+MGI:2429603	Irak2	interleukin-1 receptor-associated kinase 2	6		lipopolysaccharide-mediated signaling pathway			IDA		J:91272 	
+MGI:1859179	Irf3	interferon regulatory factor 3	7		cellular response to lipopolysaccharide			IDA		J:173334 	
+MGI:1859179	Irf3	interferon regulatory factor 3	7		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IDA		J:84679 J:84896 	
+MGI:96395	Irf8	interferon regulatory factor 8	8		cellular response to lipopolysaccharide	happens in peritoneal macrophage		IMP	MGI:1926332 	J:111178 	
+MGI:1926262	Irgm2	immunity-related GTPase family M member 2	11		cellular response to lipopolysaccharide			ISO	A1A4Y4 	J:164563 	
+MGI:96629	Jak2	Janus kinase 2	19		cellular response to lipopolysaccharide			IDA		J:173334 	
+MGI:2685002	Klrh1	killer cell lectin-like receptor subfamily H, member 1	6		cellular response to molecule of fungal origin			IBA	PTN000514167 	J:265628 	
+MGI:1196250	Klrk1	killer cell lectin-like receptor subfamily K, member 1	6		cellular response to lipopolysaccharide			IDA		J:88001 	
+MGI:1098776	Lbp	lipopolysaccharide binding protein	2		cellular response to lipopolysaccharide			IMP		J:222669 	
+MGI:1098776	Lbp	lipopolysaccharide binding protein	2		cellular response to lipopolysaccharide			ISO	P18428 	J:73065 	
+MGI:1098776	Lbp	lipopolysaccharide binding protein	2		cellular response to lipoteichoic acid			ISO	P18428 	J:73065 	
+MGI:1098776	Lbp	lipopolysaccharide binding protein	2		lipopolysaccharide-mediated signaling pathway			IBA	PTN002471180 	J:265628 	
+MGI:1098776	Lbp	lipopolysaccharide binding protein	2		lipopolysaccharide-mediated signaling pathway			ISO	P18428 	J:164563 	
+MGI:2685212	Ldoc1	regulator of NFKB signaling	X		cellular response to lipopolysaccharide			ISO	O95751 	J:164563 	
+MGI:102701	Lilrb4a	leukocyte immunoglobulin-like receptor, subfamily B, member 4A	10		cellular response to lipopolysaccharide			IMP	MGI:2653049 	J:119423 	
+MGI:1929512	Litaf	LPS-induced TN factor	16		cellular response to lipopolysaccharide			IMP	MGI:3687962 	J:113750 	
+MGI:96837	Ltf	lactotransferrin	9		negative regulation of lipopolysaccharide-mediated signaling pathway			ISO	P02788 	J:164563 	
+MGI:1321404	Ly86	lymphocyte antigen 86	13		positive regulation of lipopolysaccharide-mediated signaling pathway	regulates a function/process that happens in B cell		IDA		J:63145 	
+MGI:1321404	Ly86	lymphocyte antigen 86	13		positive regulation of lipopolysaccharide-mediated signaling pathway	regulates a function/process that happens in B cell		IGI	MGI:1194924 MGI:96824 	J:63145 	
+MGI:1321404	Ly86	lymphocyte antigen 86	13		positive regulation of lipopolysaccharide-mediated signaling pathway			ISO	O95711 	J:63145 	
+MGI:1341909	Ly96	lymphocyte antigen 96	1		cellular response to lipopolysaccharide			IBA	PTN000390890 	J:265628 	
+MGI:1341909	Ly96	lymphocyte antigen 96	1		cellular response to lipopolysaccharide			IMP		J:222669 	
+MGI:1341909	Ly96	lymphocyte antigen 96	1		lipopolysaccharide-mediated signaling pathway			IMP		J:222669 	
+MGI:1341909	Ly96	lymphocyte antigen 96	1		positive regulation of lipopolysaccharide-mediated signaling pathway			IBA	PTN000390890 	J:265628 	
+MGI:1341909	Ly96	lymphocyte antigen 96	1		positive regulation of lipopolysaccharide-mediated signaling pathway	regulates a function/process that happens in B cell		IDA		J:63145 	
+MGI:1341909	Ly96	lymphocyte antigen 96	1		positive regulation of lipopolysaccharide-mediated signaling pathway	regulates a function/process that happens in B cell		IGI	MGI:1194924 MGI:96824 	J:63145 	
+MGI:1341909	Ly96	lymphocyte antigen 96	1		positive regulation of lipopolysaccharide-mediated signaling pathway			ISO	O95711 	J:63145 	
+MGI:96892	Lyn	LYN proto-oncogene, Src family tyrosine kinase	4		lipopolysaccharide-mediated signaling pathway			IMP		J:161005 	
+MGI:2445027	Malt1	MALT1 paracaspase	18		lipopolysaccharide-mediated signaling pathway			IDA		J:116495 	
+MGI:1346871	Map2k7	mitogen-activated protein kinase kinase 7	8		cellular response to lipopolysaccharide			IMP		J:44734 	
+MGI:1346858	Mapk1	mitogen-activated protein kinase 1	16		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IDA		J:84896 	
+MGI:1346859	Mapk3	mitogen-activated protein kinase 3	7		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IDA		J:84896 	
+MGI:1346861	Mapk8	mitogen-activated protein kinase 8	14		cellular response to biotic stimulus			IMP		J:199058 	
+MGI:1346861	Mapk8	mitogen-activated protein kinase 8	14		cellular response to lipopolysaccharide			ISO	P45983 	J:205449 	
+MGI:1346865	Mapk14	mitogen-activated protein kinase 14	17		cellular response to lipopolysaccharide			ISO	Q16539 	J:205449 	
+MGI:1346865	Mapk14	mitogen-activated protein kinase 14	17		cellular response to lipoteichoic acid			ISO	Q16539 	J:164563 	
+MGI:1346865	Mapk14	mitogen-activated protein kinase 14	17		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IDA		J:84896 	
+MGI:99458	Mef2c	myocyte enhancer factor 2C	13		cellular response to lipopolysaccharide			IDA		J:144071 	
+MGI:96982	Mif	macrophage migration inhibitory factor (glycosylation-inhibiting factor)	10		positive regulation of lipopolysaccharide-mediated signaling pathway			IMP		J:73706 	
+MGI:3619436	Mir7-1	microRNA 7-1	13		cellular response to lipopolysaccharide			IGI	MGI:3619437 	J:173714 	
+MGI:3619437	Mir7-2	microRNA 7-2	7		cellular response to lipopolysaccharide			IGI	MGI:3619436 	J:173714 	
+MGI:3619435	Mir7b	microRNA 7b	17		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619064	Mir10a	microRNA 10a	11		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676841	Mir15a	microRNA 15a	14		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3618690	Mir16-2	microRNA 16-2	3		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676898	Mir23b	microRNA 23b	13		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676899	Mir24-1	microRNA 24-1	13		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3618755	Mir24-2	microRNA 24-2	8		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676900	Mir26a-1	microRNA 26a-1	9		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619045	Mir26a-2	microRNA 26a-2	10		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676901	Mir26b	microRNA 26b	1		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676902	Mir27a	microRNA 27a	8		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676904	Mir29a	microRNA 29a	6		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676905	Mir29b-1	microRNA 29b-1	6		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619047	Mir29b-2	microRNA 29b-2	1		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676908	Mir30b	microRNA 30b	15		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676909	Mir30c-1	microRNA 30c-1	4		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619048	Mir30c-2	microRNA 30c-2	1		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676910	Mir30d	microRNA 30d	15		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619441	Mir98	microRNA 98	X		cellular response to lipopolysaccharide			IDA		J:173330 	
+MGI:3619063	Mir107	microRNA 107	19		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676809	Mir125a	microRNA 125a	17		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676824	Mir139	microRNA 139	7		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:2676825	Mir140	microRNA 140	8		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676827	Mir142	microRNA 142	11		cellular response to lipopolysaccharide			IDA		J:173174 	
+MGI:2676831	Mir146	microRNA 146	11		cellular response to lipopolysaccharide			IDA		J:142604 J:173714 	
+MGI:3629945	Mir146b	microRNA 146b	19		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:2676832	Mir147	microRNA 147	2		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:2676835	Mir150	microRNA 150	7		cellular response to lipopolysaccharide			IDA		J:141184 J:173714 	
+MGI:2676840	Mir155	microRNA 155	16		cellular response to lipopolysaccharide			IDA		J:141184 J:173714 	
+MGI:3629589	Mir181a-1	microRNA 181a-1	1		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676845	Mir181a-2	microRNA 181a-2	2		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3618736	Mir181b-2	microRNA 181b-2	2		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3618737	Mir181c	microRNA 181c	8		cellular response to lipopolysaccharide			IDA		J:141184 J:173714 	
+MGI:2676846	Mir182	microRNA 182	6		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:2676848	Mir184	microRNA 184	9		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:2676857	Mir193a	microRNA 193a	11		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:2676858	Mir194-1	microRNA 194-1	1		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3618738	Mir194-2	microRNA 194-2	19		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676863	Mir199a-1	microRNA 199a-1	9		cellular response to lipopolysaccharide			IGI	MGI:3618742 	J:173714 	
+MGI:3618742	Mir199a-2	microRNA 199a-2	1		cellular response to lipopolysaccharide			IGI	MGI:2676863 	J:173714 	
+MGI:3618750	Mir200c	microRNA 200c	6		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:2676877	Mir202	microRNA 202	7		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676880	Mir205	microRNA 205	1		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676886	Mir210	microRNA 210	7		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:2676893	Mir217	microRNA 217	11		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2684360	Mir223	microRNA 223	X		cellular response to lipopolysaccharide			IDA		J:141184 J:142604 J:173714 	
+MGI:3619129	Mir224	microRNA 224	X		cellular response to lipopolysaccharide			IDA		J:141184 J:173714 	
+MGI:3711326	Mir293	microRNA 293	7		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619334	Mir323	microRNA 323	12		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619358	Mir342	microRNA 342	12		cellular response to lipopolysaccharide			IDA		J:141184 J:173714 	
+MGI:3619361	Mir345	microRNA 345	12		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619366	Mir350	microRNA 350	1		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619391	Mir381	microRNA 381	12		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619393	Mir383	microRNA 383	8		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619396	Mir409	microRNA 409	12		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619401	Mir425	microRNA 425	9		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619403	Mir431	microRNA 431	12		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619404	Mir433	microRNA 433	12		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3718540	Mir467d	microRNA 467d	2		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619421	Mir484	microRNA 484	16		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619423	Mir486	microRNA 486	8		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:3619426	Mir494	microRNA 494	12		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3624341	Mir500	microRNA 500	X		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3629949	Mir501	microRNA 501	X		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3718546	Mir511	microRNA 511	2		cellular response to lipopolysaccharide			IDA		J:196021 	
+MGI:3718554	Mir598	microRNA 598	14		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3629959	Mir672	microRNA 672	X		cellular response to lipopolysaccharide			IDA		J:173714 	
+MGI:3619049	Mirlet7a-2	microRNA let7a-2	9		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:2676800	Mirlet7g	microRNA let7g	9		cellular response to lipopolysaccharide			IDA		J:141184 	
+MGI:97142	Mrc1	mannose receptor, C type 1	2		cellular response to lipopolysaccharide			IDA		J:196021 	
+MGI:1914404	Mtdh	metadherin	15		lipopolysaccharide-mediated signaling pathway			ISO	Q86UE4 	J:164563 	
+MGI:1918961	Mus81	MUS81 structure-specific endonuclease subunit	19		response to intra-S DNA damage checkpoint signaling			ISO	Q96NY9 	J:73065 	
+MGI:108005	Myd88	myeloid differentiation primary response gene 88	9		cellular response to lipopolysaccharide	happens in cholangiocyte	PR:P22366-2	IMP		J:277857 	
+MGI:108005	Myd88	myeloid differentiation primary response gene 88	9		lipopolysaccharide-mediated signaling pathway	happens in fibroblast		IMP	MGI:2385681 	J:84679 	
+MGI:97286	Ncl	nucleolin	1		cellular response to lipopolysaccharide			ISO	RGD:3153 	J:155856 	
+MGI:97312	Nfkb1	nuclear factor of kappa light polypeptide gene enhancer in B cells 1, p105	3		cellular response to lipopolysaccharide			ISO	RGD:70498 	J:155856 	
+MGI:97312	Nfkb1	nuclear factor of kappa light polypeptide gene enhancer in B cells 1, p105	3		cellular response to lipopolysaccharide			ISO	P19838 	J:205449 	
+MGI:104741	Nfkbia	nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor, alpha	12		cellular response to biotic stimulus			IDA		J:199058 	
+MGI:104741	Nfkbia	nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor, alpha	12		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IDA		J:84896 J:132126 	
+MGI:104752	Nfkbib	nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor, beta	7		cellular response to lipopolysaccharide			IBA	PTN002933414 	J:265628 	
+MGI:104752	Nfkbib	nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor, beta	7		cellular response to lipopolysaccharide			IDA		J:157867 	
+MGI:1340031	Nfkbil1	nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor like 1	17		cellular response to lipopolysaccharide			ISO	Q9UBC1 	J:164563 	
+MGI:1340031	Nfkbil1	nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor like 1	17		negative regulation of lipopolysaccharide-mediated signaling pathway			ISO	Q9UBC1 	J:164563 	
+MGI:2653833	Nlrp3	NLR family, pyrin domain containing 3	11		cellular response to lipopolysaccharide			IDA		J:253629 	
+MGI:2653833	Nlrp3	NLR family, pyrin domain containing 3	11		cellular response to lipopolysaccharide			ISO	Q96P20 	J:164563 	
+MGI:2653833	Nlrp3	NLR family, pyrin domain containing 3	11		cellular response to peptidoglycan			IMP		J:234642 	
+MGI:2429397	Nod2	nucleotide-binding oligomerization domain containing 2	8		cellular response to lipopolysaccharide			ISO	Q9HC29 	J:164563 	
+MGI:2429397	Nod2	nucleotide-binding oligomerization domain containing 2	8		cellular response to peptidoglycan			IMP	MGI:2680581 	J:113450 	
+MGI:97361	Nos2	nitric oxide synthase 2, inducible	11		cellular response to lipopolysaccharide			IDA		J:142604 J:155210 	
+MGI:97362	Nos3	nitric oxide synthase 3, endothelial cell	5		lipopolysaccharide-mediated signaling pathway			IMP	MGI:1857229 	J:97766 	
+MGI:2444210	Nr1d1	nuclear receptor subfamily 1, group D, member 1	11		cellular response to lipopolysaccharide			ISO	P20393 	J:164563 	
+MGI:1352462	Nr1h3	nuclear receptor subfamily 1, group H, member 3	2		cellular response to lipopolysaccharide			IDA		J:173138 	
+MGI:1352462	Nr1h3	nuclear receptor subfamily 1, group H, member 3	2		cellular response to lipopolysaccharide			ISO	Q13133 	J:164563 	
+MGI:1352464	Nr1h4	nuclear receptor subfamily 1, group H, member 4	10		cellular response to lipopolysaccharide			IMP		J:228561 	
+MGI:2685446	Nuggc	nuclear GTPase, germinal center associated	14		cellular response to lipopolysaccharide			ISO	Q68CJ6 	J:164563 	
+MGI:1339639	Ogt	O-linked N-acetylglucosamine (GlcNAc) transferase (UDP-N-acetylglucosamine:polypeptide-N-acetylglucosaminyl transferase)	X		cellular response to lipopolysaccharide			ISO	RGD:62060 	J:155856 	
+MGI:1859158	Pabpn1	poly(A) binding protein, nuclear 1	14		cellular response to lipopolysaccharide			IMP		J:235256 	
+MGI:1923988	Paf1	Paf1, RNA polymerase II complex component	7		cellular response to lipopolysaccharide			IDA		J:183965 	
+MGI:1930125	Pdcd1lg2	programmed cell death 1 ligand 2	19		cellular response to lipopolysaccharide			IBA	PTN002402215 	J:265628 	
+MGI:107490	Pdcd4	programmed cell death 4	19		cellular response to lipopolysaccharide			IMP		J:158464 	
+MGI:99557	Pde4b	phosphodiesterase 4B, cAMP specific	4		cellular response to lipopolysaccharide			IMP	MGI:2181444 	J:94853 	
+MGI:99555	Pde4d	phosphodiesterase 4D, cAMP specific	13		cellular response to lipopolysaccharide			IMP	MGI:2451168 MGI:3525068 	J:94853 	
+MGI:1888711	Pf4	platelet factor 4	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:104810	Plaa	phospholipase A2, activating protein	4		cellular response to lipopolysaccharide			ISO	Q9Y263 	J:164563 	
+MGI:101884	Ppard	peroxisome proliferator activator receptor delta	17		cellular response to lipopolysaccharide			ISO	RGD:3370 	J:155856 	
+MGI:1888712	Ppbp	pro-platelet basic protein	5		cellular response to lipopolysaccharide			IBA	PTN000021269 	J:265628 	
+MGI:2444211	Ppp1r15b	protein phosphatase 1, regulatory subunit 15B	1		ER overload response			IDA		J:86710 	
+MGI:2444211	Ppp1r15b	protein phosphatase 1, regulatory subunit 15B	1		ER overload response			IMP		J:86710 	
+MGI:99655	Prdm1	PR domain containing 1, with ZNF domain	10		negative regulation of lipopolysaccharide-mediated signaling pathway		PR:Q60636-2	IDA		J:143410 	
+MGI:109486	Prdx2	peroxiredoxin 2	8		negative regulation of lipopolysaccharide-mediated signaling pathway			IMP	MGI:2668456 	J:125361 	
+MGI:97595	Prkca	protein kinase C, alpha	11		positive regulation of lipopolysaccharide-mediated signaling pathway			ISO	P17252 	J:164563 	
+MGI:97599	Prkce	protein kinase C, epsilon	17		lipopolysaccharide-mediated signaling pathway			IMP	MGI:3609215 	J:103337 	
+MGI:97599	Prkce	protein kinase C, epsilon	17		lipopolysaccharide-mediated signaling pathway			IMP		J:111048 	
+MGI:2179381	Prpf8	pre-mRNA processing factor 8	11		cellular response to lipopolysaccharide			ISO	RGD:1305467 	J:155856 	
+MGI:107170	Ptpn22	protein tyrosine phosphatase, non-receptor type 22 (lymphoid)	3		lipopolysaccharide-mediated signaling pathway			ISO	Q9Y2R2 	J:164563 	
+MGI:1931465	Pycard	PYD and CARD domain containing	7		cellular response to lipopolysaccharide			ISO	Q9ULZ3 	J:164563 	
+MGI:109477	Raet1a	retinoic acid early transcript 1, alpha	10		cellular response to lipopolysaccharide	happens in macrophage		IDA		J:88001 	
+MGI:109432	Raet1b	retinoic acid early transcript beta	10		cellular response to lipopolysaccharide	happens in macrophage		IDA		J:88001 	
+MGI:109431	Raet1c	retinoic acid early transcript gamma	10		cellular response to lipopolysaccharide	happens in macrophage		IDA		J:88001 	
+MGI:97856	Rara	retinoic acid receptor, alpha	11		cellular response to lipopolysaccharide			IDA		J:154929 	
+MGI:103290	Rela	v-rel reticuloendotheliosis viral oncogene homolog A (avian)	19		cellular response to biotic stimulus			IDA		J:199058 	
+MGI:103290	Rela	v-rel reticuloendotheliosis viral oncogene homolog A (avian)	19		cellular response to lipopolysaccharide			ISO	RGD:727889 	J:155856 	
+MGI:103290	Rela	v-rel reticuloendotheliosis viral oncogene homolog A (avian)	19		cellular response to lipopolysaccharide			ISO	Q04206 	J:164563 	
+MGI:103290	Rela	v-rel reticuloendotheliosis viral oncogene homolog A (avian)	19		cellular response to lipoteichoic acid			ISO	Q04206 	J:164563 	
+MGI:103290	Rela	v-rel reticuloendotheliosis viral oncogene homolog A (avian)	19		cellular response to peptidoglycan			ISO	Q04206 	J:164563 	
+MGI:1096342	Rhoa	ras homolog family member A	9		cellular response to lipopolysaccharide			ISO	P61586 	J:164563 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		cellular response to lipopolysaccharide	happens in macrophage		IMP	MGI:2446070 	J:75401 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		cellular response to lipopolysaccharide	happens in macrophage		IMP	MGI:2660793 	J:75400 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		cellular response to lipoteichoic acid	happens in macrophage		IMP	MGI:2660793 	J:75400 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		cellular response to peptidoglycan	happens in macrophage		IMP	MGI:2660793 	J:75400 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IMP	MGI:2660793 	J:75400 	
+MGI:1917347	Sash1	SAM and SH3 domain containing 1	10		positive regulation of lipopolysaccharide-mediated signaling pathway			ISO	O94885 	J:205449 	
+MGI:2448490	Sbno2	strawberry notch 2	10		cellular response to lipopolysaccharide			IDA		J:223816 	
+MGI:3610314	Scimp	SLP adaptor and CSK interacting membrane protein	11		cellular response to molecule of fungal origin			IMP		J:235794 	
+MGI:3610314	Scimp	SLP adaptor and CSK interacting membrane protein	11		positive regulation of lipopolysaccharide-mediated signaling pathway			IDA		J:244275 	
+MGI:95994	Selenos	selenoprotein S	7		cellular response to lipopolysaccharide			ISO	Q9BQE4 	J:164563 	
+MGI:95994	Selenos	selenoprotein S	7		ER overload response			ISO	Q9BQE4 	J:164563 	
+MGI:97608	Serpine1	serine (or cysteine) peptidase inhibitor, clade E, member 1	5		cellular response to lipopolysaccharide			ISO	P05121 	J:164563 	
+MGI:1921887	Shpk	sedoheptulokinase	11		cellular response to lipopolysaccharide			IBA	PTN000023219 	J:265628 	
+MGI:1921887	Shpk	sedoheptulokinase	11		cellular response to lipopolysaccharide			IDA		J:185274 	
+MGI:1921887	Shpk	sedoheptulokinase	11		cellular response to lipopolysaccharide			ISO	Q9UHJ6 	J:164563 	
+MGI:108563	Sirpa	signal-regulatory protein alpha	2		cellular response to lipopolysaccharide	happens in macrophage		IDA		J:126125 	
+MGI:1927664	Sirt2	sirtuin 2	7		cellular response to molecule of bacterial origin			ISO	Q8IXJ6 	J:164563 	
+MGI:106299	Slx4	SLX4 structure-specific endonuclease subunit homolog (S. cerevisiae)	16		response to intra-S DNA damage checkpoint signaling			ISO	Q8IY92 	J:73065 	
+MGI:1344345	Smc1a	structural maintenance of chromosomes 1A	X		response to DNA damage checkpoint signaling			ISO	Q14683 	J:164563 	
+MGI:1923724	Spon2	spondin 2, extracellular matrix protein	5		cellular response to lipopolysaccharide	happens in macrophage		IDA		J:87393 	
+MGI:1923724	Spon2	spondin 2, extracellular matrix protein	5		cellular response to lipopolysaccharide	happens in macrophage		IMP	MGI:3026870 	J:87393 	
+MGI:1926193	Stap1	signal transducing adaptor family member 1	5		cellular response to lipopolysaccharide			IDA		J:144524 	
+MGI:103063	Stat1	signal transducer and activator of transcription 1	1		cellular response to lipopolysaccharide			IMP	MGI:1861949 	J:173334 	
+MGI:103063	Stat1	signal transducer and activator of transcription 1	1		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IDA		J:84896 	
+MGI:99515	Syk	spleen tyrosine kinase	13		cellular response to molecule of fungal origin			IMP		J:97989 	
+MGI:98496	Tbxa2r	thromboxane A2 receptor	10		cellular response to lipopolysaccharide			ISO	RGD:3825 	J:155856 	
+MGI:98725	Tgfb1	transforming growth factor, beta 1	7		lipopolysaccharide-mediated signaling pathway			ISO	P01137 	J:164563 	
+MGI:2147032	Ticam1	toll-like receptor adaptor molecule 1	17		cellular response to lipopolysaccharide	happens in macrophage		IMP		J:123633 	
+MGI:2147032	Ticam1	toll-like receptor adaptor molecule 1	17		lipopolysaccharide-mediated signaling pathway			IBA	PTN002932982 	J:265628 	
+MGI:2147032	Ticam1	toll-like receptor adaptor molecule 1	17		lipopolysaccharide-mediated signaling pathway	happens in macrophage		IMP	MGI:2679794 	J:84896 	
+MGI:2147032	Ticam1	toll-like receptor adaptor molecule 1	17		lipopolysaccharide-mediated signaling pathway	happens in fibroblast		IMP	MGI:3029019 	J:84679 	
+MGI:3040056	Ticam2	toll-like receptor adaptor molecule 2	18		cellular response to lipopolysaccharide			ISO	Q86XR7 	J:164563 	
+MGI:2442752	Tigar	Trp53 induced glycolysis regulatory phosphatase	6		regulation of response to DNA damage checkpoint signaling			ISO	Q9NQ88 	J:164563 	
+MGI:2152213	Tirap	toll-interleukin 1 receptor (TIR) domain-containing adaptor protein	9		cellular response to bacterial lipopeptide	happens in macrophage		IMP	MGI:3573942 	J:96018 	
+MGI:2152213	Tirap	toll-interleukin 1 receptor (TIR) domain-containing adaptor protein	9		cellular response to lipoteichoic acid	happens in macrophage		IMP	MGI:3573942 	J:96018 	
+MGI:1341295	Tlr1	toll-like receptor 1	5		cellular response to bacterial lipopeptide			IBA	PTN000687445 	J:265628 	
+MGI:1341295	Tlr1	toll-like receptor 1	5		cellular response to triacyl bacterial lipopeptide			IBA	PTN000687459 	J:265628 	
+MGI:1341295	Tlr1	toll-like receptor 1	5		cellular response to triacyl bacterial lipopeptide			ISO	Q15399 	J:73065 	
+MGI:1346060	Tlr2	toll-like receptor 2	3		cellular response to bacterial lipopeptide	happens in macrophage		IMP	MGI:2674036 	J:96018 	
+MGI:1346060	Tlr2	toll-like receptor 2	3		cellular response to bacterial lipopeptide			TAS		J:161025 	
+MGI:1346060	Tlr2	toll-like receptor 2	3		cellular response to diacyl bacterial lipopeptide			ISO	O60603 	J:73065 	
+MGI:1346060	Tlr2	toll-like receptor 2	3		cellular response to lipoteichoic acid	happens in macrophage		IMP	MGI:2674036 	J:96018 	
+MGI:1346060	Tlr2	toll-like receptor 2	3		cellular response to lipoteichoic acid			ISO	O60603 	J:73065 	
+MGI:1346060	Tlr2	toll-like receptor 2	3		cellular response to peptidoglycan			IMP		J:113450 	
+MGI:1346060	Tlr2	toll-like receptor 2	3		cellular response to triacyl bacterial lipopeptide			ISO	O60603 	J:73065 	
+MGI:96824	Tlr4	toll-like receptor 4	4		cellular response to lipopolysaccharide	happens in microglial cell		IDA		J:266466 	
+MGI:96824	Tlr4	toll-like receptor 4	4		cellular response to lipopolysaccharide	happens in B cell		IDA		J:63145 	
+MGI:96824	Tlr4	toll-like receptor 4	4		cellular response to lipopolysaccharide			IDA		J:215205 	
+MGI:96824	Tlr4	toll-like receptor 4	4		cellular response to lipopolysaccharide			IMP	MGI:1860755 	J:87393 	
+MGI:96824	Tlr4	toll-like receptor 4	4		cellular response to lipopolysaccharide			IMP		J:63145 J:156686 	
+MGI:96824	Tlr4	toll-like receptor 4	4		cellular response to lipopolysaccharide			ISO	O00206 	J:164563 	
+MGI:96824	Tlr4	toll-like receptor 4	4		cellular response to lipopolysaccharide	happens in macrophage,has the participant Trim55,has the participant transcription regulator complex,has the participant NF-kappaB p50/p65 complex		TAS		J:286766 	
+MGI:96824	Tlr4	toll-like receptor 4	4		cellular response to lipoteichoic acid	happens in peritoneal macrophage		IMP	MGI:1860885 	J:76115 	
+MGI:96824	Tlr4	toll-like receptor 4	4		lipopolysaccharide-mediated signaling pathway			IDA		J:244275 	
+MGI:96824	Tlr4	toll-like receptor 4	4		lipopolysaccharide-mediated signaling pathway	happens in B cell		IGI	MGI:1194924 MGI:1321404 	J:63145 	
+MGI:96824	Tlr4	toll-like receptor 4	4		lipopolysaccharide-mediated signaling pathway	happens in B cell		IGI	MGI:1341909 	J:63145 	
+MGI:96824	Tlr4	toll-like receptor 4	4	NOT	lipopolysaccharide-mediated signaling pathway			ISO	O00206 	J:63145 	
+MGI:96824	Tlr4	toll-like receptor 4	4		lipopolysaccharide-mediated signaling pathway			ISO	O00206 	J:63145 	
+MGI:1341296	Tlr6	toll-like receptor 6	5		cellular response to bacterial lipopeptide			IBA	PTN000687445 	J:265628 	
+MGI:1341296	Tlr6	toll-like receptor 6	5		cellular response to diacyl bacterial lipopeptide			IBA	PTN000687466 	J:265628 	
+MGI:1341296	Tlr6	toll-like receptor 6	5		cellular response to diacyl bacterial lipopeptide			ISO	Q9Y2C9 	J:73065 	
+MGI:1921173	Tmco1	transmembrane and coiled-coil domains 1	1		ER overload response			ISO	Q9UM00 	J:164563 	
+MGI:104798	Tnf	tumor necrosis factor	17		cellular response to lipopolysaccharide			IDA		J:143745 J:157867 J:173334 J:204786 	
+MGI:104798	Tnf	tumor necrosis factor	17		cellular response to lipopolysaccharide			ISO	RGD:3876 	J:155856 	
+MGI:104798	Tnf	tumor necrosis factor	17		lipopolysaccharide-mediated signaling pathway			ISO	P01375 	J:164563 	
+MGI:1196377	Tnfaip3	tumor necrosis factor, alpha-induced protein 3	10		cellular response to lipopolysaccharide			ISO	P21580 	J:164563 	
+MGI:1196377	Tnfaip3	tumor necrosis factor, alpha-induced protein 3	10		tolerance induction to lipopolysaccharide			ISO	P21580 	J:164563 	
+MGI:1314883	Tnfrsf1b	tumor necrosis factor receptor superfamily, member 1b	4		cellular response to lipopolysaccharide			ISO	P20333 	J:164563 	
+MGI:104511	Tnfsf4	tumor necrosis factor (ligand) superfamily, member 4	1		cellular response to lipopolysaccharide			ISO	P23510 	J:164563 	
+MGI:104511	Tnfsf4	tumor necrosis factor (ligand) superfamily, member 4	1		cellular response to lipopolysaccharide			NAS		J:169750 	
+MGI:2386643	Tnip2	TNFAIP3 interacting protein 2	5		cellular response to lipopolysaccharide			IMP		J:112395 	
+MGI:3041165	Tnip3	TNFAIP3 interacting protein 3	6		cellular response to lipopolysaccharide			ISO	Q96KP6 	J:164563 	
+MGI:108072	Traf6	TNF receptor-associated factor 6	2		cellular response to lipopolysaccharide			ISO	Q9Y4K3 	J:205449 	
+MGI:108072	Traf6	TNF receptor-associated factor 6	2		positive regulation of lipopolysaccharide-mediated signaling pathway			IMP		J:54467 	
+MGI:1913150	Trem2	triggering receptor expressed on myeloid cells 2	17		cellular response to lipoteichoic acid			IDA		J:210929 	
+MGI:1913150	Trem2	triggering receptor expressed on myeloid cells 2	17		cellular response to peptidoglycan			IDA		J:210929 	
+MGI:1913150	Trem2	triggering receptor expressed on myeloid cells 2	17		lipopolysaccharide-mediated signaling pathway			IC	GO:0001530 	J:210929 	
+MGI:2443397	Trib1	tribbles pseudokinase 1	15		negative regulation of lipopolysaccharide-mediated signaling pathway			ISO	Q96RU8 	J:164563 	
+MGI:2384814	Trim41	tripartite motif-containing 41	11		cellular response to lipopolysaccharide			ISO	Q8WV44 	J:164563 	
+MGI:98834	Trp53	transformation related protein 53	11		ER overload response			ISO	P04637 	J:73065 	
+MGI:2445126	Tut4	terminal uridylyl transferase 4	4		regulation of lipopolysaccharide-mediated signaling pathway			IDA		J:108656 	
+MGI:1889549	Txnip	thioredoxin interacting protein	3		cellular response to tumor cell			ISO	Q9H3M7 	J:164563 	
+MGI:107995	Upf1	UPF1 regulator of nonsense transcripts homolog (yeast)	8		cellular response to lipopolysaccharide			ISO	Q92900 	J:164563 	
+MGI:98932	Vim	vimentin	2		cellular response to lipopolysaccharide			ISO	P08670 	J:164563 	
+MGI:98958	Wnt5a	wingless-type MMTV integration site family, member 5A	14		cellular response to molecule of bacterial origin			IDA		J:164784 	
+MGI:98970	Xbp1	X-box binding protein 1	11		cellular response to lipopolysaccharide			IDA		J:215658 	
+MGI:98970	Xbp1	X-box binding protein 1	11		cellular response to lipopolysaccharide			ISO	P17861 	J:164563 	
+MGI:2385891	Zc3h12a	zinc finger CCCH type containing 12A	4		cellular response to lipopolysaccharide			IDA		J:147868 J:174994 J:228359 J:229326 	
+MGI:2385891	Zc3h12a	zinc finger CCCH type containing 12A	4		cellular response to lipopolysaccharide			ISO	Q5D1E8 	J:164563 	
+MGI:2385891	Zc3h12a	zinc finger CCCH type containing 12A	4		cellular response to lipopolysaccharide			ISS	Q5D1E8 	J:196097 	
+MGI:99180	Zfp36	zinc finger protein 36	7		cellular response to lipopolysaccharide			IDA		J:161121 J:233588 J:233592 	
+MGI:99180	Zfp36	zinc finger protein 36	7		cellular response to lipopolysaccharide			IMP		J:235256 	
+MGI:99180	Zfp36	zinc finger protein 36	7		cellular response to lipopolysaccharide			ISO	P26651 	J:164563 	
+MGI:2384299	Zfp709	zinc finger protein 709	8		cellular response to lipopolysaccharide			ISO	RGD:628698 	J:155856 	
+MGI:1890508	Zmpste24	zinc metallopeptidase, STE24	4		response to DNA damage checkpoint signaling			IMP	MGI:2180033 	J:99634 	
+
