@@ -104,13 +104,13 @@ resSig <- subset(res, padj < 0.05)
 rs <- as.data.frame(resSig)
 siggenes <- as.vector(rownames(rs))
 
-# # Creating a PDF of each gene identified above
-# setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\figures\\")
-# for (genename in siggenes){
-#   n <- paste(genename,"pdf", sep = ".")
-#   pdf(file = n, onefile = FALSE, title = genename)
-#   plotCounts(dds,gene=genename,intgroup= "timehousing")
-#   dev.off()}
+# Creating a PDF of each gene identified above
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\figures\\")
+for (genename in siggenes){
+  n <- paste(genename,"png", sep = ".")
+  png(filename = n, width = 12, height = 12, units = "in", res = 800, bg= "NA")
+  plotCounts(dds,gene=genename,intgroup= "timehousing")
+  dev.off()}
 
 # # Write out results
 # write.csv(as.data.frame(res), file="timehousing-genotype_results.csv")
@@ -129,6 +129,21 @@ siggenes <- as.vector(rownames(rs))
 # plotDispEsts(dds)
 # dev.off()
 ```
+
+
+```{r}
+#Generate Heatmap of DEGs
+
+mininorm <- normed[noquote(rownames(normed)) %in% noquote(as.vector(siggenes)),]
+  mininorm <- as.matrix(mininorm)
+  setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\")
+  title = "Differentially Expressed Genes"
+  png(filename = "deg_heatmap.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
+  heatmap(mininorm, Colv = NA, main=title)
+  dev.off()
+  
+```
+
 
 
 ```{r}
@@ -180,8 +195,7 @@ mininormed <- normed[noquote(rownames(normed)) %in% noquote(unique(as.vector(go_
   mininormed <- as.matrix(mininormed)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Positive Regulation of Cytokine Production"
-  n <- paste(title,"pdf", sep = ".'")
-  pdf(file = "positive_regulation_of_cytokine_production.pdf")
+  png(filename = "positive_regulation_of_cytokine_production.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(mininormed, Colv = NA, main=title)
   dev.off()
   
@@ -191,8 +205,7 @@ minisig140 <- select(as.data.frame(normed), contains("B"))
   minisig140 <- as.matrix(minisig140)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Positive Regulation of Cytokine Production"
-  n <- paste(title,"pdf", sep = ".'")
-  pdf(file = "positive_regulation_of_cytokine_production_sig.pdf")
+  png(filename = "positive_regulation_of_cytokine_production_sig.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(minisig140, Colv = NA, main=title)
   dev.off()
 
@@ -202,8 +215,7 @@ minisig60 <- select(as.data.frame(normed), contains("A"))
   minisig60 <- as.matrix(minisig60)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Positive Regulation of Cytokine Production"
-  n <- paste(title,"pdf", sep = ".'")
-  pdf(file = "positive_regulation_of_cytokine_production_sig60.pdf")
+  png(filename = "positive_regulation_of_cytokine_production.png_sig60", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(minisig60, Colv = NA, main=title)
   dev.off()
 
@@ -217,7 +229,7 @@ mininormed <- normed[noquote(rownames(normed)) %in% noquote(unique(as.vector(go_
   mininormed <- as.matrix(mininormed)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Innate Immune Response"
-  pdf(file = "innate_immune_response.pdf")
+  png(filename = "innate_immune_response.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(mininormed, Colv = NA, main=title)
   dev.off()
   
@@ -227,7 +239,7 @@ minisig140 <- select(as.data.frame(normed), contains("B"))
   minisig140 <- as.matrix(minisig140)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Innate Immune Response"
-  pdf(file = "innate_immune_response_sig.pdf")
+  png(filename = "innate_immune_response_sig.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(minisig140, Colv = NA, main=title)
   dev.off()
 
@@ -237,7 +249,7 @@ minisig60 <- select(as.data.frame(normed), contains("A"))
   minisig60 <- as.matrix(minisig60)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Innate Immune Response"
-  pdf(file = "innate_immune_response_sig60.pdf")
+  png(filename = "innate_immune_response_sig60.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(minisig60, Colv = NA, main=title)
   dev.off()
 
@@ -245,13 +257,13 @@ minisig60 <- select(as.data.frame(normed), contains("A"))
 
 
 ```{r}
-go_crtbs <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\cellular_response_to_biotic_stimulus.txt", sep = "\t", row.names = NULL, header = TRUE)
+go_ctrbs <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\cellular_response_to_biotic_stimulus.txt", sep = "\t", row.names = NULL, header = TRUE)
 
 mininormed <- normed[noquote(rownames(normed)) %in% noquote(unique(as.vector(go_ctrbs$MGI.Gene.Marker.ID))),]
   mininormed <- as.matrix(mininormed)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Cellular Response to Biotic Stimulus"
-  pdf(file = "cellular_response_to_biotic_stimulus.pdf")
+  png(filename = "cellular_response_to_biotic_stimulus.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(mininormed, Colv = NA, main=title)
   dev.off()
   
@@ -261,7 +273,7 @@ minisig140 <- select(as.data.frame(normed), contains("B"))
   minisig140 <- as.matrix(minisig140)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Cellular Response to Biotic Stimulus"
-  pdf(file = "cellular_response_to_biotic_stimulus_sig.pdf")
+  png(filename = "cellular_response_to_biotic_stimulus_sig.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(minisig140, Colv = NA, main=title)
   dev.off()
 
@@ -271,7 +283,7 @@ minisig60 <- select(as.data.frame(normed), contains("A"))
   minisig60 <- as.matrix(minisig60)
   setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
   title = "Cellular Response to Biotic Stimulus"
-  pdf(file = "cellular_response_to_biotic_stimulus_sig60.pdf")
+  png(filename = "cellular_response_to_biotic_stimulus_sig60.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
   heatmap(minisig60, Colv = NA, main=title)
   dev.off()
 
