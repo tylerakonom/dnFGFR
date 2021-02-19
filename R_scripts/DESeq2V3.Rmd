@@ -97,20 +97,22 @@ dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design = ~ g
 
 # Run DESeq on the DESeq object
 dds = DESeq(dds)
-plotDispEsts(dds)
+# plotDispEsts(dds)
 res <- results(dds, contrast = c("timehousing", "PN140_opposite", "PN140_same"))
 normed = counts(dds, normalized=TRUE)
 resSig <- subset(res, padj < 0.05)
 rs <- as.data.frame(resSig)
 siggenes <- as.vector(rownames(rs))
 
-# Creating a PDF of each gene identified above
-setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\figures\\")
-for (genename in siggenes){
-  n <- paste(genename,"png", sep = ".")
-  png(filename = n, width = 12, height = 12, units = "in", res = 800, bg= "NA")
-  plotCounts(dds,gene=genename,intgroup= "timehousing")
-  dev.off()}
+# plotCounts(dds, gene = "", intgroup = "timehousing")
+
+# # Creating a PDF of each gene identified above
+# setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\figures\\")
+# for (genename in siggenes){
+#   n <- paste(genename,"png", sep = ".")
+#   png(filename = n, width = 12, height = 12, units = "in", res = 800, bg= "NA")
+#   plotCounts(dds,gene=genename,intgroup= "timehousing")
+#   dev.off()}
 
 # # Write out results
 # write.csv(as.data.frame(res), file="timehousing-genotype_results.csv")
@@ -185,7 +187,7 @@ siggenes <- as.vector(rownames(rs))
 
 
 ```{r}
-go_procp <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\positive_regulation_of_cytokine_production.txt", sep = "\t", row.names = NULL, header = TRUE)
+go_procp <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\positive_regulation_of_cytokine_production.txt", sep = "\t", row.names = NULL, header = TRUE, quote = "")
 
 # normed140 <- as.data.frame(normed)
 # normed140 <- select(normed140, contains("B"))
@@ -223,7 +225,7 @@ minisig60 <- select(as.data.frame(normed), contains("A"))
 
 
 ```{r}
-go_iir <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\innate_immune_response.txt", sep = "\t", row.names = NULL, header = TRUE)
+go_iir <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\innate_immune_response.txt", sep = "\t", row.names = NULL, header = TRUE, quote = "")
 
 mininormed <- normed[noquote(rownames(normed)) %in% noquote(unique(as.vector(go_iir$MGI.Gene.Marker.ID))),]
   mininormed <- as.matrix(mininormed)
@@ -257,7 +259,7 @@ minisig60 <- select(as.data.frame(normed), contains("A"))
 
 
 ```{r}
-go_ctrbs <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\cellular_response_to_biotic_stimulus.txt", sep = "\t", row.names = NULL, header = TRUE)
+go_ctrbs <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\cellular_response_to_biotic_stimulus.txt", sep = "\t", row.names = NULL, header = TRUE, quote = "")
 
 mininormed <- normed[noquote(rownames(normed)) %in% noquote(unique(as.vector(go_ctrbs$MGI.Gene.Marker.ID))),]
   mininormed <- as.matrix(mininormed)
@@ -290,3 +292,41 @@ minisig60 <- select(as.data.frame(normed), contains("A"))
   # write.table(normcounts_group,paste0(outdir,outfilename,"/",'cluster',i,'.txt', sep=""), sep="\t",append = FALSE, quote = FALSE)}
 
 ```
+
+```{r}
+go_air <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\adaptive_immune_response.txt", sep = "\t", row.names = NULL, header = TRUE, quote = "")
+
+mininormed <- normed[noquote(rownames(normed)) %in% noquote(unique(as.vector(go_air$MGI.Gene.Marker.ID))),]
+  mininormed <- as.matrix(mininormed)
+  setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
+  title = "Adaptive Immune Response"
+  png(filename = "adaptive_immune_response.png", width = 12, height = 12, units = "in", res = 800, bg= "white")
+  heatmap(mininormed, Colv = NA, main=title)
+  dev.off()
+  
+minisig140 <- select(as.data.frame(normed), contains("B"))
+  minisig140 <- minisig140[noquote(rownames(minisig140)) %in% noquote(unique(as.vector(go_air$MGI.Gene.Marker.ID))),]
+  minisig140 <- minisig140[noquote(rownames(minisig140)) %in% noquote(unique(siggenes)),]
+  minisig140 <- as.matrix(minisig140)
+  setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
+  title = "Adaptive Immune Response"
+  png(filename = "adaptive_immune_response_sig.png", width = 12, height = 12, units = "in", res = 800, bg= "white")
+  heatmap(minisig140, Colv = NA, main=title)
+  dev.off()
+
+minisig60 <- select(as.data.frame(normed), contains("A"))
+  minisig60 <- minisig60[noquote(rownames(minisig60)) %in% noquote(unique(as.vector(go_air$MGI.Gene.Marker.ID))),]
+  minisig60 <- minisig60[noquote(rownames(minisig60)) %in% noquote(unique(siggenes)),]
+  minisig60 <- as.matrix(minisig60)
+  setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\Go_heatmaps\\")
+  title = "Adaptive Immune Response"
+  png(filename = "adaptive_immune_response_sig60.png", width = 12, height = 12, units = "in", res = 800, bg= "NA")
+  heatmap(minisig60, Colv = NA, main=title)
+  dev.off()
+
+  # write.table(normcounts_group,paste0(outdir,outfilename,"/",'cluster',i,'.txt', sep=""), sep="\t",append = FALSE, quote = FALSE)}
+
+```
+
+
+

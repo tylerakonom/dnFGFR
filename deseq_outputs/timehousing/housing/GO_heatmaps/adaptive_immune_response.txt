@@ -1,0 +1,894 @@
+MGI Gene/Marker ID	Symbol	Name	Chr	Qualifier	Annotated Term	Context	Proteoform	Evidence	Inferred From	Reference(s)
+MGI:1924977	6030468B19Rik	RIKEN cDNA 6030468B19 gene	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1924977	6030468B19Rik	RIKEN cDNA 6030468B19 gene	11		positive regulation of immunoglobulin production in mucosal tissue			IMP		J:251374 	
+MGI:87916	Ada	adenosine deaminase	2		positive regulation of germinal center formation	regulates the formation of spleen		IMP	MGI:1857117 MGI:2683027 	J:106733 	
+MGI:1096335	Adam17	a disintegrin and metallopeptidase domain 17	12		germinal center formation			IMP		J:143629 	
+MGI:102891	Adcy7	adenylate cyclase 7	8		regulation of adaptive immune response			IMP		J:161446 	
+MGI:106912	Adgre1	adhesion G protein-coupled receptor E1	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:893592	Ager	advanced glycosylation end product-specific receptor	17		regulation of T cell mediated cytotoxicity			ISO	Q15109 	J:164563 	
+MGI:1342279	Aicda	activation-induced cytidine deaminase	6		isotype switching	happens in mature B cell		IMP		J:126758 	
+MGI:1342279	Aicda	activation-induced cytidine deaminase	6		isotype switching			IMP		J:172192 	
+MGI:1338803	Aire	autoimmune regulator (autoimmune polyendocrinopathy candidiasis ectodermal dystrophy)	10		peripheral T cell tolerance induction			IBA	PTN002931439 	J:265628 	
+MGI:1338803	Aire	autoimmune regulator (autoimmune polyendocrinopathy candidiasis ectodermal dystrophy)	10		peripheral T cell tolerance induction			IDA		J:208220 	
+MGI:1313266	Alcam	activated leukocyte cell adhesion molecule	16		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:87997	Alox15	arachidonate 15-lipoxygenase	11		negative regulation of adaptive immune response			IMP		J:187327 	
+MGI:96819	Anxa1	annexin A1	19		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96819	Anxa1	annexin A1	19		positive regulation of T-helper 1 cell differentiation			IBA	PTN002574794 	J:265628 	
+MGI:96819	Anxa1	annexin A1	19		positive regulation of T-helper 1 cell differentiation			ISO	P04083 	J:164563 	
+MGI:98229	Apcs	serum amyloid P-component	1		complement activation, classical pathway			IBA	PTN000444388 	J:265628 	
+MGI:1919353	Aplf	aprataxin and PNKP like factor	6		regulation of isotype switching	regulates a function/process that happens in spleen,regulates a function/process that happens in B cell		IMP	MGI:4128102 	J:168260 	
+MGI:88070	Arg1	arginase, liver	10		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88070	Arg1	arginase, liver	10		negative regulation of T-helper 2 cell cytokine production			IMP		J:243399 	
+MGI:1330806	Arg2	arginase type II	12		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2443039	Arid5a	AT rich interactive domain 5A (MRF1-like)	1		positive regulation of T-helper 1 cell cytokine production			IMP		J:240577 	
+MGI:2443039	Arid5a	AT rich interactive domain 5A (MRF1-like)	1		positive regulation of T-helper 17 type immune response			IMP		J:233072 	
+MGI:2442925	Atad5	ATPase family, AAA domain containing 5	11		isotype switching	happens in B cell		IMP	MGI:4127920 	J:230702 	
+MGI:2442925	Atad5	ATPase family, AAA domain containing 5	11		positive regulation of isotype switching to IgG isotypes			IMP	MGI:4127920 	J:230702 	
+MGI:103163	Azgp1	alpha-2-glycoprotein 1, zinc	5		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:88127	B2m	beta-2 microglobulin	2		positive regulation of T cell cytokine production			ISO	P61769 	J:164563 	
+MGI:88127	B2m	beta-2 microglobulin	2		positive regulation of T cell mediated cytotoxicity	regulates a function/process that happens in T cell		IMP		J:104295 	
+MGI:894679	Bach2	BTB and CNC homology, basic leucine zipper transcription factor 2	4		primary adaptive immune response involving T cells and B cells			ISO	Q9BYV9 	J:164563 	
+MGI:1859147	Batf	basic leucine zipper transcription factor, ATF-like	12		isotype switching			IMP		J:160935 J:172119 	
+MGI:1859147	Batf	basic leucine zipper transcription factor, ATF-like	12		T-helper 17 cell differentiation			IMP		J:160935 J:172119 	
+MGI:1859147	Batf	basic leucine zipper transcription factor, ATF-like	12		T-helper 17 cell lineage commitment			IMP		J:150643 J:190118 	
+MGI:88140	Bcl3	B cell leukemia/lymphoma 3	7		germinal center formation	has the participant spleen		IMP	MGI:1861796 	J:38092 	
+MGI:88140	Bcl3	B cell leukemia/lymphoma 3	7		germinal center formation	has the participant spleen germinal center		IMP	MGI:2158443 	J:112111 	
+MGI:88140	Bcl3	B cell leukemia/lymphoma 3	7		germinal center formation			IMP	MGI:2158443 	J:39747 	
+MGI:88140	Bcl3	B cell leukemia/lymphoma 3	7		humoral immune response mediated by circulating immunoglobulin			IMP	MGI:1861796 	J:38092 	
+MGI:88140	Bcl3	B cell leukemia/lymphoma 3	7		T-helper 1 type immune response			IMP	MGI:1861796 	J:38092 	
+MGI:107187	Bcl6	B cell leukemia/lymphoma 6	16		germinal center formation			IMP	MGI:2158436 	J:42667 J:111535 	
+MGI:107187	Bcl6	B cell leukemia/lymphoma 6	16		germinal center formation	has the participant spleen germinal center|has the participant lymph node secondary follicle|has the participant Peyer's patch germinal center		IMP	MGI:2158438 	J:40769 	
+MGI:107187	Bcl6	B cell leukemia/lymphoma 6	16		germinal center formation	has the participant spleen germinal center		IMP	MGI:2158439 	J:39815 	
+MGI:107187	Bcl6	B cell leukemia/lymphoma 6	16		negative regulation of isotype switching to IgE isotypes	regulates a function/process that happens in B cell		IGI	MGI:103034 	J:57856 	
+MGI:107187	Bcl6	B cell leukemia/lymphoma 6	16		negative regulation of isotype switching to IgE isotypes	regulates a function/process that happens in B cell		IMP	MGI:2158438 	J:57856 	
+MGI:1337994	Bcl10	B cell leukemia/lymphoma 10	3		adaptive immune response			IBA	PTN002858499 	J:265628 	
+MGI:1337994	Bcl10	B cell leukemia/lymphoma 10	3		adaptive immune response			ISO	O95999 	J:164563 	
+MGI:1337994	Bcl10	B cell leukemia/lymphoma 10	3		immunoglobulin mediated immune response			IMP	MGI:2158304 	J:67297 	
+MGI:1101778	Bmx	BMX non-receptor tyrosine kinase	X		adaptive immune response			IBA	PTN000700360 	J:265628 	
+MGI:88216	Btk	Bruton agammaglobulinemia tyrosine kinase	X		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88216	Btk	Bruton agammaglobulinemia tyrosine kinase	X		B cell affinity maturation			IMP	MGI:1856317 	J:17954 	
+MGI:88216	Btk	Bruton agammaglobulinemia tyrosine kinase	X		positive regulation of type I hypersensitivity			ISO	RGD:1359683 	J:155856 	
+MGI:88216	Btk	Bruton agammaglobulinemia tyrosine kinase	X		positive regulation of type III hypersensitivity			ISO	RGD:1359683 	J:155856 	
+MGI:2658978	Btla	B and T lymphocyte associated	16		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88223	C1qa	complement component 1, q subcomponent, alpha polypeptide	4		complement activation, classical pathway			IMP	MGI:2158701 	J:75709 	
+MGI:88224	C1qb	complement component 1, q subcomponent, beta polypeptide	4		complement activation, classical pathway			IEA	IPR037573 	J:72247 	
+MGI:88224	C1qb	complement component 1, q subcomponent, beta polypeptide	4		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:1194505	C1qbp	complement component 1, q subcomponent binding protein	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1194505	C1qbp	complement component 1, q subcomponent binding protein	11		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88225	C1qc	complement component 1, q subcomponent, C chain	4		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:1355313	C1ra	complement component 1, r subcomponent A	6		complement activation, classical pathway			IEA	IPR035707 	J:72247 	
+MGI:1355313	C1ra	complement component 1, r subcomponent A	6		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:3779804	C1rb	complement component 1, r subcomponent B	6		complement activation, classical pathway			IEA	IPR035707 	J:72247 	
+MGI:3779804	C1rb	complement component 1, r subcomponent B	6		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:2660692	C1rl	complement component 1, r subcomponent-like	6		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:1355312	C1s1	complement component 1, s subcomponent 1	6		complement activation, classical pathway			IEA	IPR035708 	J:72247 	
+MGI:1355312	C1s1	complement component 1, s subcomponent 1	6		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:3644269	C1s2	complement component 1, s subcomponent 2	6		complement activation, classical pathway			IEA	IPR035708 	J:72247 	
+MGI:3644269	C1s2	complement component 1, s subcomponent 2	6		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88226	C2	complement component 2 (within H-2S)	17		complement activation, classical pathway			IEA	IPR037568 	J:72247 	
+MGI:88226	C2	complement component 2 (within H-2S)	17		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88227	C3	complement component 3	17		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88227	C3	complement component 3	17		positive regulation of type IIa hypersensitivity			IMP	MGI:1861799 	J:75709 	
+MGI:1097680	C3ar1	complement component 3a receptor 1	6		tolerance induction to nonself antigen			ISO	RGD:620537 	J:155856 	
+MGI:88228	C4b	complement component 4B (Chido blood group)	17		immunoglobulin mediated immune response			IMP	MGI:1889070 	J:80067 	
+MGI:88229	C4bp	complement component 4 binding protein	1		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:2668347	C8a	complement component 8, alpha polypeptide	4		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88236	C8b	complement component 8, beta polypeptide	4		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88237	C8g	complement component 8, gamma polypeptide	2		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:1098282	C9	complement component 9	15		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88258	Camk4	calcium/calmodulin-dependent protein kinase IV	18		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1346316	Ccl19	chemokine (C-C motif) ligand 19	4		positive regulation of T-helper 1 cell differentiation			IDA		J:97971 	
+MGI:1329031	Ccl20	chemokine (C-C motif) ligand 20	1	NOT	regulation of T cell cytokine production			IDA		J:142071 	
+MGI:1329031	Ccl20	chemokine (C-C motif) ligand 20	1	NOT	regulation of T-helper 17 cell differentiation			IDA		J:142071 	
+MGI:106185	Ccr2	chemokine (C-C motif) receptor 2	9		positive regulation of T-helper 1 cell differentiation			IC	GO:0032729 	J:118487 	
+MGI:106185	Ccr2	chemokine (C-C motif) receptor 2	9		positive regulation of T-helper 1 type immune response			IMP		J:125574 	
+MGI:106185	Ccr2	chemokine (C-C motif) receptor 2	9		regulation of T cell cytokine production			IMP		J:247722 	
+MGI:1333797	Ccr6	chemokine (C-C motif) receptor 6	17		isotype switching to IgA isotypes			IMP		J:233674 	
+MGI:1333797	Ccr6	chemokine (C-C motif) receptor 6	17	NOT	regulation of T-helper 17 cell differentiation			IMP		J:142071 	
+MGI:103011	Ccr7	chemokine (C-C motif) receptor 7	11		positive regulation of T-helper 1 cell differentiation			IC	GO:0016493 	J:97971 	
+MGI:107674	Cd1d1	CD1d1 antigen	3		positive regulation of T cell mediated cytotoxicity			IBA	PTN000422284 	J:265628 	
+MGI:107674	Cd1d1	CD1d1 antigen	3		positive regulation of T cell mediated cytotoxicity			IDA		J:76976 	
+MGI:107675	Cd1d2	CD1d2 antigen	3		positive regulation of T cell mediated cytotoxicity			IDA		J:76976 	
+MGI:88331	Cd3d	CD3 antigen, delta polypeptide	9		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88332	Cd3e	CD3 antigen, epsilon polypeptide	9		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88333	Cd3g	CD3 antigen, gamma polypeptide	9		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88335	Cd4	CD4 antigen	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88335	Cd4	CD4 antigen	6		helper T cell enhancement of adaptive immune response			IMP		J:68957 	
+MGI:88344	Cd7	CD7 antigen	11		adaptive immune response			IEA	IPR039090 	J:72247 	
+MGI:88344	Cd7	CD7 antigen	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88346	Cd8a	CD8 antigen, alpha chain	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88346	Cd8a	CD8 antigen, alpha chain	6		T cell mediated immunity			IBA	PTN000047644 	J:265628 	
+MGI:88346	Cd8a	CD8 antigen, alpha chain	6		T cell mediated immunity	has the participant T cell		IMP	MGI:1857149 	J:68956 	
+MGI:88347	Cd8b1	CD8 antigen, beta chain 1	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88319	Cd19	CD19 antigen	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88319	Cd19	CD19 antigen	7		B cell mediated immunity			IMP		J:27463 	
+MGI:88319	Cd19	CD19 antigen	7		immunoglobulin mediated immune response			ISO	P15391 	J:164563 	
+MGI:88323	Cd24a	CD24a antigen	10		positive regulation of T cell mediated immune response to tumor cell			IDA		J:25743 	
+MGI:88327	Cd28	CD28 antigen	1		positive regulation of isotype switching to IgG isotypes			IMP	MGI:1857150 	J:14194 	
+MGI:88336	Cd40	CD40 antigen	2		B cell mediated immunity	has the participant Traf3ip2		IGI	MGI:2143599 	J:138560 	
+MGI:88336	Cd40	CD40 antigen	2		B cell mediated immunity	has the participant Traf3ip2		IGI	MGI:88336 	J:138560 	
+MGI:88336	Cd40	CD40 antigen	2		positive regulation of isotype switching to IgG isotypes			IBA	PTN005324942 	J:265628 	
+MGI:88336	Cd40	CD40 antigen	2		positive regulation of isotype switching to IgG isotypes			IDA		J:84929 	
+MGI:88337	Cd40lg	CD40 ligand	X		isotype switching			IDA		J:113688 	
+MGI:88338	Cd44	CD44 antigen	2		positive regulation of adaptive immune response			NAS		J:131317 	
+MGI:1203290	Cd46	CD46 antigen, complement regulatory protein	1		T cell mediated immunity			ISO	P15529 	J:164563 	
+MGI:88339	Cd48	CD48 antigen	1		regulation of adaptive immune response			IEA	IPR033548 	J:72247 	
+MGI:104850	Cd55	CD55 molecule, decay accelerating factor for complement	1		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:104850	Cd55	CD55 molecule, decay accelerating factor for complement	1		regulation of complement activation, classical pathway			IMP	MGI:2387405 	J:52968 	
+MGI:104849	Cd55b	CD55 molecule, decay accelerating factor for complement B	1		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:1195273	Cd70	CD70 antigen	17		B cell mediated immunity			ISO	P32970 	J:164563 	
+MGI:1195273	Cd70	CD70 antigen	17		T cell mediated immunity			ISO	P32970 	J:164563 	
+MGI:96534	Cd74	CD74 antigen (invariant polypeptide of major histocompatibility complex, class II antigen-associated)	18		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96534	Cd74	CD74 antigen (invariant polypeptide of major histocompatibility complex, class II antigen-associated)	18		immunoglobulin mediated immune response			IMP	MGI:1927205 	J:4119 	
+MGI:96534	Cd74	CD74 antigen (invariant polypeptide of major histocompatibility complex, class II antigen-associated)	18		positive regulation of adaptive immune response			NAS		J:131317 	
+MGI:101774	Cd79a	CD79A antigen (immunoglobulin-associated alpha)	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96431	Cd79b	CD79B antigen	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1096398	Cd81	CD81 antigen	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1096398	Cd81	CD81 antigen	7		humoral immune response mediated by circulating immunoglobulin			ISO	P60033 	J:164563 	
+MGI:1096398	Cd81	CD81 antigen	7		positive regulation of adaptive immune memory response			ISO	P60033 	J:164563 	
+MGI:1096398	Cd81	CD81 antigen	7		positive regulation of T-helper 2 cell cytokine production			IMP		J:65423 	
+MGI:1096398	Cd81	CD81 antigen	7		positive regulation of T-helper 2 cell cytokine production			ISO	P60033 	J:164563 	
+MGI:1336885	Cd84	CD84 antigen	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:101773	Cd86	CD86 antigen	16		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1860383	Cd160	CD160 antigen	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1860383	Cd160	CD160 antigen	3		negative regulation of adaptive immune memory response			ISO	O95971 	J:164563 	
+MGI:3039602	Cd226	CD226 antigen	18		positive regulation of immunoglobulin mediated immune response			IBA	PTN002931336 	J:265628 	
+MGI:3039602	Cd226	CD226 antigen	18		positive regulation of immunoglobulin mediated immune response			ISO	Q15762 	J:164563 	
+MGI:109294	Cd244a	CD244 molecule A	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88334	Cd247	CD247 antigen	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1926446	Cd274	CD274 antigen	19		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1926446	Cd274	CD274 antigen	19		positive regulation of tolerance induction to tumor cell			ISO	Q9NZQ7 	J:164563 	
+MGI:1095414	Cdh17	cadherin 17	4	NOT	T cell mediated immunity			IMP		J:96738 	
+MGI:88385	Cfh	complement component factor h	1		immunoglobulin mediated immune response			IGI		J:156611 	
+MGI:105937	Cfi	complement component factor i	3		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:1930088	Clcf1	cardiotrophin-like cytokine factor 1	19		positive regulation of isotype switching to IgE isotypes			IDA		J:133136 	
+MGI:1349412	Clec4a2	C-type lectin domain family 4, member a2	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1298389	Clec4d	C-type lectin domain family 4, member d	6		adaptive immune response			IMP		J:203159 	
+MGI:1923113	Clec4g	C-type lectin domain family 4, member g	8		negative regulation of T cell mediated immunity			IDA		J:200968 	
+MGI:1923113	Clec4g	C-type lectin domain family 4, member g	8		negative regulation of T cell mediated immunity	happens in liver,regulates a function/process that happens in liver		IMP	MGI:5510586 	J:194891 	
+MGI:1923113	Clec4g	C-type lectin domain family 4, member g	8		negative regulation of T cell mediated immunity	regulates a function/process that happens in liver,happens in liver		IMP	MGI:5510586 	J:200968 	
+MGI:1861231	Clec4n	C-type lectin domain family 4, member n	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88513	Cr1l	complement component (3b/4b) receptor 1-like	1		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88489	Cr2	complement receptor 2	1		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:88489	Cr2	complement receptor 2	1		immunoglobulin mediated immune response	uses Cfh		IGI		J:156611 	
+MGI:2685919	Cracr2a	calcium release activated channel regulator 2A	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2685919	Cracr2a	calcium release activated channel regulator 2A	6		T-helper 1 cell differentiation			IMP		J:264324 	
+MGI:2685919	Cracr2a	calcium release activated channel regulator 2A	6		T-helper 1 cell differentiation			ISO	Q9BSW2 	J:164563 	
+MGI:1889506	Crlf2	cytokine receptor-like factor 2	5		immunoglobulin production involved in immunoglobulin-mediated immune response	happens in lung		IDA		J:110190 	
+MGI:1889506	Crlf2	cytokine receptor-like factor 2	5		T-helper 2 cell cytokine production	happens in lung		IDA		J:110190 	
+MGI:88512	Crp	C-reactive protein, pentraxin-related	1		complement activation, classical pathway			IBA	PTN000444388 	J:265628 	
+MGI:88512	Crp	C-reactive protein, pentraxin-related	1		complement activation, classical pathway			ISO	RGD:2411 	J:155856 	
+MGI:1859822	Crtam	cytotoxic and regulatory T cell molecule	9		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88537	Csk	c-src tyrosine kinase	9		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:88556	Ctla4	cytotoxic T-lymphocyte-associated protein 4	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:109553	Ctsc	cathepsin C	7		T cell mediated cytotoxicity			IGI	P49935 	J:165930 	
+MGI:107285	Ctsh	cathepsin H	9		T cell mediated cytotoxicity			IGI	P97821 	J:165930 	
+MGI:1923520	Cyrib	CYFIP related Rac1 interactor B	15		positive regulation of T cell mediated cytotoxicity			IDA		J:186455 	
+MGI:700006	Dbnl	drebrin-like	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2441769	Dclre1c	DNA cross-link repair 1C	2		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2447812	Dennd1b	DENN/MADD domain containing 1B	1		T-helper 2 cell cytokine production			IBA	PTN000749671 	J:265628 	
+MGI:2447812	Dennd1b	DENN/MADD domain containing 1B	1		T-helper 2 cell cytokine production			IMP		J:229307 	
+MGI:2447812	Dennd1b	DENN/MADD domain containing 1B	1		T-helper 2 cell cytokine production			ISO	Q6P3S1 	J:164563 	
+MGI:107231	Dlg1	discs large MAGUK scaffold protein 1	16		T cell cytokine production	happens in T cell		IMP		J:96052 	
+MGI:94919	Dpp4	dipeptidylpeptidase 4	2		regulation of T cell mediated immunity			ISO	RGD:2515 	J:155856 	
+MGI:1927070	Dusp10	dual specificity phosphatase 10	1		regulation of adaptive immune response			IMP	MGI:3052343 	J:92104 	
+MGI:1915926	Dusp22	dual specificity phosphatase 22	13		negative regulation of T cell mediated immunity			IMP		J:213253 	
+MGI:1353427	Eif2ak4	eukaryotic translation initiation factor 2 alpha kinase 4	2		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1353427	Eif2ak4	eukaryotic translation initiation factor 2 alpha kinase 4	2		positive regulation of adaptive immune response			IMP		J:205264 	
+MGI:1098726	Emp2	epithelial membrane protein 2	16		T cell mediated cytotoxicity			IDA		J:215657 	
+MGI:2135885	Entpd7	ectonucleoside triphosphate diphosphohydrolase 7	19		T-helper 17 cell differentiation			IMP		J:191188 	
+MGI:1201683	Eomes	eomesodermin	9		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1096338	Ephb6	Eph receptor B6	6		T cell mediated immunity			IMP	MGI:3522020 	J:94701 	
+MGI:1096338	Ephb6	Eph receptor B6	6		type IV hypersensitivity			IMP	MGI:3522020 	J:94701 	
+MGI:1933403	Erap1	endoplasmic reticulum aminopeptidase 1	13		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:95412	Ercc1	excision repair cross-complementing rodent repair deficiency, complementation group 1	7		isotype switching	happens in spleen,happens in B cell		IMP	MGI:2183944 	J:92471 	
+MGI:1349427	Exo1	exonuclease 1	1		humoral immune response mediated by circulating immunoglobulin			IMP	MGI:2653925 	J:87869 	
+MGI:1349427	Exo1	exonuclease 1	1		isotype switching			IMP	MGI:2653925 	J:87869 	
+MGI:1913612	Exosc3	exosome component 3	4		isotype switching			IMP		J:173133 	
+MGI:1913612	Exosc3	exosome component 3	4		positive regulation of isotype switching			IMP		J:173133 	
+MGI:1919794	Exosc6	exosome component 6	8		isotype switching			IMP		J:173133 	
+MGI:1919794	Exosc6	exosome component 6	8		positive regulation of isotype switching			IMP		J:173133 	
+MGI:109324	Fadd	Fas (TNFRSF6)-associated via death domain	7		positive regulation of adaptive immune response			IMP		J:176448 	
+MGI:109324	Fadd	Fas (TNFRSF6)-associated via death domain	7		positive regulation of T cell mediated cytotoxicity			IMP		J:176448 	
+MGI:95484	Fas	Fas (TNF receptor superfamily member 6)	19		B cell mediated immunity			IMP		J:131363 	
+MGI:2444639	Fbxo38	F-box protein 38	18		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1927803	Fcamr	Fc receptor, IgA, IgM, high affinity	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:95494	Fcer1a	Fc receptor, IgE, high affinity I, alpha polypeptide	1		positive regulation of type I hypersensitivity			IMP	MGI:2383982 	J:39250 	
+MGI:95496	Fcer1g	Fc receptor, IgE, high affinity I, gamma polypeptide	1		immunoglobulin mediated immune response			IBA	PTN000423688 	J:265628 	
+MGI:95496	Fcer1g	Fc receptor, IgE, high affinity I, gamma polypeptide	1		immunoglobulin mediated immune response			IMP	MGI:1857165 	J:56162 J:87421 	
+MGI:95496	Fcer1g	Fc receptor, IgE, high affinity I, gamma polypeptide	1		positive regulation of type I hypersensitivity			IMP	MGI:2384004 	J:88051 	
+MGI:95496	Fcer1g	Fc receptor, IgE, high affinity I, gamma polypeptide	1		positive regulation of type IIa hypersensitivity			IMP	MGI:1857165 	J:78296 	
+MGI:95496	Fcer1g	Fc receptor, IgE, high affinity I, gamma polypeptide	1		positive regulation of type IIa hypersensitivity			IMP	MGI:2384004 	J:75709 J:83995 	
+MGI:95496	Fcer1g	Fc receptor, IgE, high affinity I, gamma polypeptide	1		positive regulation of type III hypersensitivity			IMP	MGI:1857165 	J:78296 	
+MGI:95497	Fcer2a	Fc receptor, IgE, low affinity II, alpha polypeptide	8		positive regulation of humoral immune response mediated by circulating immunoglobulin			IMP	MGI:3583003 	J:19437 	
+MGI:95498	Fcgr1	Fc receptor, IgG, high affinity I	3		antibody-dependent cellular cytotoxicity			IMP	MGI:2664927 	J:83995 	
+MGI:95498	Fcgr1	Fc receptor, IgG, high affinity I	3		antibody-dependent cellular cytotoxicity			IMP	MGI:2679238 	J:86281 	
+MGI:95498	Fcgr1	Fc receptor, IgG, high affinity I	3		positive regulation of type IIa hypersensitivity			IMP	MGI:2664927 	J:83995 	
+MGI:95498	Fcgr1	Fc receptor, IgG, high affinity I	3		positive regulation of type III hypersensitivity			IMP	MGI:2679238 	J:86281 	
+MGI:95499	Fcgr2b	Fc receptor, IgG, low affinity IIb	1		immunoglobulin mediated immune response			IMP	MGI:1857166 	J:56162 J:87421 	
+MGI:95499	Fcgr2b	Fc receptor, IgG, low affinity IIb	1		negative regulation of humoral immune response mediated by circulating immunoglobulin	regulates a function/process that has the participant serum		IMP	MGI:1857166 	J:102982 	
+MGI:95499	Fcgr2b	Fc receptor, IgG, low affinity IIb	1		negative regulation of type I hypersensitivity			IMP	MGI:1857166 	J:31133 	
+MGI:95500	Fcgr3	Fc receptor, IgG, low affinity III	1		antibody-dependent cellular cytotoxicity			IMP	MGI:1861924 	J:35057 J:87128 	
+MGI:95500	Fcgr3	Fc receptor, IgG, low affinity III	1		positive regulation of type I hypersensitivity			IDA		J:31133 	
+MGI:95500	Fcgr3	Fc receptor, IgG, low affinity III	1		positive regulation of type I hypersensitivity			IMP	MGI:1861924 	J:35057 J:87128 	
+MGI:95500	Fcgr3	Fc receptor, IgG, low affinity III	1		positive regulation of type IIa hypersensitivity			IMP	MGI:1861924 	J:83995 J:87127 	
+MGI:95500	Fcgr3	Fc receptor, IgG, low affinity III	1		positive regulation of type III hypersensitivity			IMP	MGI:1861924 	J:35057 	
+MGI:1316726	Fga	fibrinogen alpha chain	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:99501	Fgb	fibrinogen beta chain	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:95526	Fgg	fibrinogen gamma chain	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:102795	Fgl1	fibrinogen-like protein 1	8		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:103266	Fgl2	fibrinogen-like protein 2	5		immunoglobulin production involved in immunoglobulin-mediated immune response			IMP	MGI:3582343 	J:265133 	
+MGI:1347474	Foxj1	forkhead box J1	11		negative regulation of germinal center formation			IMP		J:100704 	
+MGI:1347474	Foxj1	forkhead box J1	11		negative regulation of humoral immune response mediated by circulating immunoglobulin			IMP		J:100704 	
+MGI:1891436	Foxp3	forkhead box P3	X		negative regulation of isotype switching to IgE isotypes	regulates a function/process that happens in serum		IMP	MGI:3696705 	J:117165 	
+MGI:1891436	Foxp3	forkhead box P3	X		negative regulation of T cell cytokine production			ISO	Q9BZS1 	J:164563 	
+MGI:1891436	Foxp3	forkhead box P3	X		negative regulation of T-helper 17 cell differentiation			ISO	Q9BZS1 	J:164563 	
+MGI:1891436	Foxp3	forkhead box P3	X		positive regulation of peripheral T cell tolerance induction			IMP	MGI:2654936 	J:112554 	
+MGI:1891436	Foxp3	forkhead box P3	X		regulation of isotype switching to IgG isotypes	regulates a function/process that happens in serum		IMP	MGI:3696705 	J:117165 	
+MGI:1891436	Foxp3	forkhead box P3	X		T cell mediated immunity			IMP	MGI:1857034 	J:72828 	
+MGI:107692	Fut7	fucosyltransferase 7	2		regulation of type IV hypersensitivity			IMP		J:79388 	
+MGI:95602	Fyn	Fyn proto-oncogene	10		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:108571	Fzd5	frizzled class receptor 5	1		positive regulation of T cell cytokine production			ISO	Q13467 	J:164563 	
+MGI:1346325	Gadd45g	growth arrest and DNA-damage-inducible 45 gamma	13		T-helper 1 cell differentiation			TAS		J:79231 	
+MGI:3608341	Gapt	Grb2-binding adaptor, transmembrane	13		immunoglobulin production involved in immunoglobulin-mediated immune response			IBA	PTN002204370 	J:265628 	
+MGI:3608341	Gapt	Grb2-binding adaptor, transmembrane	13		immunoglobulin production involved in immunoglobulin-mediated immune response	generates Ighm|generates Ighg2b|generates Ighg3		IMP	MGI:3809581 	J:138146 	
+MGI:95663	Gata3	GATA binding protein 3	2		positive regulation of T-helper 2 cell cytokine production			IMP		J:91286 	
+MGI:1919327	Gcnt3	glucosaminyl (N-acetyl) transferase 3, mucin type	9		immunoglobulin production in mucosal tissue	happens in intestine mucosa		IMP	MGI:3849681 	J:149909 	
+MGI:98857	Gfus	GDP-L-fucose synthase	15		T cell mediated cytotoxicity			IMP		J:9898 	
+MGI:3647514	Gm7030	predicted gene 7030	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:3704134	Gm8909	predicted gene 8909	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:3779381	Gm11127	predicted gene 11127	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:3701966	Gm13271	predicted gene 13271	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:3701968	Gm13272	predicted gene 13272	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:3701970	Gm13275	predicted gene 13275	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:3701972	Gm13276	predicted gene 13276	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:3701974	Gm13277	predicted gene 13277	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:3649573	Gm13283	predicted gene 13283	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:2442034	Gpr183	G protein-coupled receptor 183	14		adaptive immune response			IMP		J:196453 J:198681 	
+MGI:109267	Gzmb	granzyme B	14		T cell mediated cytotoxicity			IMP	MGI:1857156 	J:113349 	
+MGI:99549	Gzmm	granzyme M (lymphocyte met-ase 1)	10		T cell mediated cytotoxicity			IDA		J:96611 	
+MGI:95895	H2-Aa	histocompatibility 2, class II antigen A, alpha	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:103070	H2-Ab1	histocompatibility 2, class II antigen A, beta 1	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:103070	H2-Ab1	histocompatibility 2, class II antigen A, beta 1	17		B cell affinity maturation			IDA		J:169911 	
+MGI:103070	H2-Ab1	histocompatibility 2, class II antigen A, beta 1	17		humoral immune response mediated by circulating immunoglobulin			ISO	P01920 	J:164563 	
+MGI:103070	H2-Ab1	histocompatibility 2, class II antigen A, beta 1	17		immunoglobulin production involved in immunoglobulin-mediated immune response			ISO	P01920 	J:164563 	
+MGI:103070	H2-Ab1	histocompatibility 2, class II antigen A, beta 1	17		positive regulation of T-helper 1 type immune response			IDA		J:169793 	
+MGI:95896	H2-D1	histocompatibility 2, D region locus 1	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95896	H2-D1	histocompatibility 2, D region locus 1	17		positive regulation of T cell mediated cytotoxicity	regulates a function/process that happens in T cell		IDA		J:1767 	
+MGI:95921	H2-DMa	histocompatibility 2, class II, locus DMa	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:95921	H2-DMa	histocompatibility 2, class II, locus DMa	17		immunoglobulin mediated immune response			IMP	MGI:2652160 	J:72827 	
+MGI:95921	H2-DMa	histocompatibility 2, class II, locus DMa	17		positive regulation of germinal center formation			IMP		J:72827 	
+MGI:95922	H2-DMb1	histocompatibility 2, class II, locus Mb1	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:95900	H2-Ea	histocompatibility 2, class II antigen E alpha	17		immunoglobulin mediated immune response			IDA		J:72827 	
+MGI:95900	H2-Ea	histocompatibility 2, class II antigen E alpha	17		immunoglobulin mediated immune response			IGI	MGI:95921 	J:72827 	
+MGI:95901	H2-Eb1	histocompatibility 2, class II antigen E beta	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:95904	H2-K1	histocompatibility 2, K1, K region	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95904	H2-K1	histocompatibility 2, K1, K region	17		positive regulation of T cell mediated cytotoxicity	regulates a function/process that happens in T cell		IDA		J:1767 	
+MGI:95904	H2-K1	histocompatibility 2, K1, K region	17		positive regulation of T cell mediated cytotoxicity			IDA		J:118952 	
+MGI:95912	H2-L	histocompatibility 2, D region locus L	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95913	H2-M1	histocompatibility 2, M region locus 1	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95914	H2-M2	histocompatibility 2, M region locus 2	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95915	H2-M3	histocompatibility 2, M region locus 3	17		negative regulation of T cell mediated cytotoxicity			ISO	P17693 	J:164563 	
+MGI:95915	H2-M3	histocompatibility 2, M region locus 3	17		peripheral B cell tolerance induction			ISO	P17693 	J:164563 	
+MGI:95915	H2-M3	histocompatibility 2, M region locus 3	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95915	H2-M3	histocompatibility 2, M region locus 3	17		positive regulation of T cell mediated cytotoxicity			IDA		J:4408 J:104295 J:118952 J:118960 	
+MGI:95915	H2-M3	histocompatibility 2, M region locus 3	17		positive regulation of T cell mediated cytotoxicity			IMP	MGI:3701255 	J:118960 	
+MGI:95917	H2-M5	histocompatibility 2, M region locus 5	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:1276570	H2-M9	histocompatibility 2, M region locus 9	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:1276522	H2-M10.1	histocompatibility 2, M region locus 10.1	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:1276525	H2-M10.2	histocompatibility 2, M region locus 10.2	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:1276524	H2-M10.3	histocompatibility 2, M region locus 10.3	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:1276527	H2-M10.4	histocompatibility 2, M region locus 10.4	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:1276526	H2-M10.5	histocompatibility 2, M region locus 10.5	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:2687364	H2-M10.6	histocompatibility 2, M region locus 10.6	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:2676637	H2-M11	histocompatibility 2, M region locus 11	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95928	H2-Q1	histocompatibility 2, Q region locus 1	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95931	H2-Q2	histocompatibility 2, Q region locus 2	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95933	H2-Q4	histocompatibility 2, Q region locus 4	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95935	H2-Q6	histocompatibility 2, Q region locus 6	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95936	H2-Q7	histocompatibility 2, Q region locus 7	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95937	H2-Q8	histocompatibility 2, Q region locus 8	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95938	H2-Q9	histocompatibility 2, Q region locus 9	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95938	H2-Q9	histocompatibility 2, Q region locus 9	17		positive regulation of T cell mediated cytotoxicity			IDA		J:137349 	
+MGI:95929	H2-Q10	histocompatibility 2, Q region locus 10	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95959	H2-T3	histocompatibility 2, T region locus 3	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95956	H2-T22	histocompatibility 2, T region locus 22	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95957	H2-T23	histocompatibility 2, T region locus 23	17		adaptive immune response			ISO	P13747 	J:164563 	
+MGI:95957	H2-T23	histocompatibility 2, T region locus 23	17		positive regulation of antibody-dependent cellular cytotoxicity			ISO	P13747 	J:164563 	
+MGI:95957	H2-T23	histocompatibility 2, T region locus 23	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:95957	H2-T23	histocompatibility 2, T region locus 23	17		positive regulation of T cell mediated cytotoxicity	regulates a function/process that happens in T cell		IDA		J:1767 	
+MGI:95957	H2-T23	histocompatibility 2, T region locus 23	17		positive regulation of T cell mediated cytotoxicity			ISO	P13747 	J:164563 	
+MGI:95958	H2-T24	histocompatibility 2, T region locus 24	17		positive regulation of T cell mediated cytotoxicity			IBA	PTN002497567 	J:265628 	
+MGI:2159682	Havcr2	hepatitis A virus cellular receptor 2	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2159682	Havcr2	hepatitis A virus cellular receptor 2	11		negative regulation of T-helper 1 type immune response			IMP		J:86226 	
+MGI:2159682	Havcr2	hepatitis A virus cellular receptor 2	11		regulation of tolerance induction dependent upon immune response			IMP		J:86226 	
+MGI:96031	Hc	hemolytic complement	2		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:109191	Hfe	homeostatic iron regulator	13		negative regulation of T cell antigen processing and presentation			IEA	IPR031092 	J:72247 	
+MGI:109191	Hfe	homeostatic iron regulator	13		negative regulation of T cell cytokine production			ISO	Q30201 	J:164563 	
+MGI:96109	Hlx	H2.0-like homeobox	1		positive regulation of T-helper 1 cell differentiation	regulates the differentiation of T-helper 1 cell		IGI	MGI:105367 	J:126429 	
+MGI:96109	Hlx	H2.0-like homeobox	1		positive regulation of T-helper 1 cell differentiation	regulates the differentiation of T-helper 1 cell		IMP	MGI:2182089 	J:126429 	
+MGI:1914053	Hmces	5-hydroxymethylcytosine (hmC) binding, ES cell specific	6		positive regulation of isotype switching			IDA		J:285016 	
+MGI:96113	Hmgb1	high mobility group box 1	5		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96113	Hmgb1	high mobility group box 1	5		regulation of T cell mediated immune response to tumor cell			IDA		J:194127 	
+MGI:96217	Hprt	hypoxanthine guanine phosphoribosyl transferase	X		T cell mediated cytotoxicity			IMP	MGI:1857299 	J:85443 	
+MGI:105112	Hpx	hemopexin	7		positive regulation of humoral immune response mediated by circulating immunoglobulin	regulates a function/process that has the participant metanephros		IMP	MGI:2447193 	J:139247 	
+MGI:96224	Hras	Harvey rat sarcoma virus oncogene	7		T-helper 1 type immune response			IMP	MGI:2385945 	J:173261 	
+MGI:105384	Hspa8	heat shock protein 8	9		positive regulation of T cell mediated cytotoxicity			ISO	RGD:621725 	J:155856 	
+MGI:96242	Hspd1	heat shock protein 1 (chaperonin)	1		isotype switching to IgG isotypes			ISO	P10809 	J:164563 	
+MGI:96242	Hspd1	heat shock protein 1 (chaperonin)	1		positive regulation of T cell mediated immune response to tumor cell			ISO	P10809 	J:164563 	
+MGI:96392	Icam1	intercellular adhesion molecule 1	9		T cell antigen processing and presentation			IDA		J:10119 	
+MGI:1354701	Icosl	icos ligand	10		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1354701	Icosl	icos ligand	10		isotype switching			NAS		J:87124 	
+MGI:107670	Ifna	interferon alpha	4		adaptive immune response			IDA		J:143981 	
+MGI:107668	Ifna1	interferon alpha 1	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107666	Ifna2	interferon alpha 2	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107664	Ifna4	interferon alpha 4	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107663	Ifna5	interferon alpha 5	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107662	Ifna6	interferon alpha 6	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107661	Ifna7	interferon alpha 7	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107659	Ifna9	interferon alpha 9	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:109210	Ifna11	interferon alpha 11	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:2676324	Ifna12	interferon alpha 12	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:2667155	Ifna13	interferon alpha 13	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:3641425	Ifna14	interferon alpha 14	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:3649418	Ifna15	interferon alpha 15	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:3649260	Ifna16	interferon alpha 16	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:1097683	Ifnab	interferon alpha B	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107657	Ifnb1	interferon beta 1, fibroblast	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107657	Ifnb1	interferon beta 1, fibroblast	4		adaptive immune response			IDA		J:143981 	
+MGI:107657	Ifnb1	interferon beta 1, fibroblast	4		negative regulation of T-helper 2 cell cytokine production			ISO	P01574 	J:164563 	
+MGI:2667156	Ifne	interferon epsilon	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:107656	Ifng	interferon gamma	10		adaptive immune response			IBA	PTN000892718 	J:265628 	
+MGI:107656	Ifng	interferon gamma	10		adaptive immune response			IDA		J:143981 	
+MGI:107656	Ifng	interferon gamma	10		positive regulation of isotype switching to IgG isotypes			IDA		J:84929 	
+MGI:2683287	Ifnk	interferon kappa	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:2448469	Ifnz	interferon zeta	4		adaptive immune response			IBA	PTN000914537 	J:265628 	
+MGI:96449	Igh-7	immunoglobulin heavy chain 7 (heavy chain of IgE)	12		humoral immune response mediated by circulating immunoglobulin			IDA		J:19437 J:30239 	
+MGI:96449	Igh-7	immunoglobulin heavy chain 7 (heavy chain of IgE)	12		immunoglobulin mediated immune response			IDA		J:19552 J:56162 	
+MGI:96449	Igh-7	immunoglobulin heavy chain 7 (heavy chain of IgE)	12		positive regulation of type I hypersensitivity			IDA		J:19552 J:35057 J:39250 J:87227 	
+MGI:96450	Igh-8	immunoglobulin heavy chain 8 (heavy chain of IgG3)	12		complement activation, classical pathway			IDA		J:75709 	
+MGI:96450	Igh-8	immunoglobulin heavy chain 8 (heavy chain of IgG3)	12		humoral immune response mediated by circulating immunoglobulin	has the participant serum		IDA		J:88910 	
+MGI:96450	Igh-8	immunoglobulin heavy chain 8 (heavy chain of IgG3)	12		humoral immune response mediated by circulating immunoglobulin			IDA		J:107174 	
+MGI:96450	Igh-8	immunoglobulin heavy chain 8 (heavy chain of IgG3)	12		immunoglobulin mediated immune response			IDA		J:60916 J:64281 J:86281 	
+MGI:96450	Igh-8	immunoglobulin heavy chain 8 (heavy chain of IgG3)	12		positive regulation of type IIa hypersensitivity			IDA		J:75709 	
+MGI:96444	Igha	immunoglobulin heavy constant alpha	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96444	Igha	immunoglobulin heavy constant alpha	12		humoral immune response mediated by circulating immunoglobulin	has the participant serum		IDA		J:88910 	
+MGI:96444	Igha	immunoglobulin heavy constant alpha	12		humoral immune response mediated by circulating immunoglobulin			IDA		J:30239 J:107174 	
+MGI:96444	Igha	immunoglobulin heavy constant alpha	12		immunoglobulin mediated immune response			IDA		J:31133 	
+MGI:96447	Ighd	immunoglobulin heavy constant delta	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96447	Ighd	immunoglobulin heavy constant delta	12		immunoglobulin mediated immune response			IMP	MGI:1857186 	J:64281 	
+MGI:2685746	Ighe	Immunoglobulin heavy constant epsilon	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:2144967	Ighg	Immunoglobulin heavy chain (gamma polypeptide)	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96446	Ighg1	immunoglobulin heavy constant gamma 1 (G1m marker)	12		antibody-dependent cellular cytotoxicity			IDA		J:87128 	
+MGI:96446	Ighg1	immunoglobulin heavy constant gamma 1 (G1m marker)	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96446	Ighg1	immunoglobulin heavy constant gamma 1 (G1m marker)	12		complement activation, classical pathway			IDA		J:87227 	
+MGI:96446	Ighg1	immunoglobulin heavy constant gamma 1 (G1m marker)	12		humoral immune response mediated by circulating immunoglobulin	has the participant serum		IDA		J:88910 J:115034 	
+MGI:96446	Ighg1	immunoglobulin heavy constant gamma 1 (G1m marker)	12		humoral immune response mediated by circulating immunoglobulin			IDA		J:19437 J:30239 J:65439 J:96035 J:107174 	
+MGI:96446	Ighg1	immunoglobulin heavy constant gamma 1 (G1m marker)	12		immunoglobulin mediated immune response			IDA		J:19552 J:31133 J:56162 J:60916 J:64281 J:72827 J:84929 J:86281 J:87292 	
+MGI:96446	Ighg1	immunoglobulin heavy constant gamma 1 (G1m marker)	12		positive regulation of type I hypersensitivity			IDA		J:31133 J:87128 J:87227 	
+MGI:96446	Ighg1	immunoglobulin heavy constant gamma 1 (G1m marker)	12		positive regulation of type IIa hypersensitivity			IDA		J:75709 J:87127 	
+MGI:96443	Ighg2a	immunoglobulin heavy constant gamma 2A	12		antibody-dependent cellular cytotoxicity			IDA		J:83995 J:87128 	
+MGI:96443	Ighg2a	immunoglobulin heavy constant gamma 2A	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96443	Ighg2a	immunoglobulin heavy constant gamma 2A	12		complement activation, classical pathway			IDA		J:75709 J:87227 	
+MGI:96443	Ighg2a	immunoglobulin heavy constant gamma 2A	12		humoral immune response mediated by circulating immunoglobulin			IDA		J:107174 	
+MGI:96443	Ighg2a	immunoglobulin heavy constant gamma 2A	12		immunoglobulin mediated immune response			IDA		J:19552 J:56162 J:64281 J:84929 J:86281 	
+MGI:96443	Ighg2a	immunoglobulin heavy constant gamma 2A	12		positive regulation of type I hypersensitivity			IDA		J:83995 J:87227 	
+MGI:96443	Ighg2a	immunoglobulin heavy constant gamma 2A	12		positive regulation of type IIa hypersensitivity			IDA		J:75709 J:83995 J:87127 	
+MGI:96445	Ighg2b	immunoglobulin heavy constant gamma 2B	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96445	Ighg2b	immunoglobulin heavy constant gamma 2B	12		complement activation, classical pathway			IDA		J:75709 J:87227 	
+MGI:96445	Ighg2b	immunoglobulin heavy constant gamma 2B	12		humoral immune response mediated by circulating immunoglobulin	has the participant serum		IDA		J:88910 	
+MGI:96445	Ighg2b	immunoglobulin heavy constant gamma 2B	12		humoral immune response mediated by circulating immunoglobulin			IDA		J:19437 J:107174 	
+MGI:96445	Ighg2b	immunoglobulin heavy constant gamma 2B	12		immunoglobulin mediated immune response			IDA		J:31133 J:56162 J:60916 J:84929 J:86281 	
+MGI:96445	Ighg2b	immunoglobulin heavy constant gamma 2B	12		positive regulation of type I hypersensitivity			IDA		J:87128 J:87227 	
+MGI:96445	Ighg2b	immunoglobulin heavy constant gamma 2B	12		positive regulation of type IIa hypersensitivity			IDA		J:75709 	
+MGI:2686979	Ighg2c	immunoglobulin heavy constant gamma 2C	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:2686979	Ighg2c	immunoglobulin heavy constant gamma 2C	12		humoral immune response mediated by circulating immunoglobulin	has the participant serum		IDA		J:115034 	
+MGI:2686979	Ighg2c	immunoglobulin heavy constant gamma 2C	12		humoral immune response mediated by circulating immunoglobulin			IDA		J:65439 	
+MGI:2686979	Ighg2c	immunoglobulin heavy constant gamma 2C	12		immunoglobulin mediated immune response			IDA		J:84929 	
+MGI:2144790	Ighg3	Immunoglobulin heavy constant gamma 3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96448	Ighm	immunoglobulin heavy constant mu	12		B cell affinity maturation			IMP	MGI:2447178 	J:49405 	
+MGI:96448	Ighm	immunoglobulin heavy constant mu	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96448	Ighm	immunoglobulin heavy constant mu	12		humoral immune response mediated by circulating immunoglobulin	has the participant serum		IDA		J:88910 	
+MGI:96448	Ighm	immunoglobulin heavy constant mu	12		humoral immune response mediated by circulating immunoglobulin			IDA		J:19437 J:30239 	
+MGI:96448	Ighm	immunoglobulin heavy constant mu	12		immunoglobulin mediated immune response			IDA		J:19552 J:31133 J:60916 J:64281 	
+MGI:4439618	Ighv1-4	immunoglobulin heavy variable 1-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3704121	Ighv1-5	immunoglobulin heavy variable V1-5	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3704122	Ighv1-7	immunoglobulin heavy variable V1-7	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439621	Ighv1-9	immunoglobulin heavy variable V1-9	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:5009835	Ighv1-11	immunoglobulin heavy variable V1-11	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3646284	Ighv1-12	immunoglobulin heavy variable V1-12	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439782	Ighv1-15	immunoglobulin heavy variable 1-15	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3647704	Ighv1-16	immunoglobulin heavy variable 1-16	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439780	Ighv1-18	immunoglobulin heavy variable V1-18	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439779	Ighv1-19	immunoglobulin heavy variable V1-19	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644607	Ighv1-20	immunoglobulin heavy variable V1-20	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439784	Ighv1-22	immunoglobulin heavy variable 1-22	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3815050	Ighv1-23	immunoglobulin heavy variable V1-23	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3815052	Ighv1-24	immunoglobulin heavy variable V1-24	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439641	Ighv1-26	immunoglobulin heavy variable 1-26	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439889	Ighv1-31	immunoglobulin heavy variable 1-31	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439659	Ighv1-34	immunoglobulin heavy variable 1-34	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439639	Ighv1-36	immunoglobulin heavy variable 1-36	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439640	Ighv1-37	immunoglobulin heavy variable 1-37	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439888	Ighv1-39	immunoglobulin heavy variable 1-39	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3704123	Ighv1-42	immunoglobulin heavy variable V1-42	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3704124	Ighv1-43	immunoglobulin heavy variable V1-43	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439890	Ighv1-47	immunoglobulin heavy variable 1-47	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439754	Ighv1-49	immunoglobulin heavy variable 1-49	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439753	Ighv1-50	immunoglobulin heavy variable 1-50	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439752	Ighv1-52	immunoglobulin heavy variable 1-52	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3576502	Ighv1-53	immunoglobulin heavy variable 1-53	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3647133	Ighv1-54	immunoglobulin heavy variable V1-54	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439716	Ighv1-55	immunoglobulin heavy variable 1-55	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439715	Ighv1-56	immunoglobulin heavy variable 1-56	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439557	Ighv1-58	immunoglobulin heavy variable 1-58	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644474	Ighv1-59	immunoglobulin heavy variable V1-59	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439824	Ighv1-61	immunoglobulin heavy variable 1-61	12		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:4439824	Ighv1-61	immunoglobulin heavy variable 1-61	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644968	Ighv1-62-2	immunoglobulin heavy variable 1-62-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3648544	Ighv1-62-3	immunoglobulin heavy variable 1-62-3	12		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:3648544	Ighv1-62-3	immunoglobulin heavy variable 1-62-3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3642755	Ighv1-63	immunoglobulin heavy variable V1-63	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439789	Ighv1-64	immunoglobulin heavy variable 1-64	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439825	Ighv1-66	immunoglobulin heavy variable 1-66	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3645228	Ighv1-67	immunoglobulin heavy variable V1-67	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439632	Ighv1-69	immunoglobulin heavy variable 1-69	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439633	Ighv1-72	immunoglobulin heavy variable 1-72	12		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:4439633	Ighv1-72	immunoglobulin heavy variable 1-72	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439634	Ighv1-74	immunoglobulin heavy variable V1-74	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439735	Ighv1-75	immunoglobulin heavy variable 1-75	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439737	Ighv1-76	immunoglobulin heavy variable 1-76	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439670	Ighv1-77	immunoglobulin heavy variable 1-77	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439736	Ighv1-78	immunoglobulin heavy variable 1-78	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439738	Ighv1-80	immunoglobulin heavy variable 1-80	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439635	Ighv1-81	immunoglobulin heavy variable 1-81	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439671	Ighv1-82	immunoglobulin heavy variable 1-82	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644235	Ighv1-84	immunoglobulin heavy variable 1-84	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3645723	Ighv1-85	immunoglobulin heavy variable 1-85	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439894	Ighv2-2	immunoglobulin heavy variable 2-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439872	Ighv2-3	immunoglobulin heavy variable 2-3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3643263	Ighv2-4	immunoglobulin heavy variable V2-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439517	Ighv2-5	immunoglobulin heavy variable 2-5	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439518	Ighv2-6	immunoglobulin heavy variable 2-6	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439811	Ighv2-6-8	immunoglobulin heavy variable 2-6-8	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439521	Ighv2-7	immunoglobulin heavy variable 2-7	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439624	Ighv2-9	immunoglobulin heavy variable 2-9	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439519	Ighv2-9-1	immunoglobulin heavy variable 2-9-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439534	Ighv3-1	immunoglobulin heavy variable 3-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3643949	Ighv3-3	immunoglobulin heavy variable V3-3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644034	Ighv3-4	immunoglobulin heavy variable V3-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3648045	Ighv3-5	immunoglobulin heavy variable 3-5	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439856	Ighv3-6	immunoglobulin heavy variable 3-6	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3645298	Ighv3-8	immunoglobulin heavy variable V3-8	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439536	Ighv4-1	immunoglobulin heavy variable 4-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439893	Ighv5-2	immunoglobulin heavy variable 5-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439895	Ighv5-4	immunoglobulin heavy variable 5-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439815	Ighv5-6	immunoglobulin heavy variable 5-6	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439873	Ighv5-9	immunoglobulin heavy variable 5-9	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439810	Ighv5-9-1	immunoglobulin heavy variable 5-9-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439516	Ighv5-12	immunoglobulin heavy variable 5-12	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3645977	Ighv5-12-4	immunoglobulin heavy variable 5-12-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439812	Ighv5-15	immunoglobulin heavy variable 5-15	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439556	Ighv5-16	immunoglobulin heavy variable 5-16	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439533	Ighv5-17	immunoglobulin heavy variable 5-17	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439854	Ighv6-3	immunoglobulin heavy variable 6-3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3704120	Ighv6-4	immunoglobulin heavy variable V6-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3647134	Ighv6-5	immunoglobulin heavy variable V6-5	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439619	Ighv6-6	immunoglobulin heavy variable 6-6	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644477	Ighv6-7	immunoglobulin heavy variable V6-7	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439623	Ighv7-2	immunoglobulin heavy variable 7-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439763	Ighv7-4	immunoglobulin heavy variable 7-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3647474	Ighv8-2	immunoglobulin heavy variable V8-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3646040	Ighv8-4	immunoglobulin heavy variable V8-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3645478	Ighv8-5	immunoglobulin heavy variable V8-5	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3645823	Ighv8-6	immunoglobulin heavy variable V8-6	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3815333	Ighv8-8	immunoglobulin heavy variable 8-8	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644475	Ighv8-9	immunoglobulin heavy variable V8-9	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644925	Ighv8-11	immunoglobulin heavy variable V8-11	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3642873	Ighv8-12	immunoglobulin heavy variable V8-12	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439734	Ighv8-13	immunoglobulin heavy variable 8-13	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439911	Ighv9-1	immunoglobulin heavy variable 9-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3643816	Ighv9-2	immunoglobulin heavy variable V9-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3642720	Ighv9-3	immunoglobulin heavy variable V9-3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3646379	Ighv9-4	immunoglobulin heavy variable 9-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439620	Ighv10-1	immunoglobulin heavy variable 10-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3648785	Ighv10-3	immunoglobulin heavy variable V10-3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439535	Ighv11-1	immunoglobulin heavy variable 11-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4947968	Ighv11-2	immunoglobulin heavy variable V11-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3646760	Ighv12-3	immunoglobulin heavy variable V12-3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3705861	Ighv13-2	immunoglobulin heavy variable 13-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439920	Ighv14-1	immunoglobulin heavy variable 14-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439607	Ighv14-2	immunoglobulin heavy variable 14-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439764	Ighv14-3	immunoglobulin heavy variable V14-3	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4439765	Ighv14-4	immunoglobulin heavy variable 14-4	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4947963	Ighv15-2	immunoglobulin heavy variable V15-2	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3643819	Ighv16-1	immunoglobulin heavy variable 16-1	12		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96495	Igkc	immunoglobulin kappa constant	6		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:3644894	Igkv2-112	immunoglobulin kappa variable 2-112	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2686370	Igkv4-55	immunoglobulin kappa variable 4-55	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:3642817	Igkv5-48	immunoglobulin kappa variable 5-48	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:3577282	Igkv7-33	immunoglobulin kappa chain variable 7-33	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:3525017	Igkv9-129	immunoglobulin kappa variable 9-129	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:4439772	Igkv12-41	immunoglobulin kappa chain variable 12-41	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:99546	Iglc1	immunoglobulin lambda constant 1	16		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:99547	Iglc2	immunoglobulin lambda constant 2	16		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:99886	Iglc3	immunoglobulin lambda constant 3	16		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:96529	Igll1	immunoglobulin lambda-like polypeptide 1	16		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:99548	Iglv2	immunoglobulin lambda variable 2	16		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96543	Il1b	interleukin 1 beta	2		positive regulation of T-helper 1 cell cytokine production			ISO	P01584 	J:164563 	
+MGI:96545	Il1r1	interleukin 1 receptor, type I	1		positive regulation of T-helper 1 cell cytokine production			ISO	P14778 	J:164563 	
+MGI:98427	Il1rl1	interleukin 1 receptor-like 1	1		negative regulation of T-helper 1 type immune response			IGI	P08226 	J:132106 	
+MGI:96548	Il2	interleukin 2	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96548	Il2	interleukin 2	3		negative regulation of T-helper 17 cell differentiation			IGI	URS000039ED8D_10090 	J:220376 	
+MGI:96548	Il2	interleukin 2	3		positive regulation of isotype switching to IgG isotypes			IMP	MGI:1857191 	J:39989 	
+MGI:96556	Il4	interleukin 4	11		negative regulation of T-helper 17 cell differentiation			IBA	PTN002934025 	J:265628 	
+MGI:96556	Il4	interleukin 4	11		negative regulation of T-helper 17 cell differentiation			IDA		J:141227 	
+MGI:96556	Il4	interleukin 4	11		positive regulation of isotype switching to IgE isotypes			IBA	PTN002934025 	J:265628 	
+MGI:96556	Il4	interleukin 4	11		positive regulation of isotype switching to IgE isotypes	regulates a function/process that happens in B cell		IDA		J:88910 	
+MGI:96556	Il4	interleukin 4	11		positive regulation of isotype switching to IgG isotypes			IBA	PTN002934025 	J:265628 	
+MGI:96556	Il4	interleukin 4	11		positive regulation of isotype switching to IgG isotypes	regulates a function/process that happens in B cell		IDA		J:88910 	
+MGI:96556	Il4	interleukin 4	11		positive regulation of isotype switching to IgG isotypes			IDA		J:84929 	
+MGI:96556	Il4	interleukin 4	11		T-helper 1 cell lineage commitment			IGI	MGI:103034 	J:165738 	
+MGI:96556	Il4	interleukin 4	11		T-helper 2 cell cytokine production			IBA	PTN002934025 	J:265628 	
+MGI:96556	Il4	interleukin 4	11		T-helper 2 cell cytokine production			ISO	P05112 	J:164563 	
+MGI:105367	Il4ra	interleukin 4 receptor, alpha	7		immunoglobulin mediated immune response			IMP	MGI:1861951 	J:100883 	
+MGI:105367	Il4ra	interleukin 4 receptor, alpha	7		negative regulation of T-helper 1 cell differentiation	regulates the differentiation of CL:0000545		IGI	MGI:96109 	J:126429 	
+MGI:96559	Il6	interleukin 6	5		positive regulation of T-helper 2 cell cytokine production	uses UniProtKB:P18893		IMP		J:235269 	
+MGI:96559	Il6	interleukin 6	5		T-helper 17 cell lineage commitment			IDA		J:260609 	
+MGI:96559	Il6	interleukin 6	5		T-helper 17 cell lineage commitment			IMP		J:115922 	
+MGI:105304	Il6ra	interleukin 6 receptor, alpha	3		T-helper 17 cell lineage commitment			IDA		J:260609 	
+MGI:96562	Il7r	interleukin 7 receptor	15		negative regulation of T cell mediated cytotoxicity	regulates a function/process that happens in thymus,regulates a function/process that happens in T cell|regulates a function/process that happens in spleen,regulates a function/process that happens in T cell		IMP	MGI:1857198 	J:41239 	
+MGI:96539	Il12a	interleukin 12a	3		positive regulation of T cell mediated cytotoxicity			ISO	P29459 	J:164563 	
+MGI:96539	Il12a	interleukin 12a	3		T-helper 1 cell cytokine production			IGI	MGI:107936 MGI:96540 	J:98417 	
+MGI:96540	Il12b	interleukin 12b	11		positive regulation of T cell mediated cytotoxicity			IDA		J:87643 	
+MGI:96540	Il12b	interleukin 12b	11		positive regulation of T-helper 1 type immune response			IDA		J:87643 	
+MGI:96540	Il12b	interleukin 12b	11		positive regulation of T-helper 1 type immune response			ISO	P29460 	J:164563 	
+MGI:96540	Il12b	interleukin 12b	11		T-helper 1 cell cytokine production			IGI	MGI:107936 MGI:96539 	J:98417 	
+MGI:104579	Il12rb1	interleukin 12 receptor, beta 1	8		positive regulation of T-helper 1 type immune response			ISO	P42701 	J:164563 	
+MGI:1277954	Il13ra2	interleukin 13 receptor, alpha 2	X		immunoglobulin mediated immune response			IMP	MGI:2653910 	J:100883 	
+MGI:107364	Il17a	interleukin 17A	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2676631	Il17f	interleukin 17F	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:107399	Il17ra	interleukin 17 receptor A	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:107936	Il18	interleukin 18	9		positive regulation of T-helper 1 cell cytokine production			ISO	Q14116 	J:164563 	
+MGI:107936	Il18	interleukin 18	9		T-helper 1 cell cytokine production			IDA		J:98417 	
+MGI:107936	Il18	interleukin 18	9		T-helper 1 cell cytokine production			IGI	MGI:96539 MGI:96540 	J:98417 	
+MGI:107936	Il18	interleukin 18	9		T-helper 1 type immune response			ISO	Q14116 	J:164563 	
+MGI:107936	Il18	interleukin 18	9		T-helper 1 type immune response			ISS	Q14116 	J:115169 	
+MGI:1333800	Il18bp	interleukin 18 binding protein	7		T-helper 1 type immune response			IBA	PTN000370839 	J:265628 	
+MGI:1333800	Il18bp	interleukin 18 binding protein	7		T-helper 1 type immune response			ISO	O95998 	J:164563 	
+MGI:105383	Il18r1	interleukin 18 receptor 1	1		positive regulation of T-helper 1 cell cytokine production			ISO	Q13478 	J:164563 	
+MGI:105383	Il18r1	interleukin 18 receptor 1	1		T-helper 1 cell differentiation	results in the differentiation of T-helper 1 cell		IMP	MGI:2136765 	J:70298 	
+MGI:1338888	Il18rap	interleukin 18 receptor accessory protein	1		T-helper 1 cell cytokine production	happens at the same time as cellular response to interleukin-18		IMP	MGI:3579137 	J:98417 	
+MGI:2143266	Il20rb	interleukin 20 receptor beta	9		negative regulation of type IV hypersensitivity	regulates a function/process that has the participant T cell		IMP	MGI:3830304 	J:143497 	
+MGI:1932410	Il23a	interleukin 23, alpha subunit p19	10		positive regulation of T cell mediated cytotoxicity			IDA		J:87643 	
+MGI:1932410	Il23a	interleukin 23, alpha subunit p19	10		positive regulation of T-helper 1 type immune response			IDA		J:87643 	
+MGI:1932410	Il23a	interleukin 23, alpha subunit p19	10		positive regulation of T-helper 1 type immune response			ISO	Q9NPF7 	J:164563 	
+MGI:1932410	Il23a	interleukin 23, alpha subunit p19	10		positive regulation of T-helper 17 cell lineage commitment			IBA	PTN000409283 	J:265628 	
+MGI:1932410	Il23a	interleukin 23, alpha subunit p19	10		positive regulation of T-helper 17 cell lineage commitment			IDA		J:150655 	
+MGI:1932410	Il23a	interleukin 23, alpha subunit p19	10		positive regulation of T-helper 17 type immune response			IDA		J:150655 	
+MGI:2181693	Il23r	interleukin 23 receptor	6		positive regulation of T-helper 1 type immune response			ISO	Q5VWK5 	J:164563 	
+MGI:2384409	Il27	interleukin 27	7		regulation of T-helper 1 cell differentiation			IBA	PTN000466839 	J:265628 	
+MGI:2384409	Il27	interleukin 27	7		regulation of T-helper 1 cell differentiation			ISO	Q8NEV9 	J:164563 	
+MGI:1355318	Il27ra	interleukin 27 receptor, alpha	8		negative regulation of T-helper 17 type immune response	happens in T-helper 17 cell,happens at the same time as artery morphogenesis		IGI	P35951 	J:212625 	
+MGI:1355318	Il27ra	interleukin 27 receptor, alpha	8		positive regulation of T-helper 1 type immune response			IMP	MGI:3525439 	J:65439 	
+MGI:1355318	Il27ra	interleukin 27 receptor, alpha	8		regulation of isotype switching to IgG isotypes			IMP	MGI:3525439 	J:65439 	
+MGI:2180511	Il31ra	interleukin 31 receptor A	13		T-helper 2 cell cytokine production	happens in intestine		IMP	MGI:3717594 	J:148242 	
+MGI:1924375	Il33	interleukin 33	19		negative regulation of T-helper 1 type immune response			IGI	P08226 	J:132106 	
+MGI:107357	Inpp5d	inositol polyphosphate-5-phosphatase D	1		immunoglobulin mediated immune response			IMP	MGI:2386884 	J:60916 	
+MGI:96590	Irf1	interferon regulatory factor 1	11		positive regulation of T-helper 1 cell differentiation			TAS		J:183979 	
+MGI:96590	Irf1	interferon regulatory factor 1	11		regulation of adaptive immune response			TAS		J:183131 	
+MGI:1096873	Irf4	interferon regulatory factor 4	13		T-helper 17 cell lineage commitment			IMP		J:190118 	
+MGI:1859212	Irf7	interferon regulatory factor 7	7		immunoglobulin mediated immune response			IMP	MGI:3577089 	J:97662 	
+MGI:1859212	Irf7	interferon regulatory factor 7	7		regulation of adaptive immune response			ISO	Q92985 	J:164563 	
+MGI:96621	Itk	IL2 inducible T cell kinase	11		adaptive immune response			IBA	PTN000700360 	J:265628 	
+MGI:96621	Itk	IL2 inducible T cell kinase	11		adaptive immune response			IMP		J:54449 	
+MGI:1095416	Jag1	jagged 1	2		T cell mediated immunity			ISO	P78504 	J:164563 	
+MGI:96629	Jak2	Janus kinase 2	19		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:99928	Jak3	Janus kinase 3	8		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:99928	Jak3	Janus kinase 3	8		negative regulation of T-helper 1 cell differentiation			IMP		J:123902 	
+MGI:1933825	Jam3	junction adhesion molecule 3	9		adaptive immune response			IMP	MGI:3055281 	J:147736 	
+MGI:96493	Jchain	immunoglobulin joining chain	5		adaptive immune response			ISO	P01591 	J:164563 	
+MGI:1915387	Kdelr1	KDEL (Lys-Asp-Glu-Leu) endoplasmic reticulum protein retention receptor 1	7		T cell cytokine production			IMP	MGI:5689886 	J:224970 	
+MGI:99780	Kdm5d	lysine (K)-specific demethylase 5D	Y		T cell antigen processing and presentation			IDA		J:122146 	
+MGI:2686922	Klhl6	kelch-like 6	16		germinal center formation			IMP		J:101363 	
+MGI:1336161	Klrc1	killer cell lectin-like receptor subfamily C, member 1	6		negative regulation of T cell mediated cytotoxicity			ISO	P26715 	J:164563 	
+MGI:1196275	Klrd1	killer cell lectin-like receptor, subfamily D, member 1	6		negative regulation of T cell mediated cytotoxicity			ISO	Q13241 	J:164563 	
+MGI:1196250	Klrk1	killer cell lectin-like receptor subfamily K, member 1	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2444557	Kmt5b	lysine methyltransferase 5B	19		positive regulation of isotype switching			IMP		J:280470 	
+MGI:2385262	Kmt5c	lysine methyltransferase 5C	7		positive regulation of isotype switching			IMP		J:280470 	
+MGI:106588	Lag3	lymphocyte-activation gene 3	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2441659	Lamp3	lysosomal-associated membrane protein 3	16		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1342293	Lat	linker for activation of T cells	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1926479	Lat2	linker for activation of T cells family, member 2	5		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2443362	Lax1	lymphocyte transmembrane adaptor 1	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96770	Lef1	lymphoid enhancer binding factor 1	3		T-helper 1 cell differentiation			IDA		J:164710 	
+MGI:109496	Lgals9	lectin, galactose binding, soluble 9	11	NOT	regulation of T-helper 17 type immune response			IMP		J:224716 	
+MGI:1335098	Lig4	ligase IV, DNA, ATP-dependent	8		isotype switching	happens in mature B cell		IMP	MGI:1857732 	J:126758 	
+MGI:1919949	Lime1	Lck interacting transmembrane adaptor 1	2		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1337004	Loxl3	lysyl oxidase-like 3	6		negative regulation of T-helper 17 cell lineage commitment			IMP		J:239159 	
+MGI:104797	Lta	lymphotoxin A	17		positive regulation of humoral immune response mediated by circulating immunoglobulin			IGI	MGI:104798 	J:115034 	
+MGI:96885	Ly9	lymphocyte antigen 9	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96885	Ly9	lymphocyte antigen 9	1		T-helper 17 cell lineage commitment			ISO	Q9HBG7 	J:164563 	
+MGI:96892	Lyn	LYN proto-oncogene, Src family tyrosine kinase	4		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:107448	Lyst	lysosomal trafficking regulator	13		T cell mediated immunity			IMP	MGI:1855968 	J:6692 	
+MGI:1919140	Mad2l2	MAD2 mitotic arrest deficient-like 2	4		positive regulation of isotype switching			ISO	Q9UI95 	J:164563 	
+MGI:2445027	Malt1	MALT1 paracaspase	18		positive regulation of T cell cytokine production			ISO	Q9UDY8 	J:164563 	
+MGI:2445027	Malt1	MALT1 paracaspase	18		positive regulation of T-helper 17 cell differentiation			IDA		J:259145 	
+MGI:1919029	Marchf8	membrane associated ring-CH-type finger 8	6		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1330832	Masp2	mannan-binding lectin serine peptidase 2	4		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:96923	Mbl1	mannose-binding lectin (protein A) 1	14		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:96924	Mbl2	mannose-binding lectin (protein C) 2	19		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:1890498	Mcoln1	mucolipin 1	8		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1915529	Mcoln2	mucolipin 2	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:99458	Mef2c	myocyte enhancer factor 2C	13		germinal center formation			IMP		J:144071 	
+MGI:99458	Mef2c	myocyte enhancer factor 2C	13		regulation of germinal center formation			IMP		J:136292 	
+MGI:1922925	Mfsd6	major facilitator superfamily domain containing 6	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96982	Mif	macrophage migration inhibitory factor (glycosylation-inhibiting factor)	10		positive regulation of adaptive immune response			NAS		J:131317 	
+MGI:3618735	Mir181b-1	microRNA 181b-1	1		regulation of isotype switching			IDA		J:141184 	
+MGI:3618736	Mir181b-2	microRNA 181b-2	2		regulation of isotype switching			IDA		J:141184 	
+MGI:3619324	Mir301	microRNA 301	11		positive regulation of T-helper 17 type immune response			IMP		J:184679 	
+MGI:3619324	Mir301	microRNA 301	11		regulation of T-helper 17 cell differentiation			IMP		J:184679 	
+MGI:3619338	Mir326	microRNA 326	7		positive regulation of T-helper 17 cell differentiation			IDA		J:157744 	
+MGI:3619338	Mir326	microRNA 326	7		positive regulation of T-helper 17 cell differentiation			IMP		J:157744 	
+MGI:3718563	Mir873a	microRNA 873a	4		T-helper 17 cell differentiation			ISO	HGNC 	J:251356 	
+MGI:101938	Mlh1	mutL homolog 1	9		isotype switching			IMP	MGI:1857946 	J:83489 	
+MGI:101938	Mlh1	mutL homolog 1	9		positive regulation of isotype switching to IgA isotypes	happens in spleen,happens in B cell		IMP		J:56764 	
+MGI:101938	Mlh1	mutL homolog 1	9		positive regulation of isotype switching to IgG isotypes	happens in spleen,happens in B cell		IMP		J:56764 	
+MGI:101938	Mlh1	mutL homolog 1	9		somatic recombination of immunoglobulin genes involved in immune response			IGI	MGI:101816 	J:83489 	
+MGI:1913539	Mptx1	mucosal pentraxin 1	1		complement activation, classical pathway			IBA	PTN000444388 	J:265628 	
+MGI:3779286	Mptx2	mucosal pentraxin 2	1		complement activation, classical pathway			IBA	PTN000444388 	J:265628 	
+MGI:1195463	Mr1	major histocompatibility complex, class I-related	1		positive regulation of T cell mediated cytotoxicity directed against tumor cell target			ISO	Q95460 	J:164563 	
+MGI:101816	Msh2	mutS homolog 2	17		B cell mediated immunity			IMP	MGI:1857940 	J:52568 	
+MGI:101816	Msh2	mutS homolog 2	17		B cell mediated immunity			IMP	MGI:1858055 	J:48834 	
+MGI:101816	Msh2	mutS homolog 2	17		isotype switching			IMP	MGI:1857940 	J:83489 	
+MGI:101816	Msh2	mutS homolog 2	17		isotype switching			IMP	MGI:2151801 	J:56764 	
+MGI:101816	Msh2	mutS homolog 2	17		positive regulation of isotype switching to IgA isotypes	happens in spleen,happens in B cell		IMP		J:56764 	
+MGI:101816	Msh2	mutS homolog 2	17		positive regulation of isotype switching to IgG isotypes	happens in spleen,happens in B cell		IMP		J:56764 	
+MGI:101816	Msh2	mutS homolog 2	17		somatic recombination of immunoglobulin genes involved in immune response			IBA	PTN002603823 	J:265628 	
+MGI:101816	Msh2	mutS homolog 2	17		somatic recombination of immunoglobulin genes involved in immune response			IGI	MGI:101938 	J:83489 	
+MGI:1343961	Msh6	mutS homolog 6	17		isotype switching			IGI	MGI:109352 	J:125031 	
+MGI:1343961	Msh6	mutS homolog 6	17		isotype switching	happens in lymphocyte		IMP	MGI:3653701 	J:110906 	
+MGI:1928394	Mtor	mechanistic target of rapamycin kinase	4		T-helper 1 cell lineage commitment			IMP		J:233777 	
+MGI:2153525	Muc4	mucin 4	16		negative regulation of T cell mediated cytotoxicity directed against tumor cell target			ISO	RGD:621331 	J:155856 	
+MGI:108005	Myd88	myeloid differentiation primary response gene 88	9		immunoglobulin mediated immune response			IMP	MGI:2385681 	J:97662 	
+MGI:1927091	Myo1g	myosin IG	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1927091	Myo1g	myosin IG	11		T cell mediated immunity			IMP		J:212451 	
+MGI:1351625	Nbn	nibrin	4		isotype switching			IDA		J:96104 	
+MGI:1929601	Ndfip1	Nedd4 family interacting protein 1	18		negative regulation of isotype switching to IgE isotypes			IMP	MGI:3695433 	J:116617 	
+MGI:1929601	Ndfip1	Nedd4 family interacting protein 1	18		regulation of isotype switching to IgG isotypes			IMP	MGI:3695433 	J:116617 	
+MGI:97822	Nectin2	nectin cell adhesion molecule 2	7		positive regulation of immunoglobulin mediated immune response			IBA	PTN000589191 	J:265628 	
+MGI:97822	Nectin2	nectin cell adhesion molecule 2	7		positive regulation of immunoglobulin mediated immune response			ISO	Q92692 	J:164563 	
+MGI:97822	Nectin2	nectin cell adhesion molecule 2	7		susceptibility to T cell mediated cytotoxicity			IBA	PTN000589191 	J:265628 	
+MGI:97822	Nectin2	nectin cell adhesion molecule 2	7		susceptibility to T cell mediated cytotoxicity			ISO	Q92692 	J:164563 	
+MGI:97297	Nedd4	neural precursor cell expressed, developmentally down-regulated 4	9		adaptive immune response			IMP	MGI:3829272 	J:143560 	
+MGI:1099800	Nfkb2	nuclear factor of kappa light polypeptide gene enhancer in B cells 2, p49/p100	19		germinal center formation	has the participant spleen germinal center		IMP	MGI:2179705 	J:112111 	
+MGI:3041243	Nfkbid	nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor, delta	7		positive regulation of T-helper 17 cell differentiation			IMP		J:259145 	
+MGI:1931595	Nfkbiz	nuclear factor of kappa light polypeptide gene enhancer in B cells inhibitor, zeta	16		positive regulation of T-helper 17 cell differentiation			IMP		J:259145 	
+MGI:2653833	Nlrp3	NLR family, pyrin domain containing 3	11		positive regulation of T-helper 17 cell differentiation			IMP		J:224866 	
+MGI:2653833	Nlrp3	NLR family, pyrin domain containing 3	11		positive regulation of T-helper 2 cell cytokine production			IMP		J:224866 	
+MGI:2444084	Nlrp10	NLR family, pyrin domain containing 10	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2444084	Nlrp10	NLR family, pyrin domain containing 10	7		positive regulation of T-helper 1 type immune response			IMP		J:190699 	
+MGI:2444084	Nlrp10	NLR family, pyrin domain containing 10	7		positive regulation of T-helper 17 type immune response			IMP		J:190699 	
+MGI:2429397	Nod2	nucleotide-binding oligomerization domain containing 2	8		immunoglobulin production involved in immunoglobulin-mediated immune response			IMP	MGI:3529594 	J:96035 	
+MGI:2429397	Nod2	nucleotide-binding oligomerization domain containing 2	8		negative regulation of T cell mediated immunity	regulates a function/process that has the participant colon		IMP	MGI:2680581 	J:113450 	
+MGI:2429397	Nod2	nucleotide-binding oligomerization domain containing 2	8		positive regulation of humoral immune response mediated by circulating immunoglobulin			IMP	MGI:3529594 	J:96035 	
+MGI:97376	Nras	neuroblastoma ras oncogene	3		T-helper 1 type immune response			IMP	MGI:2385944 	J:173261 	
+MGI:1276574	Nsd2	nuclear receptor binding SET domain protein 2	5		positive regulation of isotype switching to IgA isotypes			IMP		J:191725 	
+MGI:1925542	Orai1	ORAI calcium release-activated calcium modulator 1	5		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2147616	Otub1	OTU domain, ubiquitin aldehyde binding 1	19		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1859615	Otud5	OTU domain containing 5	X		regulation of T-helper 17 type immune response			IMP	MGI:2386448 MGI:5752247 	J:219495 	
+MGI:1859615	Otud5	OTU domain containing 5	X		T-helper 17 cell lineage commitment			IMP	MGI:2386448 MGI:5752247 	J:219495 	
+MGI:2654703	Otud7b	OTU domain containing 7B	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1339957	P2rx7	purinergic receptor P2X, ligand-gated ion channel, 7	5		positive regulation of T cell mediated cytotoxicity	regulates a function/process that happens in DN3 thymocyte		IMP	MGI:3042190 	J:89513 	
+MGI:2443160	Pag1	phosphoprotein associated with glycosphingolipid microdomains 1	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1914528	Pagr1a	PAXIP1 associated glutamate rich protein 1A	7		positive regulation of isotype switching to IgG isotypes			IMP		J:229465 	
+MGI:1891258	Parp3	poly (ADP-ribose) polymerase family, member 3	9		negative regulation of isotype switching			IMP		J:274078 	
+MGI:1890430	Paxip1	PAX interacting (with transcription-activation domain) protein 1	5		positive regulation of isotype switching			IMP		J:163258 	
+MGI:1890430	Paxip1	PAX interacting (with transcription-activation domain) protein 1	5		positive regulation of isotype switching to IgG isotypes			IMP		J:229465 	
+MGI:104879	Pdcd1	programmed cell death 1	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1930125	Pdcd1lg2	programmed cell death 1 ligand 2	19		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:97572	Phb	prohibitin	11		T-helper 17 type immune response			ISO	P35232 	J:164563 	
+MGI:1098211	Pik3cd	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta	4		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:894311	Pirb	paired Ig-like receptor B	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:894311	Pirb	paired Ig-like receptor B	7		B cell mediated immunity			IMP	MGI:2180757 	J:76770 	
+MGI:108022	Pkn1	protein kinase N1	8		regulation of germinal center formation			IMP	MGI:5475202 	J:193187 	
+MGI:1195256	Pla2g4a	phospholipase A2, group IVA (cytosolic, calcium-dependent)	1		positive regulation of T-helper 1 type immune response			IMP		J:107430 	
+MGI:104288	Pms2	PMS1 homolog2, mismatch repair system component	5		positive regulation of isotype switching to IgA isotypes	happens in spleen,happens in B cell		IGI	Q9JK91 	J:56764 	
+MGI:104288	Pms2	PMS1 homolog2, mismatch repair system component	5		positive regulation of isotype switching to IgA isotypes	happens in spleen,happens in B cell		IMP		J:56764 	
+MGI:104288	Pms2	PMS1 homolog2, mismatch repair system component	5		positive regulation of isotype switching to IgG isotypes	happens in spleen,happens in B cell		IGI	Q9JK91 	J:56764 	
+MGI:104288	Pms2	PMS1 homolog2, mismatch repair system component	5		positive regulation of isotype switching to IgG isotypes	happens in spleen,happens in B cell		IMP		J:56764 	
+MGI:97365	Pnp	purine-nucleoside phosphorylase	14		positive regulation of T cell mediated cytotoxicity			IMP	MGI:2386195 	J:62870 	
+MGI:101897	Pou2f2	POU domain, class 2, transcription factor 2	7		immunoglobulin production involved in immunoglobulin-mediated immune response	happens in spleen,happens in mature B cell		IMP	MGI:3028896 	J:4555 	
+MGI:107163	Ppp3cb	protein phosphatase 3, catalytic subunit, beta isoform	14		negative regulation of T cell mediated cytotoxicity	regulates a function/process that happens in T cell		IMP	MGI:2181294 	J:130898 	
+MGI:99655	Prdm1	PR domain containing 1, with ZNF domain	10		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:97551	Prf1	perforin 1 (pore forming protein)	10		T cell mediated cytotoxicity			IDA		J:96611 	
+MGI:97596	Prkcb	protein kinase C, beta	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:97598	Prkcd	protein kinase C, delta	14		immunoglobulin mediated immune response			IMP	MGI:2179710 	J:76135 	
+MGI:97601	Prkcq	protein kinase C, theta	2		positive regulation of T-helper 17 type immune response			IMP		J:129421 	
+MGI:97602	Prkcz	protein kinase C, zeta	4		positive regulation of T-helper 2 cell cytokine production			IMP		J:99860 	
+MGI:2141917	Prkd2	protein kinase D2	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:3487246	Prr7	proline rich 7 (synaptic)	13		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:104908	Ptk2b	PTK2 protein tyrosine kinase 2 beta	14		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:96055	Ptpn6	protein tyrosine phosphatase, non-receptor type 6	6		negative regulation of humoral immune response mediated by circulating immunoglobulin			IMP	MGI:1856074 	J:42368 	
+MGI:97810	Ptprc	protein tyrosine phosphatase, receptor type, C	1		negative regulation of T cell mediated cytotoxicity			IMP		J:111646 	
+MGI:97810	Ptprc	protein tyrosine phosphatase, receptor type, C	1		positive regulation of humoral immune response mediated by circulating immunoglobulin			IMP	MGI:2181288 	J:30239 	
+MGI:97810	Ptprc	protein tyrosine phosphatase, receptor type, C	1		positive regulation of isotype switching to IgG isotypes			IMP	MGI:2181288 	J:37640 	
+MGI:97810	Ptprc	protein tyrosine phosphatase, receptor type, C	1		positive regulation of T cell mediated cytotoxicity			IMP		J:7453 	
+MGI:97810	Ptprc	protein tyrosine phosphatase, receptor type, C	1		positive regulation of T cell mediated immunity			IMP	MGI:2181288 	J:30239 	
+MGI:97810	Ptprc	protein tyrosine phosphatase, receptor type, C	1		positive regulation of T cell mediated immunity			IMP		J:7453 	
+MGI:97810	Ptprc	protein tyrosine phosphatase, receptor type, C	1		regulation of humoral immune response mediated by circulating immunoglobulin			IMP	MGI:2181288 	J:37640 	
+MGI:1931465	Pycard	PYD and CARD domain containing	7		positive regulation of adaptive immune response			ISO	Q9ULZ3 	J:164563 	
+MGI:1861441	Rab27a	RAB27A, member RAS oncogene family	9		cytotoxic T cell degranulation			IMP	MGI:1856656 	J:111253 	
+MGI:2675273	Raet1e	retinoic acid early transcript 1E	10		T cell mediated cytotoxicity			IDA		J:88981 	
+MGI:97848	Rag1	recombination activating 1	2		adaptive immune response			IBA	PTN002610391 	J:265628 	
+MGI:97848	Rag1	recombination activating 1	2		adaptive immune response			IMP	MGI:1857241 	J:186687 	
+MGI:2685397	Rc3h1	RING CCCH (C3H) domains 1	1		negative regulation of germinal center formation			IMP		J:175161 	
+MGI:2685397	Rc3h1	RING CCCH (C3H) domains 1	1		negative regulation of T-helper 17 cell differentiation			IMP		J:259145 	
+MGI:2685397	Rc3h1	RING CCCH (C3H) domains 1	1		regulation of germinal center formation			IMP		J:98938 J:146622 	
+MGI:2442789	Rc3h2	ring finger and CCCH-type zinc finger domains 2	2		negative regulation of T-helper 17 cell differentiation			IMP		J:259145 	
+MGI:103289	Relb	avian reticuloendotheliosis viral (v-rel) oncogene related B	7		T-helper 1 cell differentiation	results in the differentiation of T-helper 1 cell		IMP	MGI:2179545 	J:107516 	
+MGI:103289	Relb	avian reticuloendotheliosis viral (v-rel) oncogene related B	7		T-helper 1 type immune response			IMP	MGI:2179544 	J:23081 	
+MGI:1923688	Rftn1	raftlin lipid raft linker 1	17		T cell antigen processing and presentation			IMP		J:150299 	
+MGI:1098622	Rif1	replication timing regulatory factor 1	2		positive regulation of isotype switching			IMP		J:193246 J:195061 J:197099 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		adaptive immune response			IBA	PTN000584806 	J:265628 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		adaptive immune response			IMP		J:175412 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		positive regulation of T-helper 1 cell differentiation			IMP	MGI:2446070 	J:75401 	
+MGI:1891456	Ripk2	receptor (TNFRSF)-interacting serine-threonine kinase 2	4		positive regulation of T-helper 1 type immune response			IMP	MGI:2446070 	J:75401 	
+MGI:2154952	Ripk3	receptor-interacting serine-threonine kinase 3	14		regulation of adaptive immune response			IGI	Q61160 	J:176448 	
+MGI:2154952	Ripk3	receptor-interacting serine-threonine kinase 3	14		regulation of T cell mediated cytotoxicity			IGI	Q61160 	J:176448 	
+MGI:1929069	Rnf8	ring finger protein 8	17		isotype switching			IMP		J:156522 	
+MGI:1922484	Rnf19b	ring finger protein 19B	4		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1914914	Rnf125	ring finger protein 125	18		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1917488	Rnf168	ring finger protein 168	16		isotype switching			IMP		J:156522 	
+MGI:104661	Rora	RAR-related orphan receptor alpha	9		T-helper 17 cell differentiation			IMP		J:131020 	
+MGI:104856	Rorc	RAR-related orphan receptor gamma	3		T-helper 17 cell differentiation			IDA		J:141227 	
+MGI:104856	Rorc	RAR-related orphan receptor gamma	3		T-helper 17 cell differentiation			IMP		J:115922 J:131020 	
+MGI:1929628	Rsad2	radical S-adenosyl methionine domain containing 2	12		positive regulation of T-helper 2 cell cytokine production			IMP		J:148305 	
+MGI:1914992	Samsn1	SAM domain, SH3 domain and nuclear localization signals, 1	16		negative regulation of adaptive immune response			IMP		J:158032 	
+MGI:1921381	Sash3	SAM and SH3 domain containing 3	X		positive regulation of adaptive immune response			IBA	PTN000266475 	J:265628 	
+MGI:1921381	Sash3	SAM and SH3 domain containing 3	X		positive regulation of adaptive immune response			IMP	MGI:3716944 	J:102171 	
+MGI:1921381	Sash3	SAM and SH3 domain containing 3	X		positive regulation of T cell cytokine production	regulates a function/process that happens in T cell		IMP	MGI:3716944 	J:102171 	
+MGI:107560	Sema4a	sema domain, immunoglobulin domain (Ig), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 4A	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:107560	Sema4a	sema domain, immunoglobulin domain (Ig), transmembrane domain (TM) and short cytoplasmic domain, (semaphorin) 4A	3		T-helper 1 cell differentiation			IMP		J:97027 	
+MGI:105046	Serpina3g	serine (or cysteine) peptidase inhibitor, clade A, member 3G	12		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:106603	Serpinb9	serine (or cysteine) peptidase inhibitor, clade B, member 9	13		T cell mediated cytotoxicity			IMP	MGI:3687210 	J:113349 	
+MGI:894668	Serpinb9b	serine (or cysteine) peptidase inhibitor, clade B, member 9b	13		T cell mediated cytotoxicity			IDA		J:96611 	
+MGI:894696	Serping1	serine (or cysteine) peptidase inhibitor, clade G, member 1	2		complement activation, classical pathway			IEA	KW-0180 	J:60000 	
+MGI:1328352	Sh2d1a	SH2 domain containing 1A	X		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1349420	Sh2d1b1	SH2 domain containing 1B1	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:3622649	Sh2d1b2	SH2 domain containing 1B2	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1920997	Shld1	shieldin complex subunit 1	2		positive regulation of isotype switching			IBA	PTN002198750 	J:265628 	
+MGI:1920997	Shld1	shieldin complex subunit 1	2		positive regulation of isotype switching			ISO	Q8IYI0 	J:164563 	
+MGI:1922948	Shld2	shieldin complex subunit 2	14		positive regulation of isotype switching			ISO	Q86V20 	J:164563 	
+MGI:6194609	Shld3	shieldin complex subunit 3	13		positive regulation of isotype switching			IBA	PTN002447668 	J:265628 	
+MGI:2443630	Siglecg	sialic acid binding Ig-like lectin G	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2135607	Sirt1	sirtuin 1	10		positive regulation of adaptive immune response			ISO	Q96EB6 	J:164563 	
+MGI:1889342	Sit1	suppression inducing transmembrane adaptor 1	4		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1925723	Skap1	src family associated phosphoprotein 1	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1925723	Skap1	src family associated phosphoprotein 1	11		positive regulation of adaptive immune response			ISO	Q86WV1 	J:164563 	
+MGI:1925049	Sla2	Src-like-adaptor 2	2		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1351314	Slamf1	signaling lymphocytic activation molecule family member 1	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1351314	Slamf1	signaling lymphocytic activation molecule family member 1	1		negative regulation of T cell cytokine production			IDA		J:227397 	
+MGI:1351314	Slamf1	signaling lymphocytic activation molecule family member 1	1		T-helper 1 cell cytokine production			IDA		J:227465 	
+MGI:1353620	Slamf6	SLAM family member 6	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1353620	Slamf6	SLAM family member 6	1		T-helper 17 cell lineage commitment			ISO	Q96DU3 	J:164563 	
+MGI:1922595	Slamf7	SLAM family member 7	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1345275	Slc11a1	solute carrier family 11 (proton-coupled divalent metal ion transporters), member 1	1		positive regulation of T-helper 1 type immune response			IMP		J:146983 	
+MGI:1345275	Slc11a1	solute carrier family 11 (proton-coupled divalent metal ion transporters), member 1	1		T cell cytokine production			IMP	MGI:1857755 	J:146917 	
+MGI:2140796	Slc15a4	solute carrier family 15, member 4	5		regulation of isotype switching to IgG isotypes			IMP		J:223449 	
+MGI:2143107	Slc22a13	solute carrier family 22 (organic cation transporter), member 13	9		positive regulation of T cell mediated cytotoxicity directed against tumor cell target			ISO	Q9Y226 	J:164563 	
+MGI:1100518	Smad7	SMAD family member 7	18		negative regulation of T cell cytokine production	happens in CD4-positive helper T cell,uses UniProtKB:Q62386		IMP		J:220376 	
+MGI:1100518	Smad7	SMAD family member 7	18		negative regulation of T-helper 17 cell differentiation	happens in CD4-positive helper T cell		IMP		J:220376 	
+MGI:1100518	Smad7	SMAD family member 7	18		negative regulation of T-helper 17 type immune response			IMP		J:220376 	
+MGI:2385459	Socs5	suppressor of cytokine signaling 5	17		positive regulation of T-helper 1 cell differentiation			IDA		J:113957 	
+MGI:98384	Spn	sialophorin	7		negative regulation of type IV hypersensitivity			IMP	MGI:1857246 	J:88252 	
+MGI:98384	Spn	sialophorin	7		T-helper 1 cell lineage commitment			ISO	P16150 	J:164563 	
+MGI:2139090	Stard7	START domain containing 7	2		T-helper 2 cell cytokine production	happens in lung		IMP	MGI:4433666 	J:242746 	
+MGI:2139090	Stard7	START domain containing 7	2		T-helper 2 cell cytokine production	happens in skin		IMP	MGI:4433666 	J:242746 	
+MGI:103038	Stat3	signal transducer and activator of transcription 3	11		T-helper 17 cell lineage commitment			IMP		J:239159 	
+MGI:103038	Stat3	signal transducer and activator of transcription 3	11		T-helper 17 type immune response			ISO	P40763 	J:164563 	
+MGI:103034	Stat6	signal transducer and activator of transcription 6	10		positive regulation of isotype switching to IgE isotypes	regulates a function/process that happens in B cell		IGI	MGI:107187 	J:57856 	
+MGI:103034	Stat6	signal transducer and activator of transcription 6	10		T-helper 1 cell lineage commitment			IGI	MGI:96556 	J:165738 	
+MGI:1858210	Stx7	syntaxin 7	10		positive regulation of T cell mediated cytotoxicity			ISO	O15400 	J:164563 	
+MGI:1921982	Stx11	syntaxin 11	10		cytotoxic T cell degranulation	happens in cytotoxic T cell		IMP	MGI:5461477 	J:191103 J:194197 	
+MGI:1921982	Stx11	syntaxin 11	10		T cell mediated cytotoxicity	has the participant cytotoxic T cell		IMP	MGI:5461477 	J:191103 	
+MGI:107726	Supt6	SPT6, histone chaperone and transcription elongation factor	11		regulation of isotype switching			IMP		J:172192 	
+MGI:2138351	Susd4	sushi domain containing 4	1		negative regulation of complement activation, classical pathway			IBA	PTN002931318 	J:265628 	
+MGI:2138351	Susd4	sushi domain containing 4	1		negative regulation of complement activation, classical pathway			ISO	Q5VX71 	J:164563 	
+MGI:1298390	Swap70	SWA-70 protein	7		isotype switching			IDA		J:48490 	
+MGI:99515	Syk	spleen tyrosine kinase	13		adaptive immune response			IBA	PTN002815343 	J:265628 	
+MGI:98483	Tap1	transporter 1, ATP-binding cassette, sub-family B (MDR/TAP)	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:98484	Tap2	transporter 2, ATP-binding cassette, sub-family B (MDR/TAP)	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:98484	Tap2	transporter 2, ATP-binding cassette, sub-family B (MDR/TAP)	17		positive regulation of T cell mediated cytotoxicity	regulates a function/process that happens in T cell		IDA		J:1767 	
+MGI:98484	Tap2	transporter 2, ATP-binding cassette, sub-family B (MDR/TAP)	17		positive regulation of T cell mediated cytotoxicity	regulates a function/process that happens in T cell		IMP		J:104295 	
+MGI:98484	Tap2	transporter 2, ATP-binding cassette, sub-family B (MDR/TAP)	17		positive regulation of T cell mediated cytotoxicity			ISO	P36372 	J:73065 	
+MGI:2442280	Tarm1	T cell-interacting, activating receptor on myeloid cells 1	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1888984	Tbx21	T-box 21	11		negative regulation of T-helper 17 cell differentiation			IDA		J:167439 	
+MGI:1888984	Tbx21	T-box 21	11		negative regulation of T-helper 17 cell lineage commitment			IMP		J:167439 	
+MGI:1888984	Tbx21	T-box 21	11		negative regulation of T-helper 2 cell cytokine production			IMP		J:204781 	
+MGI:1888984	Tbx21	T-box 21	11		positive regulation of isotype switching to IgG isotypes			IMP	MGI:2180194 	J:84929 	
+MGI:1350931	Tcirg1	T cell, immune regulator 1, ATPase, H+ transporting, lysosomal V0 protein A3	19		immunoglobulin mediated immune response			IMP		J:108136 	
+MGI:98662	Tec	tec protein tyrosine kinase	5		adaptive immune response			IBA	PTN000700360 	J:265628 	
+MGI:98511	Tfe3	transcription factor E3	X		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:103270	Tfeb	transcription factor EB	17		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:98822	Tfrc	transferrin receptor	16		positive regulation of isotype switching			ISO	P02786 	J:164563 	
+MGI:98725	Tgfb1	transforming growth factor, beta 1	7		adaptive immune response based on somatic recombination of immune receptors built from immunoglobulin superfamily domains			IDA		J:150655 	
+MGI:98725	Tgfb1	transforming growth factor, beta 1	7		positive regulation of isotype switching to IgA isotypes			ISO	P01137 	J:88910 	
+MGI:98725	Tgfb1	transforming growth factor, beta 1	7		T-helper 17 cell lineage commitment			TAS		J:136164 	
+MGI:2443552	Themis	thymocyte selection associated	10		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1919668	Thoc1	THO complex 1	18		negative regulation of isotype switching to IgA isotypes			IMP		J:202582 	
+MGI:1923457	Tmem98	transmembrane protein 98	11		T-helper 1 cell differentiation			IDA		J:273519 	
+MGI:104798	Tnf	tumor necrosis factor	17		positive regulation of humoral immune response mediated by circulating immunoglobulin			IGI	MGI:104797 	J:115034 	
+MGI:1196377	Tnfaip3	tumor necrosis factor, alpha-induced protein 3	10		regulation of germinal center formation			IMP		J:170265 	
+MGI:1314883	Tnfrsf1b	tumor necrosis factor receptor superfamily, member 1b	4		regulation of T cell cytokine production			IBA	PTN002933906 	J:265628 	
+MGI:1314883	Tnfrsf1b	tumor necrosis factor receptor superfamily, member 1b	4		regulation of T cell cytokine production	happens in microglial cell,happens in macrophage,regulates a function/process that happens in spleen		IMP		J:240627 	
+MGI:1314891	Tnfrsf11a	tumor necrosis factor receptor superfamily, member 11a, NFKB activator	1		adaptive immune response			ISO	Q9Y6Q6 	J:164563 	
+MGI:1889411	Tnfrsf13b	tumor necrosis factor receptor superfamily, member 13b	11		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1919299	Tnfrsf13c	tumor necrosis factor receptor superfamily, member 13c	15		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1919299	Tnfrsf13c	tumor necrosis factor receptor superfamily, member 13c	15		positive regulation of germinal center formation	regulates the formation of spleen germinal center		IMP	MGI:2389403 	J:88708 	
+MGI:2675303	Tnfrsf14	tumor necrosis factor receptor superfamily, member 14 (herpesvirus entry mediator)	4		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2675303	Tnfrsf14	tumor necrosis factor receptor superfamily, member 14 (herpesvirus entry mediator)	4		negative regulation of adaptive immune memory response			ISO	Q92956 	J:164563 	
+MGI:1343050	Tnfrsf17	tumor necrosis factor receptor superfamily, member 17	16		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2151075	Tnfrsf21	tumor necrosis factor receptor superfamily, member 21	17		adaptive immune response			IBA	PTN002930692 	J:265628 	
+MGI:2151075	Tnfrsf21	tumor necrosis factor receptor superfamily, member 21	17		adaptive immune response			IMP		J:70594 	
+MGI:104511	Tnfsf4	tumor necrosis factor (ligand) superfamily, member 4	1		negative regulation of T-helper 1 cell differentiation			IDA		J:169814 	
+MGI:104511	Tnfsf4	tumor necrosis factor (ligand) superfamily, member 4	1		positive regulation of immunoglobulin mediated immune response			IMP		J:127284 	
+MGI:104511	Tnfsf4	tumor necrosis factor (ligand) superfamily, member 4	1		positive regulation of interleukin-4-dependent isotype switching to IgE isotypes			IMP		J:127284 	
+MGI:104511	Tnfsf4	tumor necrosis factor (ligand) superfamily, member 4	1		positive regulation of T cell cytokine production			IDA		J:169814 J:169884 	
+MGI:104511	Tnfsf4	tumor necrosis factor (ligand) superfamily, member 4	1		regulation of adaptive immune response			IDA		J:164885 	
+MGI:1916833	Tnfsf13	tumor necrosis factor (ligand) superfamily, member 13	11		immunoglobulin mediated immune response			IMP	MGI:3038886 	J:88910 	
+MGI:1916833	Tnfsf13	tumor necrosis factor (ligand) superfamily, member 13	11		immunoglobulin production in mucosal tissue	happens in small intestine lamina propria		IMP	MGI:3038886 	J:88910 	
+MGI:1916833	Tnfsf13	tumor necrosis factor (ligand) superfamily, member 13	11		positive regulation of germinal center formation	regulates the formation of spleen germinal center		IMP	MGI:3038886 	J:88910 	
+MGI:1916833	Tnfsf13	tumor necrosis factor (ligand) superfamily, member 13	11		positive regulation of isotype switching to IgA isotypes			IBA	PTN001432209 	J:265628 	
+MGI:1916833	Tnfsf13	tumor necrosis factor (ligand) superfamily, member 13	11		positive regulation of isotype switching to IgA isotypes			IMP	MGI:3038886 	J:88910 	
+MGI:1916833	Tnfsf13	tumor necrosis factor (ligand) superfamily, member 13	11		positive regulation of isotype switching to IgA isotypes			ISO	O75888 	J:88910 	
+MGI:1344376	Tnfsf13b	tumor necrosis factor (ligand) superfamily, member 13b	8		positive regulation of germinal center formation	regulates the formation of spleen germinal center		IMP	MGI:2387426 	J:88708 	
+MGI:2673064	Tnfsf18	tumor necrosis factor (ligand) superfamily, member 18	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2673064	Tnfsf18	tumor necrosis factor (ligand) superfamily, member 18	1		negative regulation of T-helper 17 cell lineage commitment	happens in mesenteric lymph node,happens at the same time as inflammatory response		IMP		J:206613 	
+MGI:3845075	Tnfsfm13	tumor necrosis factor (ligand) superfamily, membrane-bound member 13	11		positive regulation of isotype switching to IgA isotypes			IBA	PTN001432209 	J:265628 	
+MGI:101835	Traf2	TNF receptor-associated factor 2	2		positive regulation of T cell cytokine production			ISO	Q12933 	J:164563 	
+MGI:2143599	Traf3ip2	TRAF3 interacting protein 2	10		B cell mediated immunity	has the participant Cd40		IGI	MGI:2143599 	J:138560 	
+MGI:2143599	Traf3ip2	TRAF3 interacting protein 2	10		B cell mediated immunity	has the participant Cd40		IGI	MGI:88336 	J:138560 	
+MGI:108072	Traf6	TNF receptor-associated factor 6	2		positive regulation of T cell cytokine production			ISO	Q9Y4K3 	J:164563 	
+MGI:108072	Traf6	TNF receptor-associated factor 6	2		T-helper 1 type immune response			IMP	MGI:2678775 	J:85808 	
+MGI:1924897	Trat1	T cell receptor associated transmembrane adaptor 1	16		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:4439726	Trbc1	T cell receptor beta, constant region 1	6		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4835227	Trbc2	T cell receptor beta, constant 2	6		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:98612	Trdc	T cell receptor delta, constant region	14		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:4887419	Trdv4	T cell receptor delta variable 4	14		complement activation, classical pathway			IBA	PTN001510949 	J:265628 	
+MGI:1923239	Treml4	triggering receptor expressed on myeloid cells-like 4	17		T cell antigen processing and presentation			IMP		J:180744 	
+MGI:1328317	Trex1	three prime repair exonuclease 1	9		adaptive immune response			IMP	MGI:5751220 	J:220965 	
+MGI:1328317	Trex1	three prime repair exonuclease 1	9		immune complex formation			IMP	MGI:5751220 	J:220965 	
+MGI:1328317	Trex1	three prime repair exonuclease 1	9		immunoglobulin production involved in immunoglobulin-mediated immune response			IMP	MGI:5751220 	J:220965 	
+MGI:1328317	Trex1	three prime repair exonuclease 1	9		T cell antigen processing and presentation			IMP	MGI:3052754 	J:207137 	
+MGI:98631	Trgv1	T cell receptor gamma, variable 1	13		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:97904	Trim27	tripartite motif-containing 27	13		negative regulation of adaptive immune response			ISO	P14373 	J:164563 	
+MGI:1351320	Trp53bp1	transformation related protein 53 binding protein 1	2		positive regulation of isotype switching			IMP		J:89802 J:91130 	
+MGI:1351320	Trp53bp1	transformation related protein 53 binding protein 1	2		positive regulation of isotype switching			ISO	Q12888 	J:164563 	
+MGI:1915917	Trpm4	transient receptor potential cation channel, subfamily M, member 4	7		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:1915917	Trpm4	transient receptor potential cation channel, subfamily M, member 4	7		regulation of T cell cytokine production			ISO	Q8TD43 	J:164563 	
+MGI:1929183	Tsc1	TSC complex subunit 1	2		adaptive immune response			IMP	MGI:2656240 	J:216437 	
+MGI:102960	Txk	TXK tyrosine kinase	5		adaptive immune response			IBA	PTN000700360 	J:265628 	
+MGI:102960	Txk	TXK tyrosine kinase	5		adaptive immune response			IMP		J:54449 	
+MGI:1917700	Unc13d	unc-13 homolog D	11		germinal center formation	has the participant lymph node		IMP	MGI:3628822 	J:119974 	
+MGI:1859307	Unc93b1	unc-93 homolog B1, TLR signaling regulator	19		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:109352	Ung	uracil DNA glycosylase	5		isotype switching			IGI	MGI:1343961 	J:125031 	
+MGI:103178	Vegfa	vascular endothelial growth factor A	17		T-helper 1 type immune response			ISO	RGD:619991 	J:155856 	
+MGI:1921298	Vsir	V-set immunoregulatory receptor	10		negative regulation of T cell cytokine production			IDA		J:176836 	
+MGI:3039619	Vtcn1	V-set domain containing T cell activation inhibitor 1	3		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:105059	Was	Wiskott-Aldrich syndrome	X		regulation of T cell antigen processing and presentation			ISO	P42768 	J:164563 	
+MGI:104593	Xcl1	chemokine (C motif) ligand 1	1		negative regulation of T cell cytokine production			ISO	P47992 	J:164563 	
+MGI:104593	Xcl1	chemokine (C motif) ligand 1	1		positive regulation of immunoglobulin production in mucosal tissue			IDA		J:172916 	
+MGI:104593	Xcl1	chemokine (C motif) ligand 1	1		positive regulation of T cell cytokine production			IDA		J:38259 	
+MGI:104593	Xcl1	chemokine (C motif) ligand 1	1		positive regulation of T cell mediated cytotoxicity			ISO	P47992 	J:164563 	
+MGI:104593	Xcl1	chemokine (C motif) ligand 1	1		positive regulation of T-helper 1 cell cytokine production			IDA		J:172916 	
+MGI:104593	Xcl1	chemokine (C motif) ligand 1	1		positive regulation of T-helper 2 cell cytokine production			IDA		J:172916 	
+MGI:1333799	Xrcc4	X-ray repair complementing defective repair in Chinese hamster cells 4	13		isotype switching	happens in mature B cell		IMP	MGI:1926771 MGI:3047571 MGI:3641440 	J:126758 	
+MGI:99613	Zap70	zeta-chain (TCR) associated protein kinase	1		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:2442326	Zbtb1	zinc finger and BTB domain containing 1	12		positive regulation of T cell mediated immunity			IDA		J:189773 	
+MGI:102755	Zbtb7b	zinc finger and BTB domain containing 7B	3		negative regulation of T-helper 17 cell differentiation			IMP	MGI:3530739 	J:190936 	
+MGI:2385891	Zc3h12a	zinc finger CCCH type containing 12A	4		negative regulation of T-helper 17 cell differentiation			IMP		J:259145 	
+MGI:3650254	Zfp683	zinc finger protein 683	4		adaptive immune response			IEA	KW-1064 	J:60000 	
+MGI:99215	Zp3	zona pellucida glycoprotein 3	5		humoral immune response mediated by circulating immunoglobulin			IDA		J:170041 	
+MGI:99215	Zp3	zona pellucida glycoprotein 3	5		positive regulation of type IV hypersensitivity			IDA		J:169908 	
+
