@@ -1,7 +1,7 @@
 ---
 title: "DESeq2.v2"
 author: "Tyler Akonom"
-date: "12/4/2020"
+date: "3/9/21"
 output: html_document
 ---
 
@@ -41,31 +41,6 @@ counts <- counts[,coldata$sampleName]
 ```
 
 
-# Filter data to show different cohorts
-```{r}
-# require(dplyr)
-# PN140counts <- select(counts, contains("B"))
-# PN140coldata <- filter(coldata, time=="PN140")
-# PN140DNcounts <- select(PN140counts, contains("B2"))
-# PN140DNcoldata <- filter(PN140coldata, genotype =="dnFGFR")
-# PN140DNcoldata['time'] = NULL
-# 
-# PN140Ctrlcounts <- select(PN140counts, contains("B1"))
-# PN140Ctrlcoldata <- filter(PN140coldata, genotype =="ctrl")
-# PN140Ctrlcoldata['time'] = NULL
-# 
-# PN140SScounts <- select(PN140counts, contains(c("B1116","B1117","B1118","B1119","B1120","B2111","B2112","B2113","B2114","B2115")))
-# PN140SScoldata <- filter(PN140coldata, housing =="same")
-# PN140SScoldata['time'] = NULL
-# 
-# PN60counts <- select(counts, contains("A"))
-# PN60coldata <- filter(coldata, time=="PN60")
-# PN60DNcounts <- select(PN60counts, contains("A2"))
-# PN60DNcoldata <- filter(PN60coldata, genotype =="dnFGFR")
-# PN60DNcoldata['time'] = NULL
-
-```
-
 # Checking to see if parent cage or date of collection drives expression
 ```{r}
 # dds = DESeqDataSetFromMatrix(countData = counts, colData = coldata, design = ~dod)
@@ -104,8 +79,16 @@ resSig <- subset(res, padj < 0.05)
 rs <- as.data.frame(resSig)
 siggenes <- as.vector(rownames(rs))
 
+# # Generating a .rnk file for GSEA from results
+# rnkdf <- tibble(gene = rownames(res),
+# 				rnk = -log(res$pvalue) * sign(res$log2FoldChange)) %>%
+# 	arrange(desc(rnk)) %>% drop_na()
+#
+## Write out the table without any additional information
+# write.table(rnkdf, file = "deseq_res_for_gsea.rnk", append = FALSE, col.names = FALSE, row.names = FALSE, quote = FALSE, sep = "\t")
+#
 # plotCounts(dds, gene = "", intgroup = "timehousing")
-
+#
 # # Creating a PDF of each gene identified above
 # setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\figures\\")
 # for (genename in siggenes){
@@ -113,7 +96,7 @@ siggenes <- as.vector(rownames(rs))
 #   png(filename = n, width = 12, height = 12, units = "in", res = 800, bg= "NA")
 #   plotCounts(dds,gene=genename,intgroup= "timehousing")
 #   dev.off()}
-
+#
 # # Write out results
 # write.csv(as.data.frame(res), file="timehousing-genotype_results.csv")
 # 
@@ -180,6 +163,52 @@ siggenes <- as.vector(rownames(rs))
 # pdf("all_genotype-housing-time_dispersionPlot.pdf")
 # plotDispEsts(dds4)
 # dev.off()
+```
+
+# GSEA Results -----------------------------------------------------------------------------------------------------------------
+
+
+```{r}
+gsea_inflammatory <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\GSEA\\HALLMARK_INFLAMMATORY_RESPONSE.tsv", sep = "\t", row.names = NULL, header = TRUE)
+
+mininormed <- normed[noquote(toupper(as.character(rownames(normed)))) %in% noquote(unique(gsea_inflammatory$SYMBOL)),]
+  mininormed <- as.matrix(mininormed)
+  setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\GSEA\\")
+  title = "Hallmark Inflammatory Response"
+  png(filename = "inflammatory_response_w.png", width = 12, height = 12, units = "in", res = 800, bg= "white")
+  heatmap(mininormed, Colv = NA, main=title)
+  dev.off()
+  
+minisig140 <- select(as.data.frame(normed), contains("B"))
+  minisig140 <- minisig140[noquote(toupper(as.character(rownames(minisig140)))) %in% noquote(unique(gsea_inflammatory$SYMBOL)),]
+  minisig140 <- minisig140[noquote(rownames(minisig140)) %in% noquote(unique(siggenes)),]
+  minisig140 <- as.matrix(minisig140)
+  setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\GSEA\\")
+  title = "Hallmark Inflammatory Response"
+  png(filename = "inflammatory_response_sig.png", width = 12, height = 12, units = "in", res = 800, bg= "white")
+  heatmap(minisig140, Colv = NA, main=title)
+  dev.off()
+  
+gsea_inta <- read.table("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\GSEA\\HALLMARK_INTERFERON_ALPHA_RESPONSE.tsv", sep = "\t", row.names = NULL, header = TRUE)
+
+mininormed <- normed[noquote(toupper(as.character(rownames(normed)))) %in% noquote(unique(gsea_inta$SYMBOL)),]
+  mininormed <- as.matrix(mininormed)
+  setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\GSEA\\")
+  title = "Hallmark Interferon Alpha Response"
+  png(filename = "interferon_alpha_response.png", width = 12, height = 12, units = "in", res = 800, bg= "white")
+  heatmap(mininormed, Colv = NA, main=title)
+  dev.off()
+  
+minisig140 <- select(as.data.frame(normed), contains("B"))
+  minisig140 <- minisig140[noquote(toupper(as.character(rownames(minisig140)))) %in% noquote(unique(gsea_inta$SYMBOL)),]
+  minisig140 <- minisig140[noquote(rownames(minisig140)) %in% noquote(unique(siggenes)),]
+  minisig140 <- as.matrix(minisig140)
+  setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\GSEA\\")
+  title = "Hallmark Interferon Alpha Response"
+  png(filename = "interferon_alpha_response_sig.png", width = 12, height = 12, units = "in", res = 800, bg= "white")
+  heatmap(minisig140, Colv = NA, main=title)
+  dev.off()
+
 ```
 
 
