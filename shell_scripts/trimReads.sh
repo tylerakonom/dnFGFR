@@ -1,24 +1,27 @@
 #!/bin/bash
-#SBATCH -J trimReads
-#SBATCH -n 6 # Number of cores
-#SBATCH -N 1 # Ensure that all cores are on one node
-#SBATCH -t 10:00:00 # Runtime in HH:MM:SS
-#SBATCH --partition=shas
 
-export PATH=$PATH:/projects/ehringer/software/scripts 
-ml singularity
+# Written by: tyak9569
+# Date: 20210316
+# Purpose: Cutadapt script for tyak9569
 
-mkdir -p /scratch/summit/tyak9569/dnFGFR
-mkdir -p /scratch/summit/tyak9569/dnFGFR/trimmedReads
+#SBATCH --partition=shas    # Summit partition
+#SBATCH --qos=normal                 # Summit qos
+#SBATCH --time=001:00:00           # Max wall time in HHH:MM:SS
+#SBATCH --ntasks=6           # Number of tasks per job  
+#SBATCH --nodes=1             # Number of nodes per job
+#SBATCH --job-name=cutadapt      # Job submission name
+#SBATCH --output=cutadapt%j.out   # Output file name with Job ID
 
-FILES1=/projects/tyak9569/dnFGFR/data/*_1*.fq.gz
-for f in $FILES1
-do
-	f2=${f//_1/_2}
-	f_trimmed=${f//.fq.gz/_trimmed.fq.gz}
-	f_trimmed=${f_trimmed//\/projects\/tyak9569\/dnFGFR\/data/\/scratch\/summit\/tyak9569\/dnFGFR\/trimmedReads}
-	f2_trimmed=${f2//.fq.gz/_trimmed.fq.gz}
-	f2_trimmed=${f2_trimmed//\/projects\/tyak9569\/dnFGFR\/data/\/scratch\/summit\/tyak9569\/dnFGFR\/trimmedReads}
-	rnaseq cutadapt -j 6 -u 15 -U 15 -q 20 -m 20	-a AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT -A GATCGGAAGAGCACACGTCTGAACTCCAGTCACATCACGATCTCGTATGCCGTCTTCTGCTTG -o $f_trimmed -p $f2_trimmed $f $f2
-done
 
+# purge all existing modules
+module purge
+
+# load the module needed to run the software container, and set up temporary directories
+module load singularity
+export SINGULARITY_TMPDIR=/gpfs/summit/scratch/$USER
+export SINGULARITY_CACHEDIR=/gpfs/summit/scratch/$USER
+indirectory=/projects/tyak9569/dnFGFR/data
+outdirectory=/gpfs/summit/scratch/tyak9569/dnFGFR/trimmedReads
+mkdir -p $outdirectory
+
+singularity run /projects/lowryc/software/containers/rnaseq.sif cutadapt -j 6 -u 15 -U 15 -q 20 -m 20	-a AATGATACGGCGACCACCGAGATCTACACTCTTTCCCTACACGACGCTCTTCCGATCT -A GATCGGAAGAGCACACGTCTGAACTCCAGTCACATCACGATCTCGTATGCCGTCTTCTGCTTG -o ${outdirectory}/${filename}_1_trimmed.fq.gz -p ${outdirectory}/${filename}_2_trimmed.fq.gz ${indirectory}/${filename}_1.fq.gz ${indirectory}/${filename}_2.fq.gz

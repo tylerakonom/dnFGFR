@@ -87,7 +87,7 @@ siggenes <- as.vector(rownames(rs))
 ## Write out the table without any additional information
 # write.table(rnkdf, file = "deseq_res_for_gsea.rnk", append = FALSE, col.names = FALSE, row.names = FALSE, quote = FALSE, sep = "\t")
 #
-# plotCounts(dds, gene = "", intgroup = "timehousing")
+plotCounts(dds, gene = "Gm11428", intgroup = "timehousing")
 #
 # # Creating a PDF of each gene identified above
 # setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\timehousing\\housing\\figures\\")

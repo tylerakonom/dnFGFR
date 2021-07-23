@@ -110,7 +110,7 @@ quote=FALSE,sep="\t",row.names=FALSE)
 
 # Antisense
 
-antisenseunique=featureCounts(files,
+coverage=featureCounts(files,
 isGTFAnnotationFile = TRUE,
 annot.ext = gtf,
 GTF.attrType = "gene_id",
@@ -122,5 +122,13 @@ strandSpecific = 2)
 write.table(x=data.frame(
 antisenseunique$annotation[,c("GeneID","Length")],
 antisenseunique$counts,stringsAsFactors=FALSE),
-file=paste(OUT,"Rsubread_antisenseunique.txt"),
+file=paste(OUT,"Rsubread_antisenseunique"),
 quote=FALSE,sep="\t",row.names=FALSE)
+
+
+fileroot=paste(OUT,"Rsubread_antisenseunique")
+write.csv(coverage$counts, paste(fileroot,".coverage.csv", sep=""))
+write.csv(coverage$stat, paste(fileroot,".stat.csv", sep=""))
+write.csv(coverage$annotation, paste(fileroot,".annotation.csv", sep=""))
+write.csv(coverage$targets, paste(fileroot,".targets.csv", sep=""))
+
