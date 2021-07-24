@@ -17,11 +17,13 @@
 module purge
 
 # load the module needed to run the software container, and set up temporary directories
-module load singularity/3.3.0
-export SINGULARITY_TMPDIR=/scratch/summit/$USER
-export SINGULARITY_CACHEDIR=/scratch/summit/$USER
-outdirectory=/scratch/summit/tyak9569/dnFGFR/aligned/
-mkdir -p $outdirectory
+module load singularity
+export SINGULARITY_TMPDIR=/gpfs/summit/scratch/$USER
+export SINGULARITY_CACHEDIR=/gpfs/summit/scratch/$USER
+outdirectory=/gpfs/summit/scratch/tyak9569/dnFGFR/aligned
+indirectory=/gpfs/summit/scratch/tyak9569/dnFGFR/trimmedReads
+mkdir -p ${outdirectory}
+mkdir -p ${outdirectory}/hisatout
 
 # Running HISAT2
-singularity run /projects/lowryc/software/containers/rnaseq.sif hisat2 -p 4 --summary-file ${outdirectory}${filename}.txt -x /projects/tyak9569/dnFGFR/genome/GRCm38 -1 /scratch/summit/tyak9569/dnFGFR/trimmedReads/${filename}_1_trimmed.fq.gz -2 /scratch/summit/tyak9569/dnFGFR/trimmedReads/${filename}_2_trimmed.fq.gz -S ${outdirectory}${filename}.bam
+singularity run /projects/lowryc/software/containers/rnaseq.sif hisat2 -p 4 --summary-file ${outdirectory}/hisatout/${filename}.txt -x /projects/tyak9569/dnFGFR/genome/GRCm38 -1 ${indirectory}/${filename}_1_trimmed.fq.gz -2 ${indirectory}/${filename}_2_trimmed.fq.gz -S ${outdirectory}/${filename}.bam

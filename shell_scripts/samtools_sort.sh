@@ -18,12 +18,13 @@
 module purge
 
 # load the module needed to run the software container, and set up temporary directories
-module load singularity/3.3.0
-export SINGULARITY_TMPDIR=/scratch/summit/$USER
-export SINGULARITY_CACHEDIR=/scratch/summit/$USER
-outdirectory=/scratch/summit/tyak9569/dnFGFR/aligned/sorted/
+module load singularity
+export SINGULARITY_TMPDIR=/gpfs/summit/scratch/$USER
+export SINGULARITY_CACHEDIR=/gpfs/summit/scratch/$USER
+outdirectory=/gpfs/summit/scratch/tyak9569/dnFGFR/aligned/sorted
+indirectory=/gpfs/summit/scratch/tyak9569/dnFGFR/aligned
 mkdir -p $outdirectory
 
 # Merge files
-singularity run /projects/lowryc/software/containers/rnaseq.sif samtools sort -m 25G -o ${outdirectory}${filename}.sort.bam -T ${SLURM_JOBID} -@ 4 /scratch/summit/$USER/dnFGFR/aligned/${filename}.bam
-singularity run /projects/lowryc/software/containers/rnaseq.sif samtools index /scratch/summit/$USER/dnFGFR/aligned/sorted/${filename}.sort.bam
+singularity run /projects/lowryc/software/containers/rnaseq.sif samtools sort -m 25G -o ${outdirectory}/${filename}.sort.bam -T ${SLURM_JOBID} -@ 4 ${indirectory}/${filename}.bam
+singularity run /projects/lowryc/software/containers/rnaseq.sif samtools index ${outdirectory}/${filename}.sort.bam
