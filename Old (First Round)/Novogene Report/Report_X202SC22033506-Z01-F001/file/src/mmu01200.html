@@ -1,0 +1,587 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>mmu01200</title>
+<style type="text/css">
+<!--
+area {cursor: pointer;}
+-->
+</style>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+<img src="mmu01200.png" usemap="#mapdata" border="0" />
+
+
+<div id="Detail" style=" display:none;position: fixed; left: 25%; top: 0px; width: 50%; border: 3px solid rgb(167, 201, 66); background-color: rgb(239, 254, 193); opacity: 0.95; font-size: 12px; padding-right: 20px;">	
+	<div style="cursor: pointer; position: absolute;top:5px; right: 5px; color: #7a9c14;" onclick="$('#Detail').hide();" title="close">Close</div>
+</div>
+
+<map name="mapdata">
+ <area coords="711,322,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00085+C05345" onmouseout="hideMapTn()" onmouseover='popupTimer("C00085", "C00085 (D-Fructose 6-phosphate), C05345 (beta-D-Fructose 6-phosphate)", "#ffffff")' shape="circle" title="C00085 (D-Fructose 6-phosphate), C05345 (beta-D-Fructose 6-phosphate)"/>
+ <area coords="1041,672,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01182" onmouseout="hideMapTn()" onmouseover='popupTimer("C01182", "C01182 (D-Ribulose 1,5-bisphosphate)", "#ffffff")' shape="circle" title="C01182 (D-Ribulose 1,5-bisphosphate)"/>
+ <area coords="711,672,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00197" onmouseout="hideMapTn()" onmouseover='popupTimer("C00197", "C00197 (3-Phospho-D-glycerate)", "#ffffff")' shape="circle" title="C00197 (3-Phospho-D-glycerate)"/>
+ <area coords="413,535,4" href="http://www.kegg.jp/dbget-bin/www_bget?C00101" onmouseout="hideMapTn()" onmouseover='popupTimer("C00101", "C00101 (Tetrahydrofolate)", "#ffffff")' shape="circle" title="C00101 (Tetrahydrofolate)"/>
+ <area coords="711,148,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00267+C00221" onmouseout="hideMapTn()" onmouseover='popupTimer("C00267", "C00267 (alpha-D-Glucose), C00221 (beta-D-Glucose)", "#ffffff")' shape="circle" title="C00267 (alpha-D-Glucose), C00221 (beta-D-Glucose)"/>
+ <area coords="711,217,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00668+C01172" onmouseout="hideMapTn()" onmouseover='popupTimer("C00668", "C00668 (alpha-D-Glucose 6-phosphate), C01172 (beta-D-Glucose 6-phosphate)", "#ffffff")' shape="circle" title="C00668 (alpha-D-Glucose 6-phosphate), C01172 (beta-D-Glucose 6-phosphate)"/>
+ <area coords="1041,217,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00345" onmouseout="hideMapTn()" onmouseover='popupTimer("C00345", "C00345 (6-Phospho-D-gluconate)", "#ffffff")' shape="circle" title="C00345 (6-Phospho-D-gluconate)"/>
+ <area coords="711,427,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00354+C05378" onmouseout="hideMapTn()" onmouseover='popupTimer("C00354", "C00354 (D-Fructose 1,6-bisphosphate), C05378 (beta-D-Fructose 1,6-bisphosphate)", "#ffffff")' shape="circle" title="C00354 (D-Fructose 1,6-bisphosphate), C05378 (beta-D-Fructose 1,6-bisphosphate)"/>
+ <area coords="876,217,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01236" onmouseout="hideMapTn()" onmouseover='popupTimer("C01236", "C01236 (D-Glucono-1,5-lactone 6-phosphate)", "#ffffff")' shape="circle" title="C01236 (D-Glucono-1,5-lactone 6-phosphate)"/>
+ <area coords="711,602,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00236" onmouseout="hideMapTn()" onmouseover='popupTimer("C00236", "C00236 (3-Phospho-D-glyceroyl phosphate)", "#ffffff")' shape="circle" title="C00236 (3-Phospho-D-glyceroyl phosphate)"/>
+ <area coords="711,532,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00118" onmouseout="hideMapTn()" onmouseover='popupTimer("C00118", "C00118 (D-Glyceraldehyde 3-phosphate)", "#ffffff")' shape="circle" title="C00118 (D-Glyceraldehyde 3-phosphate)"/>
+ <area coords="830,497,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00111" onmouseout="hideMapTn()" onmouseover='popupTimer("C00111", "C00111 (Glycerone phosphate)", "#ffffff")' shape="circle" title="C00111 (Glycerone phosphate)"/>
+ <area coords="711,742,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00631" onmouseout="hideMapTn()" onmouseover='popupTimer("C00631", "C00631 (2-Phospho-D-glycerate)", "#ffffff")' shape="circle" title="C00631 (2-Phospho-D-glycerate)"/>
+ <area coords="793,377,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00279" onmouseout="hideMapTn()" onmouseover='popupTimer("C00279", "C00279 (D-Erythrose 4-phosphate)", "#ffffff")' shape="circle" title="C00279 (D-Erythrose 4-phosphate)"/>
+ <area coords="878,377,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00447" onmouseout="hideMapTn()" onmouseover='popupTimer("C00447", "C00447 (Sedoheptulose 1,7-bisphosphate)", "#ffffff")' shape="circle" title="C00447 (Sedoheptulose 1,7-bisphosphate)"/>
+ <area coords="878,446,10" href="http://www.kegg.jp/dbget-bin/www_bget?C05382" onmouseout="hideMapTn()" onmouseover='popupTimer("C05382", "C05382 (Sedoheptulose 7-phosphate)", "#ffffff")' shape="circle" title="C05382 (Sedoheptulose 7-phosphate)"/>
+ <area coords="1010,417,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00117" onmouseout="hideMapTn()" onmouseover='popupTimer("C00117", "C00117 (D-Ribose 5-phosphate)", "#ffffff")' shape="circle" title="C00117 (D-Ribose 5-phosphate)"/>
+ <area coords="1041,322,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00199" onmouseout="hideMapTn()" onmouseover='popupTimer("C00199", "C00199 (D-Ribulose 5-phosphate)", "#ffffff")' shape="circle" title="C00199 (D-Ribulose 5-phosphate)"/>
+ <area coords="966,322,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00231" onmouseout="hideMapTn()" onmouseover='popupTimer("C00231", "C00231 (D-Xylulose 5-phosphate)", "#ffffff")' shape="circle" title="C00231 (D-Xylulose 5-phosphate)"/>
+ <area coords="876,271,10" href="http://www.kegg.jp/dbget-bin/www_bget?C06019" onmouseout="hideMapTn()" onmouseover='popupTimer("C06019", "C06019 (D-arabino-Hex-3-ulose 6-phosphate)", "#ffffff")' shape="circle" title="C06019 (D-arabino-Hex-3-ulose 6-phosphate)"/>
+ <area coords="711,917,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00022" onmouseout="hideMapTn()" onmouseover='popupTimer("C00022", "C00022 (Pyruvate)", "#ffffff")' shape="circle" title="C00022 (Pyruvate)"/>
+ <area coords="711,847,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00074" onmouseout="hideMapTn()" onmouseover='popupTimer("C00074", "C00074 (Phosphoenolpyruvate)", "#ffffff")' shape="circle" title="C00074 (Phosphoenolpyruvate)"/>
+ <area coords="1095,417,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00119" onmouseout="hideMapTn()" onmouseover='popupTimer("C00119", "C00119 (5-Phospho-alpha-D-ribose 1-diphosphate)", "#ffffff")' shape="circle" title="C00119 (5-Phospho-alpha-D-ribose 1-diphosphate)"/>
+ <area coords="194,584,4" href="http://www.kegg.jp/dbget-bin/www_bget?C00014" onmouseout="hideMapTn()" onmouseover='popupTimer("C00014", "C00014 (Ammonia)", "#ffffff")' shape="circle" title="C00014 (Ammonia)"/>
+ <area coords="490,296,4" href="http://www.kegg.jp/dbget-bin/www_bget?C01217+C18802" onmouseout="hideMapTn()" onmouseover='popupTimer("C01217", "C01217 (5,6,7,8-Tetrahydromethanopterin), C18802 (Tetrahydrosarcinapterin)", "#ffffff")' shape="circle" title="C01217 (5,6,7,8-Tetrahydromethanopterin), C18802 (Tetrahydrosarcinapterin)"/>
+ <area coords="133,654,4" href="http://www.kegg.jp/dbget-bin/www_bget?C00283" onmouseout="hideMapTn()" onmouseover='popupTimer("C00283", "C00283 (Hydrogen sulfide)", "#ffffff")' shape="circle" title="C00283 (Hydrogen sulfide)"/>
+ <area coords="152,123,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01438" onmouseout="hideMapTn()" onmouseover='popupTimer("C01438", "C01438 (Methane)", "#ffffff")' shape="circle" title="C01438 (Methane)"/>
+ <area coords="152,193,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00132" onmouseout="hideMapTn()" onmouseover='popupTimer("C00132", "C00132 (Methanol)", "#ffffff")' shape="circle" title="C00132 (Methanol)"/>
+ <area coords="152,263,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00067" onmouseout="hideMapTn()" onmouseover='popupTimer("C00067", "C00067 (Formaldehyde)", "#ffffff")' shape="circle" title="C00067 (Formaldehyde)"/>
+ <area coords="241,485,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00058" onmouseout="hideMapTn()" onmouseover='popupTimer("C00058", "C00058 (Formate)", "#ffffff")' shape="circle" title="C00058 (Formate)"/>
+ <area coords="241,415,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00011" onmouseout="hideMapTn()" onmouseover='popupTimer("C00011", "C00011 (CO2)", "#ffffff")' shape="circle" title="C00011 (CO2)"/>
+ <area coords="241,345,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01001" onmouseout="hideMapTn()" onmouseover='popupTimer("C01001", "C01001 (Formylmethanofuran)", "#ffffff")' shape="circle" title="C01001 (Formylmethanofuran)"/>
+ <area coords="431,199,10" href="http://www.kegg.jp/dbget-bin/www_bget?C03920" onmouseout="hideMapTn()" onmouseover='popupTimer("C03920", "C03920 (2-(Methylthio)ethanesulfonate)", "#ffffff")' shape="circle" title="C03920 (2-(Methylthio)ethanesulfonate)"/>
+ <area coords="369,239,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00218" onmouseout="hideMapTn()" onmouseover='popupTimer("C00218", "C00218 (Methylamine)", "#ffffff")' shape="circle" title="C00218 (Methylamine)"/>
+ <area coords="295,239,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00543" onmouseout="hideMapTn()" onmouseover='popupTimer("C00543", "C00543 (Dimethylamine)", "#ffffff")' shape="circle" title="C00543 (Dimethylamine)"/>
+ <area coords="221,239,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00565" onmouseout="hideMapTn()" onmouseover='popupTimer("C00565", "C00565 (Trimethylamine)", "#ffffff")' shape="circle" title="C00565 (Trimethylamine)"/>
+ <area coords="537,345,10" href="http://www.kegg.jp/dbget-bin/www_bget?C04488+C18799" onmouseout="hideMapTn()" onmouseover='popupTimer("C04488", "C04488 (5-Methyl-5,6,7,8-tetrahydromethanopterin), C18799 (5-Methyl-H4SPT)", "#ffffff")' shape="circle" title="C04488 (5-Methyl-5,6,7,8-tetrahydromethanopterin), C18799 (5-Methyl-H4SPT)"/>
+ <area coords="463,345,10" href="http://www.kegg.jp/dbget-bin/www_bget?C04377" onmouseout="hideMapTn()" onmouseover='popupTimer("C04377", "C04377 (5,10-Methylenetetrahydromethanopterin)", "#ffffff")' shape="circle" title="C04377 (5,10-Methylenetetrahydromethanopterin)"/>
+ <area coords="389,345,10" href="http://www.kegg.jp/dbget-bin/www_bget?C04330" onmouseout="hideMapTn()" onmouseover='popupTimer("C04330", "C04330 (5,10-Methenyltetrahydromethanopterin)", "#ffffff")' shape="circle" title="C04330 (5,10-Methenyltetrahydromethanopterin)"/>
+ <area coords="315,345,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01274" onmouseout="hideMapTn()" onmouseover='popupTimer("C01274", "C01274 (5-Formyl-5,6,7,8-tetrahydromethanopterin)", "#ffffff")' shape="circle" title="C01274 (5-Formyl-5,6,7,8-tetrahydromethanopterin)"/>
+ <area coords="586,415,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00237" onmouseout="hideMapTn()" onmouseover='popupTimer("C00237", "C00237 (CO)", "#ffffff")' shape="circle" title="C00237 (CO)"/>
+ <area coords="116,485,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00488" onmouseout="hideMapTn()" onmouseover='popupTimer("C00488", "C00488 (Formamide)", "#ffffff")' shape="circle" title="C00488 (Formamide)"/>
+ <area coords="537,485,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00440" onmouseout="hideMapTn()" onmouseover='popupTimer("C00440", "C00440 (5-Methyltetrahydrofolate)", "#ffffff")' shape="circle" title="C00440 (5-Methyltetrahydrofolate)"/>
+ <area coords="463,485,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00143" onmouseout="hideMapTn()" onmouseover='popupTimer("C00143", "C00143 (5,10-Methylenetetrahydrofolate)", "#ffffff")' shape="circle" title="C00143 (5,10-Methylenetetrahydrofolate)"/>
+ <area coords="389,485,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00445" onmouseout="hideMapTn()" onmouseover='popupTimer("C00445", "C00445 (5,10-Methenyltetrahydrofolate)", "#ffffff")' shape="circle" title="C00445 (5,10-Methenyltetrahydrofolate)"/>
+ <area coords="315,485,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00234" onmouseout="hideMapTn()" onmouseover='popupTimer("C00234", "C00234 (10-Formyltetrahydrofolate)", "#ffffff")' shape="circle" title="C00234 (10-Formyltetrahydrofolate)"/>
+ <area coords="348,742,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00048" onmouseout="hideMapTn()" onmouseover='popupTimer("C00048", "C00048 (Glyoxylate)", "#ffffff")' shape="circle" title="C00048 (Glyoxylate)"/>
+ <area coords="486,628,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00037" onmouseout="hideMapTn()" onmouseover='popupTimer("C00037", "C00037 (Glycine)", "#ffffff")' shape="circle" title="C00037 (Glycine)"/>
+ <area coords="587,672,10" href="http://www.kegg.jp/dbget-bin/www_bget?C03232" onmouseout="hideMapTn()" onmouseover='popupTimer("C03232", "C03232 (3-Phosphonooxypyruvate)", "#ffffff")' shape="circle" title="C03232 (3-Phosphonooxypyruvate)"/>
+ <area coords="513,672,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01005" onmouseout="hideMapTn()" onmouseover='popupTimer("C01005", "C01005 (O-Phospho-L-serine)", "#ffffff")' shape="circle" title="C01005 (O-Phospho-L-serine)"/>
+ <area coords="389,672,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00065" onmouseout="hideMapTn()" onmouseover='popupTimer("C00065", "C00065 (L-Serine)", "#ffffff")' shape="circle" title="C00065 (L-Serine)"/>
+ <area coords="617,742,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00258" onmouseout="hideMapTn()" onmouseover='popupTimer("C00258", "C00258 (D-Glycerate)", "#ffffff")' shape="circle" title="C00258 (D-Glycerate)"/>
+ <area coords="542,742,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00168" onmouseout="hideMapTn()" onmouseover='popupTimer("C00168", "C00168 (Hydroxypyruvate)", "#ffffff")' shape="circle" title="C00168 (Hydroxypyruvate)"/>
+ <area coords="711,1022,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00024" onmouseout="hideMapTn()" onmouseover='popupTimer("C00024", "C00024 (Acetyl-CoA)", "#ffffff")' shape="circle" title="C00024 (Acetyl-CoA)"/>
+ <area coords="711,1287,10" href="http://www.kegg.jp/dbget-bin/www_bget?C05668" onmouseout="hideMapTn()" onmouseover='popupTimer("C05668", "C05668 (3-Hydroxypropionyl-CoA)", "#ffffff")' shape="circle" title="C05668 (3-Hydroxypropionyl-CoA)"/>
+ <area coords="711,1095,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00083" onmouseout="hideMapTn()" onmouseover='popupTimer("C00083", "C00083 (Malonyl-CoA)", "#ffffff")' shape="circle" title="C00083 (Malonyl-CoA)"/>
+ <area coords="711,1223,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01013" onmouseout="hideMapTn()" onmouseover='popupTimer("C01013", "C01013 (3-Hydroxypropanoate)", "#ffffff")' shape="circle" title="C01013 (3-Hydroxypropanoate)"/>
+ <area coords="711,1159,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00222" onmouseout="hideMapTn()" onmouseover='popupTimer("C00222", "C00222 (3-Oxopropanoate)", "#ffffff")' shape="circle" title="C00222 (3-Oxopropanoate)"/>
+ <area coords="503,1415,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01213" onmouseout="hideMapTn()" onmouseover='popupTimer("C01213", "C01213 ((R)-Methylmalonyl-CoA)", "#ffffff")' shape="circle" title="C01213 ((R)-Methylmalonyl-CoA)"/>
+ <area coords="587,1415,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00683" onmouseout="hideMapTn()" onmouseover='popupTimer("C00683", "C00683 ((S)-Methylmalonyl-CoA)", "#ffffff")' shape="circle" title="C00683 ((S)-Methylmalonyl-CoA)"/>
+ <area coords="711,1415,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00100" onmouseout="hideMapTn()" onmouseover='popupTimer("C00100", "C00100 (Propanoyl-CoA)", "#ffffff")' shape="circle" title="C00100 (Propanoyl-CoA)"/>
+ <area coords="711,1351,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00894" onmouseout="hideMapTn()" onmouseover='popupTimer("C00894", "C00894 (Propenoyl-CoA)", "#ffffff")' shape="circle" title="C00894 (Propenoyl-CoA)"/>
+ <area coords="911,1109,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01011" onmouseout="hideMapTn()" onmouseover='popupTimer("C01011", "C01011 ((3S)-Citramalyl-CoA)", "#ffffff")' shape="circle" title="C01011 ((3S)-Citramalyl-CoA)"/>
+ <area coords="911,1319,10" href="http://www.kegg.jp/dbget-bin/www_bget?C06027" onmouseout="hideMapTn()" onmouseover='popupTimer("C06027", "C06027 (L-erythro-3-Methylmalyl-CoA)", "#ffffff")' shape="circle" title="C06027 (L-erythro-3-Methylmalyl-CoA)"/>
+ <area coords="911,1249,10" href="http://www.kegg.jp/dbget-bin/www_bget?C06028" onmouseout="hideMapTn()" onmouseover='popupTimer("C06028", "C06028 (2-Methylfumaryl-CoA)", "#ffffff")' shape="circle" title="C06028 (2-Methylfumaryl-CoA)"/>
+ <area coords="911,1179,10" href="http://www.kegg.jp/dbget-bin/www_bget?C18323" onmouseout="hideMapTn()" onmouseover='popupTimer("C18323", "C18323 (3-Methylfumaryl-CoA)", "#ffffff")' shape="circle" title="C18323 (3-Methylfumaryl-CoA)"/>
+ <area coords="1217,1454,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00989" onmouseout="hideMapTn()" onmouseover='popupTimer("C00989", "C00989 (4-Hydroxybutanoic acid)", "#ffffff")' shape="circle" title="C00989 (4-Hydroxybutanoic acid)"/>
+ <area coords="1217,1109,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00332" onmouseout="hideMapTn()" onmouseover='popupTimer("C00332", "C00332 (Acetoacetyl-CoA)", "#ffffff")' shape="circle" title="C00332 (Acetoacetyl-CoA)"/>
+ <area coords="1217,1179,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01144" onmouseout="hideMapTn()" onmouseover='popupTimer("C01144", "C01144 ((S)-3-Hydroxybutanoyl-CoA)", "#ffffff")' shape="circle" title="C01144 ((S)-3-Hydroxybutanoyl-CoA)"/>
+ <area coords="1217,1249,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00877" onmouseout="hideMapTn()" onmouseover='popupTimer("C00877", "C00877 (Crotonoyl-CoA)", "#ffffff")' shape="circle" title="C00877 (Crotonoyl-CoA)"/>
+ <area coords="1217,1319,10" href="http://www.kegg.jp/dbget-bin/www_bget?C11062" onmouseout="hideMapTn()" onmouseover='popupTimer("C11062", "C11062 (4-Hydroxybutyryl-CoA)", "#ffffff")' shape="circle" title="C11062 (4-Hydroxybutyryl-CoA)"/>
+ <area coords="550,1454,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00232" onmouseout="hideMapTn()" onmouseover='popupTimer("C00232", "C00232 (Succinate semialdehyde)", "#ffffff")' shape="circle" title="C00232 (Succinate semialdehyde)"/>
+ <area coords="431,1319,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00091" onmouseout="hideMapTn()" onmouseover='popupTimer("C00091", "C00091 (Succinyl-CoA)", "#ffffff")' shape="circle" title="C00091 (Succinyl-CoA)"/>
+ <area coords="472,1129,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00036" onmouseout="hideMapTn()" onmouseover='popupTimer("C00036", "C00036 (Oxaloacetate)", "#ffffff")' shape="circle" title="C00036 (Oxaloacetate)"/>
+ <area coords="348,1129,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00149" onmouseout="hideMapTn()" onmouseover='popupTimer("C00149", "C00149 ((S)-Malate)", "#ffffff")' shape="circle" title="C00149 ((S)-Malate)"/>
+ <area coords="348,1199,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00122" onmouseout="hideMapTn()" onmouseover='popupTimer("C00122", "C00122 (Fumarate)", "#ffffff")' shape="circle" title="C00122 (Fumarate)"/>
+ <area coords="348,1269,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00042" onmouseout="hideMapTn()" onmouseover='popupTimer("C00042", "C00042 (Succinate)", "#ffffff")' shape="circle" title="C00042 (Succinate)"/>
+ <area coords="300,1059,10" href="http://www.kegg.jp/dbget-bin/www_bget?C04348" onmouseout="hideMapTn()" onmouseover='popupTimer("C04348", "C04348 (L-Malyl-CoA)", "#ffffff")' shape="circle" title="C04348 (L-Malyl-CoA)"/>
+ <area coords="596,1129,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00158" onmouseout="hideMapTn()" onmouseover='popupTimer("C00158", "C00158 (Citrate)", "#ffffff")' shape="circle" title="C00158 (Citrate)"/>
+ <area coords="596,1224,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00311" onmouseout="hideMapTn()" onmouseover='popupTimer("C00311", "C00311 (Isocitrate)", "#ffffff")' shape="circle" title="C00311 (Isocitrate)"/>
+ <area coords="532,1166,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00566" onmouseout="hideMapTn()" onmouseover='popupTimer("C00566", "C00566 ((3S)-Citryl-CoA)", "#ffffff")' shape="circle" title="C00566 ((3S)-Citryl-CoA)"/>
+ <area coords="596,1319,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00026" onmouseout="hideMapTn()" onmouseover='popupTimer("C00026", "C00026 (2-Oxoglutarate)", "#ffffff")' shape="circle" title="C00026 (2-Oxoglutarate)"/>
+ <area coords="904,497,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00184" onmouseout="hideMapTn()" onmouseover='popupTimer("C00184", "C00184 (Glycerone)", "#ffffff")' shape="circle" title="C00184 (Glycerone)"/>
+ <area coords="165,676,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00979" onmouseout="hideMapTn()" onmouseover='popupTimer("C00979", "C00979 (O-Acetyl-L-serine)", "#ffffff")' shape="circle" title="C00979 (O-Acetyl-L-serine)"/>
+ <area coords="81,676,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00097" onmouseout="hideMapTn()" onmouseover='popupTimer("C00097", "C00097 (L-Cysteine)", "#ffffff")' shape="circle" title="C00097 (L-Cysteine)"/>
+ <area coords="488,178,4" href="http://www.kegg.jp/dbget-bin/www_bget?C04628" onmouseout="hideMapTn()" onmouseover='popupTimer("C04628", "C04628 (Coenzyme B)", "#ffffff")' shape="circle" title="C04628 (Coenzyme B)"/>
+ <area coords="488,135,4" href="http://www.kegg.jp/dbget-bin/www_bget?C04832" onmouseout="hideMapTn()" onmouseover='popupTimer("C04832", "C04832 (Coenzyme M 7-mercaptoheptanoylthreonine-phosphate heterodisulfide)", "#ffffff")' shape="circle" title="C04832 (Coenzyme M 7-mercaptoheptanoylthreonine-phosphate heterodisulfide)"/>
+ <area coords="583,199,4" href="http://www.kegg.jp/dbget-bin/www_bget?C03576" onmouseout="hideMapTn()" onmouseover='popupTimer("C03576", "C03576 (Coenzyme M)", "#ffffff")' shape="circle" title="C03576 (Coenzyme M)"/>
+ <area coords="116,584,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00169" onmouseout="hideMapTn()" onmouseover='popupTimer("C00169", "C00169 (Carbamoyl phosphate)", "#ffffff")' shape="circle" title="C00169 (Carbamoyl phosphate)"/>
+ <area coords="1206,217,10" href="http://www.kegg.jp/dbget-bin/www_bget?C04442" onmouseout="hideMapTn()" onmouseover='popupTimer("C04442", "C04442 (2-Dehydro-3-deoxy-6-phospho-D-gluconate)", "#ffffff")' shape="circle" title="C04442 (2-Dehydro-3-deoxy-6-phospho-D-gluconate)"/>
+ <area coords="876,148,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00198" onmouseout="hideMapTn()" onmouseover='popupTimer("C00198", "C00198 (D-Glucono-1,5-lactone)", "#ffffff")' shape="circle" title="C00198 (D-Glucono-1,5-lactone)"/>
+ <area coords="1041,148,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00257" onmouseout="hideMapTn()" onmouseover='popupTimer("C00257", "C00257 (D-Gluconic acid)", "#ffffff")' shape="circle" title="C00257 (D-Gluconic acid)"/>
+ <area coords="1206,148,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00204" onmouseout="hideMapTn()" onmouseover='popupTimer("C00204", "C00204 (2-Dehydro-3-deoxy-D-gluconate)", "#ffffff")' shape="circle" title="C00204 (2-Dehydro-3-deoxy-D-gluconate)"/>
+ <area coords="1013,810,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00577" onmouseout="hideMapTn()" onmouseover='popupTimer("C00577", "C00577 (D-Glyceraldehyde)", "#ffffff")' shape="circle" title="C00577 (D-Glyceraldehyde)"/>
+ <area coords="1342,1249,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00136" onmouseout="hideMapTn()" onmouseover='popupTimer("C00136", "C00136 (Butanoyl-CoA)", "#ffffff")' shape="circle" title="C00136 (Butanoyl-CoA)"/>
+ <area coords="467,1199,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00049" onmouseout="hideMapTn()" onmouseover='popupTimer("C00049", "C00049 (L-Aspartate)", "#ffffff")' shape="circle" title="C00049 (L-Aspartate)"/>
+ <area coords="796,880,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00041" onmouseout="hideMapTn()" onmouseover='popupTimer("C00041", "C00041 (L-Alanine)", "#ffffff")' shape="circle" title="C00041 (L-Alanine)"/>
+ <area coords="952,963,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00227" onmouseout="hideMapTn()" onmouseover='popupTimer("C00227", "C00227 (Acetyl phosphate)", "#ffffff")' shape="circle" title="C00227 (Acetyl phosphate)"/>
+ <area coords="1077,963,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00033" onmouseout="hideMapTn()" onmouseover='popupTimer("C00033", "C00033 (Acetate)", "#ffffff")' shape="circle" title="C00033 (Acetate)"/>
+ <area coords="1162,1179,10" href="http://www.kegg.jp/dbget-bin/www_bget?C03561" onmouseout="hideMapTn()" onmouseover='popupTimer("C03561", "C03561 ((R)-3-Hydroxybutanoyl-CoA)", "#ffffff")' shape="circle" title="C03561 ((R)-3-Hydroxybutanoyl-CoA)"/>
+ <area coords="1133,1249,10" href="http://www.kegg.jp/dbget-bin/www_bget?C18026" onmouseout="hideMapTn()" onmouseover='popupTimer("C18026", "C18026 ((2S)-Ethylmalonyl-CoA)", "#ffffff")' shape="circle" title="C18026 ((2S)-Ethylmalonyl-CoA)"/>
+ <area coords="1059,1249,10" href="http://www.kegg.jp/dbget-bin/www_bget?C20238" onmouseout="hideMapTn()" onmouseover='popupTimer("C20238", "C20238 ((2R)-Ethylmalonyl-CoA)", "#ffffff")' shape="circle" title="C20238 ((2R)-Ethylmalonyl-CoA)"/>
+ <area coords="985,1249,10" href="http://www.kegg.jp/dbget-bin/www_bget?C18324" onmouseout="hideMapTn()" onmouseover='popupTimer("C18324", "C18324 ((2S)-Methylsuccinyl-CoA)", "#ffffff")' shape="circle" title="C18324 ((2S)-Methylsuccinyl-CoA)"/>
+ <area coords="671,1319,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00025" onmouseout="hideMapTn()" onmouseover='popupTimer("C00025", "C00025 (L-Glutamate)", "#ffffff")' shape="circle" title="C00025 (L-Glutamate)"/>
+ <area coords="836,1319,10" href="http://www.kegg.jp/dbget-bin/www_bget?C03618" onmouseout="hideMapTn()" onmouseover='popupTimer("C03618", "C03618 (L-threo-3-Methylaspartate)", "#ffffff")' shape="circle" title="C03618 (L-threo-3-Methylaspartate)"/>
+ <area coords="836,1249,10" href="http://www.kegg.jp/dbget-bin/www_bget?C01732" onmouseout="hideMapTn()" onmouseover='popupTimer("C01732", "C01732 (Mesaconate)", "#ffffff")' shape="circle" title="C01732 (Mesaconate)"/>
+ <area coords="877,720,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00988" onmouseout="hideMapTn()" onmouseover='popupTimer("C00988", "C00988 (2-Phosphoglycolate)", "#ffffff")' shape="circle" title="C00988 (2-Phosphoglycolate)"/>
+ <area coords="877,789,10" href="http://www.kegg.jp/dbget-bin/www_bget?C00160" onmouseout="hideMapTn()" onmouseover='popupTimer("C00160", "C00160 (Glycolate)", "#ffffff")' shape="circle" title="C00160 (Glycolate)"/>
+ <area coords="706,440,706,520,708,520,708,440" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="723,321,784,321,784,323,723,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="784,321,785,321,785,323,784,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="785,321,787,322,787,324,785,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="787,322,788,322,788,324,787,324" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="787,323,788,324,790,324,789,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="789,323,791,324,791,326,789,325" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="790,325,791,326,793,326,792,325" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="791,326,791,328,793,328,793,326" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="791,328,792,329,794,329,793,328" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="792,329,792,331,794,331,794,329" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="792,331,792,365,794,365,794,331" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="710,685,710,730,712,730,712,685" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18648+mmu:56012" shape="poly" title="18648 (Pgam1), 56012 (Pgam2)"/>
+ <area coords="710,615,710,660,712,660,712,615" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18655+mmu:18663" shape="poly" title="18655 (Pgk1), 18663 (Pgk2)"/>
+ <area coords="710,545,710,590,712,590,712,545" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:100042025+mmu:14433" shape="poly" title="100042025 (Gapdh-ps15), 14433 (Gapdh)"/>
+ <area coords="714,440,714,520,716,520,716,440" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="714,440,714,488,716,488,716,440" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="714,488,714,489,716,489,716,488" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="714,489,715,491,717,491,716,489" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="715,491,715,492,717,492,717,491" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="715,492,716,493,718,493,717,492" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="716,493,718,495,720,495,718,493" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="718,495,719,496,721,496,720,495" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="720,495,721,495,721,497,720,497" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="721,495,723,496,723,498,721,497" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="723,496,724,496,724,498,723,498" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="724,496,817,496,817,498,724,498" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="706,335,706,415,708,415,708,335" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:14120+mmu:14121" shape="poly" title="14120 (Fbp2), 14121 (Fbp1)"/>
+ <area coords="723,321,953,321,953,323,723,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="724,525,740,525,740,527,724,527" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="740,525,741,525,741,527,740,527" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="741,525,743,524,743,526,741,527" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="743,524,744,524,744,526,743,526" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="743,525,744,524,746,524,745,525" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="745,523,747,522,747,524,745,525" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="746,523,747,522,749,522,748,523" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="747,522,747,520,749,520,749,522" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="747,520,748,519,750,519,749,520" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="748,519,748,517,750,517,750,519" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="748,517,748,331,750,331,750,517" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="748,331,748,329,750,329,750,331" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="748,329,749,328,751,328,750,329" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="749,328,749,326,751,326,751,328" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="749,326,750,325,752,325,751,326" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="750,325,751,324,753,324,752,325" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="751,324,752,323,754,323,753,324" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="753,322,754,322,754,324,753,324" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="754,322,756,321,756,323,754,324" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="756,321,757,321,757,323,756,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="757,321,784,321,784,323,757,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="784,321,785,321,785,323,784,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="785,321,787,322,787,324,785,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="787,322,788,322,788,324,787,324" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="787,323,788,324,790,324,789,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="789,323,791,324,791,326,789,325" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="790,325,791,326,793,326,792,325" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="791,326,791,328,793,328,793,326" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="791,328,792,329,794,329,793,328" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="792,329,792,331,794,331,794,329" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="792,331,792,365,794,365,794,331" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="805,376,865,376,865,378,805,378" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="829,485,829,386,831,386,831,485" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="829,386,829,385,831,385,831,386" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="829,385,830,383,832,383,831,385" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="830,383,830,382,832,382,832,383" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="830,382,831,381,833,381,832,382" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="831,381,832,379,834,379,833,381" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="832,379,833,378,835,378,834,379" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="834,377,836,377,836,379,834,379" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="835,378,836,377,838,377,837,378" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="837,376,839,376,839,378,837,378" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="839,376,846,376,846,378,839,378" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11674+mmu:11676+mmu:230163+mmu:353204" shape="poly" title="11674 (Aldoa), 11676 (Aldoc), 230163 (Aldob), 353204 (Aldoart1)"/>
+ <area coords="890,445,961,445,961,447,890,447" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="961,445,963,445,963,447,961,447" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="962,446,963,445,965,445,964,446" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="964,444,966,444,966,446,964,446" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="965,445,966,444,968,444,967,445" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="966,444,967,443,969,443,968,444" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="967,443,968,442,970,442,969,443" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="968,442,968,440,970,440,970,442" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="968,440,969,439,971,439,970,440" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="969,439,969,437,971,437,971,439" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="969,437,969,426,971,426,971,437" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="969,426,969,425,971,425,971,426" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="969,425,970,423,972,423,971,425" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="970,423,970,422,972,422,972,423" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="970,422,971,421,973,421,972,422" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="971,421,972,419,974,419,973,421" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="972,419,973,418,975,418,974,419" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="974,417,976,417,976,419,974,419" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="975,418,976,417,978,417,977,418" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="977,416,979,416,979,418,977,418" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="979,416,997,416,997,418,979,418" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="724,537,961,537,961,539,724,539" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="961,537,963,537,963,539,961,539" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="962,538,963,537,965,537,964,538" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="964,536,966,536,966,538,964,538" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="965,537,966,536,968,536,967,537" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="966,536,967,535,969,535,968,536" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="967,535,968,534,970,534,969,535" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="968,534,968,532,970,532,970,534" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="968,532,969,531,971,531,970,532" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="969,531,969,529,971,529,971,531" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="969,529,969,335,971,335,971,529" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21881+mmu:74419+mmu:83553" shape="poly" title="21881 (Tkt), 74419 (Tktl2), 83553 (Tktl1)"/>
+ <area coords="978,321,1028,321,1028,323,978,323" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:66646" shape="poly" title="66646 (Rpe)"/>
+ <area coords="714,335,714,415,716,415,716,335" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18641+mmu:18642+mmu:56421" shape="poly" title="18641 (Pfkl), 18642 (Pfkm), 56421 (Pfkp)"/>
+ <area coords="710,160,710,205,712,205,712,160" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:103988+mmu:15275+mmu:15277+mmu:212032+mmu:216019+mmu:72141" shape="poly" title="103988 (Gck), 15275 (Hk1), 15277 (Hk2), 212032 (Hk3), 216019 (Hkdc1), 72141 (Adpgk)"/>
+ <area coords="710,230,710,310,712,310,712,230" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:14751" shape="poly" title="14751 (Gpi1)"/>
+ <area coords="723,216,863,216,863,218,723,218" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:100198+mmu:14380+mmu:14381" shape="poly" title="100198 (H6pd), 14380 (G6pd2), 14381 (G6pdx)"/>
+ <area coords="888,216,1028,216,1028,218,888,218" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:100198+mmu:66171" shape="poly" title="100198 (H6pd), 66171 (Pgls)"/>
+ <area coords="1040,229,1040,310,1042,310,1042,229" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110208" shape="poly" title="110208 (Pgd)"/>
+ <area coords="1032,334,1012,405,1014,405,1034,334" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:19895" shape="poly" title="19895 (Rpia)"/>
+ <area coords="724,531,821,531,821,533,724,533" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="821,531,823,531,823,533,821,533" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="822,532,823,531,825,531,824,532" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="824,530,826,530,826,532,824,532" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="825,531,826,530,828,530,827,531" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="826,530,827,529,829,529,828,530" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="827,529,828,528,830,528,829,529" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="828,528,828,526,830,526,830,528" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="828,526,829,525,831,525,830,526" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="829,525,829,523,831,523,831,525" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="829,523,829,510,831,510,831,523" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21991" shape="poly" title="21991 (Tpi1)"/>
+ <area coords="792,390,792,437,794,437,794,390" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="792,437,792,439,794,439,794,437" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="792,439,793,440,795,440,794,439" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="793,440,793,442,795,442,795,440" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="793,442,794,443,796,443,795,442" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="795,442,797,443,797,445,795,444" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="796,444,797,445,799,445,798,444" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="798,444,799,444,799,446,798,446" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="799,444,801,445,801,447,799,446" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="801,445,802,445,802,447,801,447" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="802,445,865,445,865,447,802,447" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="720,330,786,401,788,401,722,330" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="786,401,787,402,789,402,788,401" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="787,402,788,404,790,404,789,402" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="788,404,789,406,791,406,790,404" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="789,406,790,408,792,408,791,406" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="790,408,790,410,792,410,792,408" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="790,410,791,412,793,412,792,410" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="791,412,792,413,794,413,793,412" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="792,413,792,415,794,415,794,413" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="792,415,792,417,794,417,794,415" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="792,417,792,424,794,424,794,417" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="792,424,792,425,794,425,794,424" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="792,425,792,427,794,427,794,425" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="792,427,791,429,793,429,794,427" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="791,429,790,431,792,431,793,429" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="790,431,790,433,792,433,792,431" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="790,433,789,435,791,435,792,433" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="789,435,788,437,790,437,791,435" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="788,437,787,439,789,439,790,437" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="787,439,786,440,788,440,789,439" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="786,440,717,522,719,522,788,440" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:21351" shape="poly" title="21351 (Taldo1)"/>
+ <area coords="710,755,710,835,712,835,712,755" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:13806+mmu:13807+mmu:13808+mmu:226265+mmu:433182" shape="poly" title="13806 (Eno1), 13807 (Eno2), 13808 (Eno3), 226265 (Eno4), 433182 (Eno1b)"/>
+ <area coords="714,859,714,904,716,904,716,859" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18746+mmu:18770" shape="poly" title="18746 (Pkm), 18770 (Pklr)"/>
+ <area coords="714,930,714,1008,716,1008,716,930" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:13382+mmu:18597+mmu:18598+mmu:235339+mmu:68263" shape="poly" title="13382 (Dld), 18597 (Pdha1), 18598 (Pdha2), 235339 (Dlat), 68263 (Pdhb)"/>
+ <area coords="544,1128,540,1128,540,1130,544,1130" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="540,1128,539,1128,539,1130,540,1130" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="539,1128,537,1127,537,1129,539,1130" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="537,1127,536,1127,536,1129,537,1129" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="535,1128,534,1127,536,1127,537,1128" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="534,1127,532,1125,534,1125,536,1127" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="532,1125,531,1124,533,1124,534,1125" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="531,1124,531,1123,533,1123,533,1124" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="531,1123,530,1121,532,1121,533,1123" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="530,1121,530,1120,532,1120,532,1121" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="530,1120,530,1043,532,1043,532,1120" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="530,1043,530,1041,532,1041,532,1043" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="530,1041,531,1040,533,1040,532,1041" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="531,1040,531,1038,533,1038,533,1040" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="531,1038,532,1037,534,1037,533,1038" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="533,1036,535,1035,535,1037,533,1038" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="534,1036,535,1035,537,1035,536,1036" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="536,1034,537,1034,537,1036,536,1036" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="537,1034,539,1033,539,1035,537,1036" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="539,1033,540,1033,540,1035,539,1035" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="540,1033,694,1033,694,1035,540,1035" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="484,1128,584,1128,584,1130,484,1130" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12974+mmu:71832" shape="poly" title="12974 (Cs), 71832 (Csl)"/>
+ <area coords="360,1124,460,1124,460,1126,360,1126" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17448+mmu:17449" shape="poly" title="17448 (Mdh2), 17449 (Mdh1)"/>
+ <area coords="347,1142,347,1187,349,1187,349,1142" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:14194" shape="poly" title="14194 (Fh1)"/>
+ <area coords="347,1212,347,1257,349,1257,349,1212" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:66052+mmu:66925+mmu:66945+mmu:67680" shape="poly" title="66052 (Sdhc), 66925 (Sdhd), 66945 (Sdha), 67680 (Sdhb)"/>
+ <area coords="347,1282,347,1310,349,1310,349,1282" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="347,1310,347,1311,349,1311,349,1310" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="347,1311,348,1313,350,1313,349,1311" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="348,1313,348,1314,350,1314,350,1313" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="348,1314,349,1315,351,1315,350,1314" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="349,1315,350,1317,352,1317,351,1315" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="350,1317,351,1318,353,1318,352,1317" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="352,1317,354,1317,354,1319,352,1319" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="353,1318,354,1319,356,1319,355,1318" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="355,1318,357,1318,357,1320,355,1320" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="357,1318,417,1318,417,1320,357,1320" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:20916+mmu:20917+mmu:56451" shape="poly" title="20916 (Sucla2), 20917 (Suclg2), 56451 (Suclg1)"/>
+ <area coords="595,1237,595,1307,597,1307,597,1237" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:15926+mmu:15929+mmu:170718+mmu:243996+mmu:269951+mmu:67834" shape="poly" title="15926 (Idh1), 15929 (Idh3g), 170718 (Idh3b), 243996 (4933405O20Rik), 269951 (Idh2), 67834 (Idh3a)"/>
+ <area coords="595,1142,595,1212,597,1212,597,1142" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11428+mmu:11429" shape="poly" title="11428 (Aco1), 11429 (Aco2)"/>
+ <area coords="599,1414,699,1414,699,1416,599,1416" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110821+mmu:66904" shape="poly" title="110821 (Pcca), 66904 (Pccb)"/>
+ <area coords="515,1414,575,1414,575,1416,515,1416" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:73724" shape="poly" title="73724 (Mcee)"/>
+ <area coords="434,1331,434,1406,436,1406,436,1331" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="434,1406,434,1407,436,1407,436,1406" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="434,1407,435,1409,437,1409,436,1407" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="435,1409,435,1410,437,1410,437,1409" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="435,1410,436,1411,438,1411,437,1410" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="436,1411,437,1413,439,1413,438,1411" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="437,1413,438,1414,440,1414,439,1413" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="439,1413,441,1413,441,1415,439,1415" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="440,1414,441,1415,443,1415,442,1414" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="442,1414,444,1414,444,1416,442,1416" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="444,1414,490,1414,490,1416,444,1416" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17850" shape="poly" title="17850 (Mmut)"/>
+ <area coords="727,1021,1208,1021,1208,1023,727,1023" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1208,1021,1209,1021,1209,1023,1208,1023" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1209,1021,1211,1022,1211,1024,1209,1023" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1211,1022,1212,1022,1212,1024,1211,1024" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1211,1023,1212,1024,1214,1024,1213,1023" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1213,1023,1215,1024,1215,1026,1213,1025" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1214,1025,1215,1026,1217,1026,1216,1025" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1215,1026,1215,1028,1217,1028,1217,1026" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1215,1028,1216,1029,1218,1029,1217,1028" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1216,1029,1216,1031,1218,1031,1218,1029" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="1216,1031,1216,1097,1218,1097,1218,1031" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110446+mmu:110460" shape="poly" title="110446 (Acat1), 110460 (Acat2)"/>
+ <area coords="361,741,477,741,477,743,361,743" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="477,741,479,741,479,743,477,743" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="478,742,479,741,481,741,480,742" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="480,740,482,740,482,742,480,742" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="481,741,482,740,484,740,483,741" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="482,740,483,739,485,739,484,740" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="483,739,484,738,486,738,485,739" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="484,738,484,736,486,736,486,738" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="484,736,485,735,487,735,486,736" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="485,735,485,733,487,733,487,735" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="485,733,485,640,487,640,487,733" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="388,685,388,733,390,733,390,685" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="388,733,388,735,390,735,390,733" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="388,735,389,736,391,736,390,735" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="389,736,389,738,391,738,391,736" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="389,738,390,739,392,739,391,738" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="390,739,391,740,393,740,392,739" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="391,740,392,741,394,741,393,740" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="393,740,395,740,395,742,393,742" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="394,741,395,742,397,742,396,741" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="396,741,398,741,398,743,396,743" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="398,741,529,741,529,743,398,743" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11611" shape="poly" title="11611 (Agxt)"/>
+ <area coords="629,741,699,741,699,743,629,743" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:235582" shape="poly" title="235582 (Glyctk)"/>
+ <area coords="599,671,699,671,699,673,599,673" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:236539" shape="poly" title="236539 (Phgdh)"/>
+ <area coords="525,671,575,671,575,673,525,673" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107272" shape="poly" title="107272 (Psat1)"/>
+ <area coords="401,671,501,671,501,673,401,673" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:100678" shape="poly" title="100678 (Psph)"/>
+ <area coords="388,660,388,637,390,637,390,660" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="388,637,388,635,390,635,390,637" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="388,635,389,634,391,634,390,635" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="389,634,389,632,391,632,391,634" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="389,632,390,631,392,631,391,632" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="390,631,391,630,393,630,392,631" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="391,630,392,629,394,629,393,630" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="393,628,395,628,395,630,393,630" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="394,629,395,628,397,628,396,629" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="396,627,398,627,398,629,396,629" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="398,627,473,627,473,629,398,629" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="412,542,412,619,414,619,414,542" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="412,619,412,621,414,621,414,619" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="412,621,413,622,415,622,414,621" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="413,622,413,624,415,624,415,622" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="413,624,414,625,416,625,415,624" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="414,625,415,626,417,626,416,625" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="415,626,416,627,418,627,417,626" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="417,626,419,626,419,628,417,628" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="418,627,419,628,421,628,420,627" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="420,627,422,627,422,629,420,629" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="422,627,454,627,454,629,422,629" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="454,627,455,627,455,629,454,629" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="455,627,457,626,457,628,455,629" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="457,626,458,626,458,628,457,628" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="457,627,458,626,460,626,459,627" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="459,625,461,624,461,626,459,627" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="460,625,461,624,463,624,462,625" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="461,624,461,622,463,622,463,624" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="461,622,462,621,464,621,463,622" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="462,621,462,619,464,619,464,621" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="462,619,462,498,464,498,464,619" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108037+mmu:20425" shape="poly" title="108037 (Shmt2), 20425 (Shmt1)"/>
+ <area coords="475,484,525,484,525,486,475,486" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:17769" shape="poly" title="17769 (Mthfr)"/>
+ <area coords="1022,416,1082,416,1082,418,1022,418" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:110639+mmu:19139+mmu:328099+mmu:75456" shape="poly" title="110639 (Prps2), 19139 (Prps1), 328099 (Prps1l3), 75456 (Prps1l1)"/>
+ <area coords="282,667,277,667,277,669,282,669" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="277,667,275,667,275,669,277,669" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="274,668,273,669,275,669,276,668" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="274,668,272,668,272,670,274,670" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="271,669,270,670,272,670,273,669" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="270,670,269,671,271,671,272,670" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="269,671,268,672,270,672,271,671" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="268,672,268,674,270,674,270,672" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="268,674,267,675,269,675,270,674" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="267,675,267,677,269,677,269,675" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="267,677,267,902,269,902,269,677" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="267,902,267,903,269,903,269,902" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="267,903,268,905,270,905,269,903" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="268,905,268,906,270,906,270,905" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="268,906,269,907,271,907,270,906" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="269,907,270,909,272,909,271,907" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="270,909,271,910,273,910,272,909" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="272,909,274,909,274,911,272,911" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="273,910,274,911,276,911,275,910" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="275,910,277,910,277,912,275,912" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="277,910,698,910,698,912,277,912" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="193,592,193,659,195,659,195,592" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="193,659,193,661,195,661,195,659" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="193,661,194,662,196,662,195,661" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="194,662,194,664,196,664,196,662" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="194,664,195,665,197,665,196,664" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="195,665,196,666,198,666,197,665" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="196,666,197,667,199,667,198,666" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="198,666,200,666,200,668,198,668" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="199,667,200,668,202,668,201,667" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="201,667,203,667,203,669,201,669" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="203,667,376,667,376,669,203,669" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:231691+mmu:257635" shape="poly" title="231691 (Sds), 257635 (Sdsl)"/>
+ <area coords="201,583,477,583,477,585,201,585" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="477,583,479,583,479,585,477,585" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="478,584,479,585,481,585,480,584" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="480,584,482,584,482,586,480,586" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="481,585,482,586,484,586,483,585" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="482,586,483,587,485,587,484,586" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="483,587,484,588,486,588,485,587" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="484,588,484,590,486,590,486,588" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="484,590,485,591,487,591,486,590" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="485,591,485,593,487,593,487,591" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="485,593,485,616,487,616,487,593" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="452,491,303,538,303,540,452,493" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="303,538,301,539,301,541,303,540" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="300,540,299,541,301,541,302,540" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="300,540,298,541,298,543,300,542" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="297,542,296,543,298,543,299,542" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="296,543,295,545,297,545,298,543" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="295,545,294,546,296,546,297,545" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="294,546,294,548,296,548,296,546" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="294,548,293,549,295,549,296,548" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="293,549,293,551,295,551,295,549" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="293,551,293,575,295,575,295,551" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="293,575,293,577,295,577,295,575" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="293,577,294,578,296,578,295,577" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="294,578,294,580,296,580,296,578" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="294,580,295,581,297,581,296,580" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="295,581,296,582,298,582,297,581" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="296,582,297,583,299,583,298,582" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="298,582,300,582,300,584,298,584" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="299,583,300,584,302,584,301,583" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="301,583,303,583,303,585,301,585" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="303,583,310,583,310,585,303,585" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104174+mmu:13382+mmu:434437+mmu:68133" shape="poly" title="104174 (Gldc), 13382 (Dld), 434437 (Amt), 68133 (Gcsh)"/>
+ <area coords="151,276,151,470,153,470,153,276" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="151,470,151,471,153,471,153,470" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="151,471,152,473,154,473,153,471" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="152,473,152,474,154,474,154,473" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="152,474,153,475,155,475,154,474" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="153,475,154,477,156,477,155,475" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="154,477,155,478,157,478,156,477" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="156,477,158,477,158,479,156,479" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="157,478,158,479,160,479,159,478" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="159,478,161,478,161,480,159,480" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="161,478,228,478,228,480,161,480" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11532+mmu:13885" shape="poly" title="11532 (Adh5), 13885 (Esd)"/>
+ <area coords="842,496,892,496,892,498,842,498" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:225913" shape="poly" title="225913 (Tkfc)"/>
+ <area coords="476,1117,476,932,478,932,478,1117" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="476,932,476,931,478,931,478,932" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="476,931,477,929,479,929,478,931" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="477,929,477,928,479,928,479,929" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="477,928,478,927,480,927,479,928" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="478,927,479,925,481,925,480,927" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="479,925,480,924,482,924,481,925" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="481,923,483,923,483,925,481,925" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="482,924,483,923,485,923,484,924" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="484,922,486,922,486,924,484,924" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="486,922,698,922,698,924,486,924" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:18563" shape="poly" title="18563 (Pcx)"/>
+ <area coords="443,1322,583,1322,583,1324,443,1324" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:13382+mmu:18293+mmu:239017+mmu:78920" shape="poly" title="13382 (Dld), 18293 (Ogdh), 239017 (Ogdhl), 78920 (Dlst)"/>
+ <area coords="128,583,188,583,188,585,128,585" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:227231" shape="poly" title="227231 (Cps1)"/>
+ <area coords="339,1117,339,926,341,926,341,1117" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="339,926,339,925,341,925,341,926" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="339,925,340,923,342,923,341,925" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="340,923,340,922,342,922,342,923" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="340,922,341,921,343,921,342,922" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="341,921,342,919,344,919,343,921" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="342,919,343,918,345,918,344,919" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="344,917,346,917,346,919,344,919" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="345,918,346,917,348,917,347,918" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="347,916,349,916,349,918,347,918" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="349,916,698,916,698,918,349,918" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:107029+mmu:109264+mmu:17436" shape="poly" title="107029 (Me2), 109264 (Me3), 17436 (Me1)"/>
+ <area coords="888,147,1028,147,1028,149,888,149" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:19733" shape="poly" title="19733 (Rgn)"/>
+ <area coords="1040,160,1040,205,1042,205,1042,160" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:75731" shape="poly" title="75731 (Idnk)"/>
+ <area coords="706,1363,706,1403,708,1403,708,1363" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11409+mmu:11430+mmu:80911" shape="poly" title="11409 (Acads), 11430 (Acox1), 80911 (Acox3)"/>
+ <area coords="706,1299,706,1339,708,1339,708,1299" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:74147+mmu:93747+mmu:97212" shape="poly" title="74147 (Ehhadh), 93747 (Echs1), 97212 (Hadha)"/>
+ <area coords="706,1235,706,1275,708,1275,708,1235" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:227095" shape="poly" title="227095 (Hibch)"/>
+ <area coords="696,1039,670,1039,670,1041,696,1041" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="670,1039,669,1039,669,1041,670,1041" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="669,1039,667,1040,667,1042,669,1041" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="667,1040,666,1040,666,1042,667,1042" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="665,1041,664,1042,666,1042,667,1041" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="665,1041,663,1042,663,1044,665,1043" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="662,1043,661,1044,663,1044,664,1043" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="661,1044,661,1046,663,1046,663,1044" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="661,1046,660,1047,662,1047,663,1046" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="660,1047,660,1049,662,1049,662,1047" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="660,1049,660,1150,662,1150,662,1049" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="660,1150,660,1151,662,1151,662,1150" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="660,1151,661,1153,663,1153,662,1151" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="661,1153,661,1154,663,1154,663,1153" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="661,1154,662,1155,664,1155,663,1154" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="662,1155,664,1157,666,1157,664,1155" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="664,1157,665,1158,667,1158,666,1157" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="666,1157,667,1157,667,1159,666,1159" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="667,1157,669,1158,669,1160,667,1159" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="669,1158,670,1158,670,1160,669,1160" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="670,1158,698,1158,698,1160,670,1160" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:104776" shape="poly" title="104776 (Aldh6a1)"/>
+ <area coords="467,1142,467,1187,469,1187,469,1142" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:14718+mmu:14719" shape="poly" title="14718 (Got1), 14719 (Got2)"/>
+ <area coords="722,904,722,889,724,889,724,904" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="722,889,722,887,724,887,724,889" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="722,887,723,886,725,886,724,887" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="723,886,723,884,725,884,725,886" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="723,884,724,883,726,883,725,884" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="725,882,727,881,727,883,725,884" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="726,882,727,881,729,881,728,882" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="728,880,729,880,729,882,728,882" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="729,880,731,879,731,881,729,882" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="731,879,732,879,732,881,731,881" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="732,879,783,879,783,881,732,881" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:108682+mmu:76282" shape="poly" title="108682 (Gpt2), 76282 (Gpt)"/>
+ <area coords="1229,1252,1329,1252,1329,1254,1229,1254" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:11409" shape="poly" title="11409 (Acads)"/>
+ <area coords="727,1015,1068,1015,1068,1017,727,1017" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1068,1015,1069,1015,1069,1017,1068,1017" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1069,1015,1071,1014,1071,1016,1069,1017" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1071,1014,1072,1014,1072,1016,1071,1016" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1071,1015,1072,1014,1074,1014,1073,1015" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1073,1013,1075,1012,1075,1014,1073,1015" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1074,1013,1075,1012,1077,1012,1076,1013" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1075,1012,1075,1010,1077,1010,1077,1012" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1075,1010,1076,1009,1078,1009,1077,1010" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1076,1009,1076,1007,1078,1007,1078,1009" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1076,1007,1076,976,1078,976,1078,1007" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:60525+mmu:68738" shape="poly" title="60525 (Acss2), 68738 (Acss1)"/>
+ <area coords="1071,1248,1121,1248,1121,1250,1071,1250" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:73724" shape="poly" title="73724 (Mcee)"/>
+ <area coords="608,1318,658,1318,658,1320,608,1320" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:14661" shape="poly" title="14661 (Glud1)"/>
+ <area coords="876,777,876,732,878,732,878,777" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:67078" shape="poly" title="67078 (Pgp)"/>
+ <area coords="353,755,353,780,355,780,355,755" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="353,780,353,781,355,781,355,780" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="353,781,354,783,356,783,355,781" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="354,783,354,784,356,784,356,783" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="354,784,355,785,357,785,356,784" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="355,785,356,787,358,787,357,785" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="356,787,357,788,359,788,358,787" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="358,787,360,787,360,789,358,789" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="359,788,360,789,362,789,361,788" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="361,788,363,788,363,790,361,790" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="363,788,864,788,864,790,363,790" href="http://www.kegg.jp/dbget-bin/www_bget?mmu:12359+mmu:15112+mmu:56185" shape="poly" title="12359 (Cat), 15112 (Hao1), 56185 (Hao2)"/>
+ <area coords="40,45,217,70" href="http://www.kegg.jp/dbget-bin/www_bget?mmu01200" onmouseout="hideMapTn()" onmouseover='popupTimer("mmu01200", "mmu01200: Carbon metabolism", "#ffffff")' shape="rect" title="mmu01200: Carbon metabolism"/>
+</map>
+
+
+<script type="text/javascript" >
+		$("span.maps").bind("mouseover",function(){
+			$("#Detail ul").remove();
+			$("#Detail").prepend($(this).siblings("span").html());
+			console.log($("#Detail").html());
+			$("#Detail").show();
+			});
+</script>
+</body>
+</html>

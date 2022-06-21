@@ -1,0 +1,5 @@
+compare	all	up	down	threshold
+OS320vsSS320	2216	1114	1102	DESeq2 pvalue<=0.05 |log2FoldChange|>=0.0
+DO320vsDS320	1510	752	758	DESeq2 pvalue<=0.05 |log2FoldChange|>=0.0
+CO320vsCS320	1596	745	851	DESeq2 pvalue<=0.05 |log2FoldChange|>=0.0
+OS140vsSS140	719	326	393	DESeq2 pvalue<=0.05 |log2FoldChange|>=0.0
