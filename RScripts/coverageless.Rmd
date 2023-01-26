@@ -1,0 +1,200 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+# Second round of dnFGFR OS sequencing. Animals were either OS or SS housed for 140 or 320 days.
+require("knitr")
+knitr::opts_chunk$set(echo = TRUE)
+opts_knit$set(root.dir = "C:\\GitHub\\dnFGFR\\deseq_outputs\\")
+outdir <- "C:\\GitHub\\dnFGFR\\deseq_outputs\\"
+library(dplyr)
+library(DESeq2)
+library(knitr)
+library(ggplot2)
+library(magrittr)
+library(tidyr)
+library(tibble)
+library(ComplexHeatmap)
+#library(DEGreport)
+library(vsn)
+library(rrcov)
+library(sva)
+library(circlize)
+
+```
+
+
+# Load counts and metadata
+```{r}
+counts = read.csv("Rsub_less_id.coverage.csv", header=TRUE, row.names = 1)
+colnames(counts) <- sub(".bam", "", colnames(counts))
+coldata = read.table("coldata.txt", header=TRUE, sep="\t")
+coldata$group<-paste(coldata$genotype, coldata$time, coldata$housing, sep="_")
+coldata$timehousing <- paste(coldata$time, coldata$housing, sep="_")
+coldata$housing <- factor(coldata$housing, levels = c("same","opposite"))
+coldata$genotype <- factor(coldata$genotype, levels = c("ctrl", "dnFGFR"))
+coldata$time <- factor(coldata$time, levels = c("PN140",  "PN320"))
+coldata$group <- factor(coldata$group)
+coldata$timehousing <- factor(coldata$timehousing, levels = c("PN140_same", "PN140_opposite","PN320_same", "PN320_opposite"))
+#coldata$parent <- factor(coldata$parent)
+coldata$dod <- factor(coldata$dod)
+
+#remove length from counts table and sort properly
+counts['Length'] = NULL
+counts <- counts[,coldata$sampleName]
+
+threshold <- 0.05
+```
+
+
+```{r}
+coldataedit <- coldata %>% filter(time == "PN320")
+removesamples <- c("PN140CS2", "PN140CS4", "PN140DS1", "PN320DO5")
+coldataedit <- coldataedit %>% filter(!sampleName %in% removesamples)
+countedit <- counts %>% select(coldataedit$sampleName)
+dds = DESeqDataSetFromMatrix(countData = countedit, colData = coldataedit, design = ~genotype + housing + genotype:housing)
+
+dds = DESeq(dds)
+plotDispEsts(dds)
+effect_housing_control_res <- results(dds, contrast = c("housing", "opposite", "same"))
+effect_housing_dnFGFR_res <- results(dds, list(c("housing_opposite_vs_same", "genotypednFGFR.housingopposite")))
+
+threshold = 0.1
+summary(effect_housing_control_res, alpha = threshold)
+plotMA(effect_housing_control_res, alpha = threshold)
+
+summary(effect_housing_dnFGFR_res, alpha = threshold)
+plotMA(effect_housing_dnFGFR_res, alpha = threshold)
+
+effect_housing_dnFGFR_res[order(effect_housing_dnFGFR_res$padj), ]
+effect_housing_control_res[order(effect_housing_control_res$padj), ]
+plotCounts(dds, gene = "Drd3", intgroup = c("genotype", "housing"))
+
+hist(effect_housing_control_res$pvalue, breaks = 200)
+hist(effect_housing_control_res$padj, breaks = 100)
+
+hist(effect_housing_dnFGFR_res$pvalue, breaks = 200)
+hist(effect_housing_dnFGFR_res$padj, breaks = 100)
+
+plotCounts(dds, gene = "Acaa1b", intgroup = c("genotype", "housing"))
+```
+
+
+```{r}
+# Write out results
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\effect_housing_dnFGFR_res\\")
+write.csv(as.data.frame(effect_housing_dnFGFR_res), file="effect_housing_dnFGFR_res.csv")
+ 
+# Create MA Plot, alpha is FDR cutoff, for this experiment it is "0.05"
+pdf("effect_housing_dnFGFR_res_MAPlot.pdf")
+DESeq2::plotMA(effect_housing_dnFGFR_res, alpha = 0.05, ylim=c(-3,3), cex=.4)
+abline(h=c(-1,1), col="dodgerblue", lwd=2)
+dev.off()
+
+# Plot dispersions
+pdf("effect_housing_dnFGFR_res_dispersionPlot.pdf")
+plotDispEsts(dds)
+dev.off()
+```
+
+
+```{r}
+outdir <- "C:\\GitHub\\dnFGFR\\deseq_outputs\\effect_housing_dnFGFR_res\\"
+
+effect_housing_dnFGFR_res[order(effect_housing_dnFGFR_res$padj), ]
+plotCounts(dds, gene = "Ttc34", intgroup = c("genotype", "housing"))
+resSig <- as.data.frame(subset(effect_housing_dnFGFR_res, padj < threshold))
+write.table(resSig,paste0(outdir,"/",'effect_housing_dnFGFR_ressig.txt', sep=""), sep="\t",append = FALSE, quote = FALSE)
+allresgenes <- na.omit(as.data.frame(effect_housing_dnFGFR_res))
+write.table(allresgenes,paste0(outdir,"/",'effect_housing_dnFGFR_res.txt', sep=""), sep="\t",append = FALSE, quote = FALSE)
+
+
+rnkdf <- tibble(gene = rownames(effect_housing_dnFGFR_res),
+				rnk = -log(effect_housing_dnFGFR_res$pvalue) * sign(effect_housing_dnFGFR_res$log2FoldChange)) %>%
+	arrange(desc(rnk)) %>% drop_na()
+
+## Write out the table without any additional information
+write.table(rnkdf, file = paste0(outdir,"deseq_dnfgfr_res_for_gsea.rnk"),
+			append = FALSE, col.names = FALSE, row.names = FALSE,
+			quote = FALSE, sep = "\t")
+
+```
+
+
+
+```{r}
+normed = counts(dds, normalized=TRUE)
+# write.csv(normed, file="normCounts.csv")
+siggenes <- rownames(effect_housing_dnFGFR_res)
+normedsig <- as.data.frame(normed) %>% filter(rownames(normed) %in% siggenes)
+
+rowSigma <- apply(normedsig, 1, sd, na.rm = TRUE)
+rowMu <- rowMeans(normedsig, na.rm = TRUE)
+zscore_norm_expression <- (normedsig - rowMu) / rowSigma
+
+```
+
+
+```{r}
+# https://bioc.ism.ac.jp/packages/3.3/bioc/vignettes/ComplexHeatmap/inst/doc/s9.examples.html
+# https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html
+  # Labels can be added to each block
+  # https://www.wikipathways.org/index.p
+
+col_fun = circlize::colorRamp2(c(-2, 0, 2), c("blue", "white", "red"))
+resSig <- as.data.frame(subset(effect_housing_dnFGFR_res, padj < threshold))
+resSigRows <- rownames(resSig)
+zscore_sig <- as.data.frame(zscore_norm_expression) %>% filter(rownames(zscore_norm_expression) %in% resSigRows)
+
+ht <- Heatmap(name = "PN320", as.matrix(zscore_sig),
+        cluster_columns = FALSE,
+        col = col_fun,
+        row_names_gp = gpar(fontsize = 8),
+        row_title_rot = 90,
+        column_title_side = "bottom",
+        column_names_rot = 45,
+        top_annotation = HeatmapAnnotation(foo = anno_block(gp = gpar(fill = 2:4))),
+#        show_row_dend = FALSE,
+#        show_column_dend = FALSE,
+  )
+ht
+
+dnFGFR_coldata <- coldataedit %>% filter(!genotype == "ctrl")
+zscore_dnFGFR <- zscore_sig %>% select(dnFGFR_coldata$sampleName)
+
+ht_dnFGFR <- Heatmap(name = "dnFGFR", zscore_dnFGFR, cluster_columns = FALSE, col = col_fun,
+        row_names_gp = gpar(fontsize = 8),
+        row_title_rot = 90,
+        column_title_side = "bottom",
+        column_names_rot = 45,
+        show_column_names = FALSE,
+        heatmap_height = unit(10, "in"),
+        heatmap_width = unit(5, "in"),
+#        show_row_dend = FALSE,
+#        show_column_dend = FALSE,
+  )
+ht_dnFGFR
+
+ctrl_coldata <- coldataedit %>% filter(!genotype == "dnFGFR")
+zscore_ctrl <- zscore_sig %>% select(ctrl_coldata$sampleName)
+
+ht_ctrl <- Heatmap(name = "Control", zscore_ctrl, cluster_columns = FALSE, col = col_fun,
+        row_names_gp = gpar(fontsize = 8),
+        row_title_rot = 90,
+        column_title_side = "bottom",
+        column_names_rot = 45,
+        # show_column_names = FALSE,
+        heatmap_height = unit(10, "in"),
+        heatmap_width = unit(5, "in"),
+#        show_row_dend = FALSE,
+#        show_column_dend = FALSE,
+  )
+ht_ctrl
+```
+
+
+
+
+
