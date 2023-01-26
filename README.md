@@ -28,33 +28,13 @@ The job was then run using the following command:
 	$ sbatch <name of script to run>
 
 
-#### Adapter Trimming
+#### Aligning to the Genome
 
-[Cutadapt(v2.1)](https://cutadapt.readthedocs.io/en/stable/) was used to remove the adapter sequences from the 3' and  5' ends of each read, low quality ends were removed (20 base pairs from the 3' end), and reads smaller than 20 base pairs in length were filtered out with the shell script [trimReads](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/trimReads.sh). 
-
-
-#### Post Trim Quality Control
-
-[FastQC (v0.11.8)](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) was used to visualize the data to check for quality before continued processing using [this](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/fastQC.sh) script. An example of good Illumina data can be found [here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/good_sequence_short_fastqc.html#M2) and an example of our trimmed data (sample A1006-1) can be found [here](https://htmlpreview.github.io/?https://github.com/tylerakonom/dnFGFR/blob/master/Example_FastQC_Output_A1006-1.html).
-
-A few discrepancies between the two examples given can be explained by the fact that we are working with already trimmed RNA-Seq data, and not genomic DNA like the "perfect" example. "Sequence Length Distribution" curves upward, indicating that we have successfully removed small irrelevant reads during trimming. Our "Sequence Duplication Levels" graph shows that a good chunk of our sequences were duplicated 10-50  times, and further analysis will allow us to filter some of the lower expressed genes out of our data set. Our "Per Sequence GC Content" and "Per Tile Sequence Quality" being flagged isn't irregular, and both are within acceptable limits.
-
-
-#### Align to the Genome
-
-Trimmed samples were aligned to the NCBI ([GRCm38 mm10](https://www.ncbi.nlm.nih.gov/assembly/GCF_000001635.20/)) mouse genome using [HISAT2 (v2.1.0)](https://ccb.jhu.edu/software/hisat2/manual.shtml) and [**alignReads.sh**](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/alignReads.sh). This script was queued in Summit by calling the script and inputting filenames with [**run_alignReads.sh**](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/run_alignReads.sh). This was done in the bash terminal in a "compile" node. To ssh into a compile node, this command was used:
-
-	$ ssh scompile
-
-By running the following command, the script "run_alignReads.sh" was run, file names were generated automatically, and input into the "alignReads.sh" script:
-
-	$ bash run_alignReads.sh
-
-This accomplished two primary objectives, assigning a gene to each read and combining the two paired-end reads into one ".bam" file. [Here](https://github.com/tylerakonom/dnFGFR/blob/master/aligned1006.txt) is an example of the HISAT2 output, giving the results of the alignment for a sample (A1006). Unsorted outputs from Hisat2 were then sorted using [Samtools v1.9](https://www.htslib.org/doc/1.9/samtools.html), [run_samtools_sort.sh](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/run_samtools_sort.sh), and [samtools_sort.sh](https://github.com/tylerakonom/dnFGFR/blob/master/shell_scripts/samtools_sort.sh).
+Trimmed samples were aligned to the NCBI ([GRCm38 mm10](https://www.ncbi.nlm.nih.gov/assembly/GCF_000001635.20/)) mouse genome using [HISAT2](https://ccb.jhu.edu/software/hisat2/manual.shtml) by [Novogene](https://www.novogene.com/us-en/). Results were received in the form of ".bam" files.
 
 #### Generating Raw Read Counts
 
-Raw read counts were generated using the [Rsubread (v2.0.1)](https://bioconductor.org/packages/release/bioc/html/Rsubread.html) for [R (v3.6.1)](https://www.r-project.org/) package installed on summit. Reads were annotated with the [NCBI refSeq genome](https://www.ncbi.nlm.nih.gov/refseq/) downloaded from [**here**](https://support.illumina.com/sequencing/sequencing_software/igenome.html). Processing was performed by switching to a compile node with this command:
+Raw read counts were generated using the [Rsubread (v2.0.1)](https://bioconductor.org/packages/release/bioc/html/Rsubread.html) for [R (v3.6.1)](https://www.r-project.org/) package installed on summit. Reads were annotated with the [NCBI refSeq genome](https://www.ncbi.nlm.nih.gov/refseq/). Processing was performed by switching to a compile node with this command:
 
 	$ ssh scompile
 
@@ -64,7 +44,7 @@ R was run by calling and running R in the anaconda environment on summit:
 	$ conda activate r361
 	$ R
 
-The script [Rsubread.R](https://github.com/tylerakonom/dnFGFR/blob/master/Rsubread.R) was entered into the R terminal, and the output was stored as a text file for processing and analysis.
+The script [Rsubread.R](https://github.com/tylerakonom/dnFGFR/blob/master/RScripts/Rsubread.R) was entered into the R terminal, and the output was stored as a text file for processing and analysis.
 
 From this point on, the processing was performed on a local machine. The command to copy a file from the summit cluster looks like this:
 
@@ -74,5 +54,4 @@ From this point on, the processing was performed on a local machine. The command
 ## Analyzing Counts
 *Turning counts into results.*
 
-Raw read counts were normalized and analyzed for differential expression using [DESeq2(v1.26.0)](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) for R, and [DESEQ2.rmd](https://github.com/tylerakonom/dnFGFR/blob/master/R_scripts/DESEQ2.Rmd). All outputs were stored under [deseq_outputs](https://github.com/tylerakonom/dnFGFR/tree/master/deseq_outputs) as .csv files, and "working" excel spreadsheets were created to assist in analysis. Since our primary question related to the effect of opposite-sex housing on dnFGFR animals, PN140 dnFGFR animals were compared for differentially expressed genes (DEGs). DEGs were grouped based on physiological relevance using GO enrichment provided by [ShinyGO v0.61](http://bioinformatics.sdstate.edu/go/).
-
+Raw read counts were normalized and analyzed for differential expression using [DESeq2(v1.36.0)](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) for R, and [coverageless.rmd](https://github.com/tylerakonom/dnFGFR/blob/master/R_scripts/coverageless.Rmd). All outputs were stored under [deseq_outputs](https://github.com/tylerakonom/dnFGFR/tree/master/deseq_outputs) as .csv files, and "working" excel spreadsheets were created to assist in analysis. Sample outlier detection was performed using robust PCA and outlying samples were removed. The time variable (PN140 vs PN320) was identified as a confounder by PCA in the differential expression analysis of the effect of housing. As a result, PN140 animals were removed from further analysis. Genes were considered significant with adjusted p < 0.1.
