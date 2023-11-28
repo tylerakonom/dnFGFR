@@ -99,6 +99,42 @@ plotDispEsts(dds)
 dev.off()
 ```
 
+# Generating plotcount graphs for each gene of interest
+```{r}
+# Creating a PDF of each gene
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\effect_housing_dnFGFR_res\\plotcounts\\")
+
+genesofinterest <- c("Kiss1", "Kiss1r", "Th", "Gnrhr", "Gnrh1")
+
+goi <- as.data.frame(effect_housing_dnFGFR_res)
+goi$genename <- rownames(goi)
+goi <- goi %>% filter(genename %in% genesofinterest)
+
+normed = as.data.frame(counts(dds, normalized=TRUE))
+normed$genename <- rownames(normed)
+normededit <- normed %>% filter(genename %in% genesofinterest)
+
+for (genename in genesofinterest){
+  n <- paste(genename,"png", sep = ".")
+  png(filename = n, width = 12, height = 12, units = "in", res = 800, bg= "white")
+  plotCounts(dds,gene=genename,intgroup= c("genotype", "housing"), normalized = TRUE)
+  dev.off()}
+
+data <- plotCounts(dds, 
+                   gene = "Kiss1r", 
+                   intgroup = c("genotype","housing"), 
+                   returnData = TRUE)
+
+ggplot(data, aes(x=interaction(genotype, housing), y=count, color=genotype, shape=housing)) + 
+  geom_jitter(size=3) + 
+  scale_y_log10()
+
+goi$genename <- NULL
+normededit$genename <- NULL
+write.csv(as.data.frame(goi), file="genesofinterest_stat.csv")
+write.csv(as.data.frame(normededit), file="genesofinterest_normalized_counts.csv")
+```
+
 
 ```{r}
 outdir <- "C:\\GitHub\\dnFGFR\\deseq_outputs\\effect_housing_dnFGFR_res\\"
