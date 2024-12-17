@@ -1,0 +1,118 @@
+---
+title: "Heatmaps"
+author: "Tyler Akonom"
+date: "4/22/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+require("knitr")
+knitr::opts_chunk$set(echo = TRUE)
+opts_knit$set(root.dir = "C:\\GitHub\\dnFGFR\\deseq_outputs\\")
+outdir <- "C:\\GitHub\\dnFGFR\\deseq_outputs\\"
+library(dplyr)
+library(DESeq2)
+library(knitr)
+library(ggplot2)
+library(magrittr)
+library(tidyr)
+library(tibble)
+library(ComplexHeatmap)
+#library(DEGreport)
+library(vsn)
+library(rrcov)
+library(sva)
+library(circlize)
+library(enrichplot)
+library(tidyverse)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\GSEA_results\\")
+
+pos <- read.csv("pos.csv", header = TRUE)
+neg <- read.csv("neg.csv", header = TRUE)
+norm <- read.csv("C:\\GitHub\\dnFGFR\\deseq_outputs\\effect_housing_dnFGFR_res\\normCounts.csv", row.names = 1)
+normd <- select(norm, contains("D"))
+normds <- select(normd, contains("S"))
+normdo <- select(normd, contains("O"))
+
+zscore <- read.csv("C:\\GitHub\\dnFGFR\\deseq_outputs\\zscore.csv", row.names = 1)
+zscoredn <- zscore %>% select(contains("D"))
+
+posfwer <- filter(pos, FWER.p.val < 0.05)
+posbps <- paste(posfwer$NAME)
+postsv <- paste0(posbps, ".tsv")
+
+negfwer <- filter(neg, FWER.p.val < 0.05)
+negbps <- paste(negfwer$NAME)
+negtsv <- paste0(negbps, ".tsv")
+
+bps <- c(posbps, negbps)
+tsv <- c(postsv, negtsv)
+
+for(i in c(1:length(bps))){
+     name <- bps[[i]]    
+     assign (name, read.csv(paste0("C:\\GitHub\\dnFGFR\\my_analysis.GseaPreranked.1667342500005\\", bps[i], ".tsv"), sep = "\t",
+                            colClasses = c('character','character', 'numeric', 'numeric', 'numeric', 'factor', 'factor')
+                            ))}
+
+list <- mget(bps)
+flist <- lapply(list, function(df){
+  df <- df %>% select(SYMBOL, CORE.ENRICHMENT)
+  df$CORE.ENRICHMENT <- factor(df$CORE.ENRICHMENT)
+  df <- df %>% filter(CORE.ENRICHMENT == "Yes")
+  df <- as.data.frame(zscoredn) %>% filter(rownames(zscoredn) %in% df$SYMBOL)
+  df
+})
+```
+
+
+
+```{r}
+data_list <- flist
+
+# Function to generate heatmap for each data frame in the list
+
+generate_heatmaps <- function(data_list) {
+  for (name in names(data_list)) {
+    # Create Heatmap object
+    heatmap_object <- Heatmap(as.matrix(data_list[[name]]),
+                              name = "zscore",
+                              cluster_columns = FALSE,
+                              col = col_fun,
+                              row_names_gp = gpar(fontsize = 14),
+                              row_title_rot = 90,
+                              row_title_side = "left",
+                              row_names_side = "left",
+                              column_title_side = "top",
+                              column_names_rot = 90,
+                              show_column_names = FALSE,
+                              show_row_dend = FALSE,
+                              show_column_dend = FALSE,
+                              column_split = c("1-SS", "1-SS", "1-SS", "1-SS", "1-SS", "2-OS", "2-OS", "2-OS", "2-OS"),
+                              heatmap_width = unit(4, "npc"),
+                              heatmap_height = unit(8, "npc"),
+                              heatmap_legend_param = list(legend_height = unit(.5, "npc"), legend_width = unit(.2, "npc"), title_position = "topcenter")                             
+                              )
+    
+    # Plot Heatmap
+    draw(heatmap_object, heatmap_legend_side = "left")
+    
+    # Export as PNG
+    filename <- paste(name, ".png", sep = "")
+    dev.copy(png, filename, width = 300, height = 800, units = "px")
+    dev.off()
+    cat(name, "exported as", filename, "\n")
+  }
+}
+
+# Call the function to generate heatmaps for each data frame
+setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\GSEA_results\\heatmaps\\")
+generate_heatmaps(data_list)
+```
+
+
