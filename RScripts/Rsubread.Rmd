@@ -61,11 +61,11 @@ files=c(
 
 gtf=("/projects/tyak9569/dnFGFR/genome/mm10.refGene.gtf")
 
-## Output the file:
+## Output directory:
 
 OUT="/gpfs/summit/scratch/tyak9569/dnFGFR/rsubless/"
 
-# Unstranded
+## Unstranded
 
 coverage=featureCounts(files,
 isGTFAnnotationFile = TRUE,
@@ -76,63 +76,7 @@ nthreads = 36,
 isPairedEnd=TRUE,
 strandSpecific = 0)
 
-# write.table(x=data.frame(
-# senseunique$annotation[,c("GeneID","Length")],
-# senseunique$counts,stringsAsFactors=FALSE),
-# file=paste(OUT,"rsubread_senseunique_0.txt"),
-# quote=FALSE,sep="\t",row.names=FALSE) 
-
-# Forward Stranded
-
-# senseunique=featureCounts(files,
-# isGTFAnnotationFile = TRUE,
-# annot.ext = gtf,
-# GTF.attrType = "gene_id",
-# allowMultiOverlap = FALSE,
-# nthreads = 18,
-# isPairedEnd=TRUE,
-# strandSpecific = 1)
-
-# write.table(x=data.frame(
-# senseunique$annotation[,c("GeneID","Length")],
-# senseunique$counts,stringsAsFactors=FALSE),
-# file=paste(OUT,"rsubread_senseunique_1.txt"),
-# quote=FALSE,sep="\t",row.names=FALSE) 
-
-# Reverse Stranded
-
-# senseunique=featureCounts(files,
-# isGTFAnnotationFile = TRUE,
-# annot.ext = gtf,
-# GTF.attrType = "gene_id",
-# allowMultiOverlap = FALSE,
-# nthreads = 18,
-# isPairedEnd=TRUE,
-# strandSpecific = 2)
-
-# write.table(x=data.frame(
-# senseunique$annotation[,c("GeneID","Length")],
-# senseunique$counts,stringsAsFactors=FALSE),
-# file=paste(OUT,"rsubread_senseunique_2.txt"),
-# quote=FALSE,sep="\t",row.names=FALSE) 
-
-# Antisense
-
-# coverage=featureCounts(files,
-# isGTFAnnotationFile = TRUE,
-# annot.ext = gtf,
-# GTF.attrType = "gene_id",
-# allowMultiOverlap = TRUE,
-# isPairedEnd=FALSE,
-# nthreads = 18,
-# strandSpecific = 2)
- 
-# write.table(x=data.frame(
-# antisenseunique$annotation[,c("GeneID","Length")],
-# antisenseunique$counts,stringsAsFactors=FALSE),
-# file=paste(OUT,"Rsubread_antisenseunique"),
-# quote=FALSE,sep="\t",row.names=FALSE)
-
+## Generate .csv file for DESeq2
 
 fileroot=paste(OUT,"Rsub_less_id", sep="")
 write.csv(coverage$counts, paste(fileroot,".coverage.csv", sep=""))

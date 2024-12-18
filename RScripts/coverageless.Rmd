@@ -1,6 +1,8 @@
 ---
-title: "R Notebook"
-output: html_notebook
+title: "Heatmaps"
+author: "Tyler Akonom"
+date: "4/22/2024"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -50,6 +52,7 @@ threshold <- 0.05
 ```
 
 
+# Investigating whether or not genotypes show a different response to OS housing
 ```{r}
 coldataedit <- coldata %>% filter(time == "PN320")
 removesamples <- c("PN140CS2", "PN140CS4", "PN140DS1", "PN320DO5")
@@ -147,6 +150,10 @@ write.table(resSig,paste0(outdir,"/",'effect_housing_dnFGFR_ressig.txt', sep="")
 allresgenes <- na.omit(as.data.frame(effect_housing_dnFGFR_res))
 write.table(allresgenes,paste0(outdir,"/",'effect_housing_dnFGFR_res.txt', sep=""), sep="\t",append = FALSE, quote = FALSE)
 
+```
+
+# Generate ranked file for GSEA
+```{r}
 
 rnkdf <- tibble(gene = rownames(effect_housing_dnFGFR_res),
 				rnk = -log(effect_housing_dnFGFR_res$pvalue) * sign(effect_housing_dnFGFR_res$log2FoldChange)) %>%
@@ -160,7 +167,7 @@ write.table(rnkdf, file = paste0(outdir,"deseq_dnfgfr_res_for_gsea.rnk"),
 ```
 
 
-#Raw results for heatmaps
+# Raw results for heatmaps
 ```{r}
 normed = counts(dds, normalized=TRUE)
 # write.csv(normed, file="normCounts.csv")
@@ -174,149 +181,7 @@ zscore_norm_expression <- (normedsig - rowMu) / rowSigma
 ```
 
 
-#Generating a heatmap of significant results
-```{r}
-# https://bioc.ism.ac.jp/packages/3.3/bioc/vignettes/ComplexHeatmap/inst/doc/s9.examples.html
-# https://jokergoo.github.io/ComplexHeatmap-reference/book/heatmap-annotations.html
-  # Labels can be added to each block
-  # https://www.wikipathways.org/index.p
 
-col_fun = circlize::colorRamp2(c(-2, 0, 2), c("blue", "white", "red"))
-resSig <- as.data.frame(subset(effect_housing_dnFGFR_res, padj < threshold))
-resSigRows <- rownames(resSig)
-zscore_sig <- as.data.frame(zscore_norm_expression) %>% filter(rownames(zscore_norm_expression) %in% resSigRows)
-
-ht <- Heatmap(name = "PN320", as.matrix(zscore_sig),
-        cluster_columns = FALSE,
-        col = col_fun,
-        row_names_gp = gpar(fontsize = 8),
-        row_title_rot = 90,
-        column_title_side = "bottom",
-        column_names_rot = 45,
-        top_annotation = HeatmapAnnotation(foo = anno_block(gp = gpar(fill = 2:4))),
-#        show_row_dend = FALSE,
-#        show_column_dend = FALSE,
-  )
-ht
-
-dnFGFR_coldata <- coldataedit %>% filter(!genotype == "ctrl")
-zscore_dnFGFR <- zscore_sig %>% select(dnFGFR_coldata$sampleName)
-
-ht_dnFGFR <- Heatmap(name = "dnFGFR", zscore_dnFGFR, cluster_columns = FALSE, col = col_fun,
-        row_names_gp = gpar(fontsize = 8),
-        row_title_rot = 90,
-        column_title_side = "bottom",
-        column_names_rot = 45,
-        show_column_names = FALSE,
-        heatmap_height = unit(10, "in"),
-        heatmap_width = unit(5, "in"),
-#        show_row_dend = FALSE,
-#        show_column_dend = FALSE,
-  )
-ht_dnFGFR
-
-ctrl_coldata <- coldataedit %>% filter(!genotype == "dnFGFR")
-zscore_ctrl <- zscore_sig %>% select(ctrl_coldata$sampleName)
-
-ht_ctrl <- Heatmap(name = "Control", zscore_ctrl, cluster_columns = FALSE, col = col_fun,
-        row_names_gp = gpar(fontsize = 8),
-        row_title_rot = 90,
-        column_title_side = "bottom",
-        column_names_rot = 45,
-        # show_column_names = FALSE,
-        heatmap_height = unit(10, "in"),
-        heatmap_width = unit(5, "in"),
-#        show_row_dend = FALSE,
-#        show_column_dend = FALSE,
-  )
-ht_ctrl
-```
-
-
-# -------------------------- Generating a heatmap of GSEA results from interesting biological processes -----------------------
-
-# Chemical Synaptic Transmission
-```{r}
-setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\GSEA_results\\")
-col_fun = circlize::colorRamp2(c(-2, 0, 2), c("blue", "white", "red"))
-
-gsea_synaptic <- read.table("GOBP_CHEMICAL_SYNAPTIC_TRANSMISSION_POSTSYNAPTIC.tsv", header=TRUE, sep="\t")
-gsea_synaptic_genes <- gsea_synaptic %>% select(SYMBOL, CORE.ENRICHMENT)
-zscore_synaptic <- as.data.frame(zscore_norm_expression) %>% filter(rownames(zscore_norm_expression) %in% gsea_synaptic_genes$SYMBOL)
-
-
-synaptic_allgenes <- Heatmap(name = "Chemical Synaptic Transmission Postsynaptic", as.matrix(zscore_synaptic),
-        cluster_columns = FALSE,
-        col = col_fun,
-        row_names_gp = gpar(fontsize = 8),
-        row_title_rot = 90,
-        column_title_side = "bottom",
-        column_names_rot = 45,
-        top_annotation = HeatmapAnnotation(foo = anno_block(gp = gpar(fill = 2:4))),
-#        show_row_dend = FALSE,
-#        show_column_dend = FALSE,
-  )
-synaptic_allgenes
-
-#Heatmap shows no clustering when all genes from biological process are included, only using "core enriched" genes.
-
-gsea_synaptic_enriched <- gsea_synaptic_genes[gsea_synaptic_genes$CORE.ENRICHMENT == 'Yes', ]
-zscore_enriched_synaptic <- as.data.frame(zscore_norm_expression) %>% filter(rownames(zscore_norm_expression) %in% gsea_synaptic_enriched$SYMBOL)
-
-synaptic_enriched <- Heatmap(name = "Chemical Synaptic Transmission Postsynaptic, Enriched", as.matrix(zscore_enriched_synaptic),
-        cluster_columns = FALSE,
-        col = col_fun,
-        row_names_gp = gpar(fontsize = 8),
-        row_title_rot = 90,
-        column_title_side = "bottom",
-        column_names_rot = 45,
-        top_annotation = HeatmapAnnotation(foo = anno_block(gp = gpar(fill = 2:4))),
-#        show_row_dend = FALSE,
-#        show_column_dend = FALSE,
-  )
-synaptic_enriched
-```
-# 
-```{r}
-setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\GSEA_results\\")
-col_fun = circlize::colorRamp2(c(-2, 0, 2), c("blue", "white", "red"))
-
-gsea_translation <- read.table("GOBP_CYTOPLASMIC_TRANSLATION.tsv", header=TRUE, sep="\t")
-gsea_translation_genes <- gsea_translation %>% select(SYMBOL, CORE.ENRICHMENT)
-zscore_translation <- as.data.frame(zscore_norm_expression) %>% filter(rownames(zscore_norm_expression) %in% gsea_translation_genes$SYMBOL)
-
-
-translation_allgenes <- Heatmap(name = "Cytoplasmic Translation", as.matrix(zscore_translation),
-        cluster_columns = FALSE,
-        col = col_fun,
-        row_names_gp = gpar(fontsize = 8),
-        row_title_rot = 90,
-        column_title_side = "bottom",
-        column_names_rot = 45,
-        top_annotation = HeatmapAnnotation(foo = anno_block(gp = gpar(fill = 2:4))),
-#        show_row_dend = FALSE,
-#        show_column_dend = FALSE,
-  )
-translation_allgenes
-
-#Heatmap shows no clustering when all genes from biological process are included, only using "core enriched" genes.
-
-gsea_translation_enriched <- gsea_translation_genes[gsea_translation_genes$CORE.ENRICHMENT == 'Yes', ]
-zscore_enriched_translation <- as.data.frame(zscore_norm_expression) %>% filter(rownames(zscore_norm_expression) %in% gsea_translation_enriched$SYMBOL)
-
-translation_enriched <- Heatmap(name = "Cytoplasmic Translation, Enriched", as.matrix(zscore_enriched_translation),
-        cluster_columns = FALSE,
-        col = col_fun,
-        row_names_gp = gpar(fontsize = 8),
-        row_title_rot = 90,
-        column_title_side = "bottom",
-        column_names_rot = 45,
-        top_annotation = HeatmapAnnotation(foo = anno_block(gp = gpar(fill = 2:4))),
-#        show_row_dend = FALSE,
-#        show_column_dend = FALSE,
-  )
-translation_enriched
-```
 
 
 

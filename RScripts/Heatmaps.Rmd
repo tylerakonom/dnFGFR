@@ -29,6 +29,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+# --------- Generating heatmaps of significant GSEA results --------
 
 ```{r}
 setwd("C:\\GitHub\\dnFGFR\\deseq_outputs\\GSEA_results\\")
