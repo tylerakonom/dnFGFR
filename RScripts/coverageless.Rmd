@@ -85,6 +85,18 @@ hist(effect_housing_dnFGFR_res$padj, breaks = 100)
 plotCounts(dds, gene = "Acaa1b", intgroup = c("genotype", "housing"))
 ```
 
+# Outlier detection using robust PCA
+
+```{r}
+countsT <- t(countedit)
+pcah <- PcaHubert(countsT)
+pcag <- PcaGrid(countsT)
+plot(pcag)
+
+#Sample PN320DO5 was eliminated during this step and removed from further analysis.
+
+```
+
 
 ```{r}
 # Write out results
