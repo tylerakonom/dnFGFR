@@ -40,3 +40,5 @@ From this point on, the processing was performed on a local machine.
 *Turning counts into results.*
 
 Raw read counts were normalized and analyzed for differential expression using [DESeq2(v1.36.0)](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) for R, and [coverageless.rmd](https://github.com/tylerakonom/dnFGFR/blob/master/RScripts/coverageless.Rmd). All outputs were stored under [deseq_outputs](https://github.com/tylerakonom/dnFGFR/tree/master/deseq_outputs) as .csv files, and "working" excel spreadsheets were created to assist in analysis. Sample outlier detection was performed using robust PCA and outlying samples were removed. The time variable (PN140 vs PN320) was identified as a confounder by PCA in the differential expression analysis of the effect of housing. As a result, PN140 animals were removed from further analysis. Genes were considered significant with adjusted p < 0.1.
+
+[![DOI](https://zenodo.org/badge/289104997.svg)](https://doi.org/10.5281/zenodo.14511480)
